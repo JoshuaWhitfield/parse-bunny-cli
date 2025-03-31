@@ -1,6 +1,17 @@
 # parse-bunny-cli
 This is a data collection cli for AI model training and development
 
+<h1>Getting Started:</h1>
+<p>clone the repository and download the following dependencies:</p>
+
+```bash
+    python -m pip install requests
+
+    python -m pip install beautifulsoup4
+
+    python -m pip install validators
+```
+
 <h1>Commands:</h1>
 <br />
 <h3>clear</h3>
@@ -29,14 +40,3 @@ when ommitting keywords from the `-search-engine` flag, all content is scraped.<
 
 <h3>press CTRL + C to exit<h3>
 
-<h1>Getting Started:</h1>
-<p>clone the repository and download the following dependencies:</p>
-
-```bash
-   
-    python -m pip install requests
-
-    python -m pip install beautifulsoup4
-
-    python -m pip install validators
-```
