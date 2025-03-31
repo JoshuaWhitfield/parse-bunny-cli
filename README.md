@@ -31,8 +31,9 @@ when ommitting keywords from the `-search-engine` flag, all content is scraped.<
 
 <h1>Getting Started:</h1>
 <p>clone the repository and download the following dependencies:</p>
+
 ```bash
-   _
+   
     python -m pip install requests
 
     python -m pip install beautifulsoup4
