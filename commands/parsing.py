@@ -82,7 +82,7 @@ def data(PARAMS):
     web_crawler = WebCrawler(api_key=api_key, cse_id=cse_id, keywords=search_engine_keywords)  # Pass the keywords to the crawler
     web_crawler.start_crawl_from_keywords()
     print()
-    print(_callback.local_debug(web_crawler.get_body(), "parsing:", 83))
+    _callback.local_debug(web_crawler.get_body(), "parsing:", 83)
     print()
 
     return _callback.catch(web_crawler.get_body(), True)
@@ -117,7 +117,7 @@ def db(PARAMS):
     if not error_handling.status:
         return error_handling
     
-    
+
     
     return _callback.catch("", True)
 command.add_func("db", db) 
