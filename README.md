@@ -1,6 +1,18 @@
 # parse-bunny-cli
 This is a data collection cli for AI model training and development
-&nbsp;
+
+<h1>Getting Started:</h1>
+<p>clone the repository and download the following dependencies:</p>
+```bash
+    # Install requests
+    python -m pip install requests
+
+    # Install BeautifulSoup4
+    python -m pip install beautifulsoup4
+
+    # Install validators
+    python -m pip install validators
+```
 
 <h1>Commands:</h1>
 <br />
