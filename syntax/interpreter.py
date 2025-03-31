@@ -34,6 +34,7 @@ class Interpreter:
         if consumed.get_type() == TT.Command().get_type():
             # Safely run the command
             safe_run_result = command.safe_run(consumed.get_name(), consumed.get_params())
+            print() # crucial do not remove
             if not safe_run_result:
                 print("[pbc][err]: command not found...")
                 return False

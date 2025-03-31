@@ -10,23 +10,23 @@ class Usage:
         return usage_object
     
     def get_usage(self, cmd_name):
-        if not cmd_name in self.body.keys():
+        if cmd_name not in self.body:
             return None
         return self.body[cmd_name]
     
     def display(self, usage_object):
-        print(usage_object.get_name().upper() + ": ")
-        print(" " + usage_object.get_usage_array.join("\n "))
+        # Fixing the join() issue for usage_array
+        print("COMMAND: " + usage_object.get_name().upper())
+        print(" " + "\n ".join(usage_object.get_usage_array()))  # Correct usage of join
         print(" desc: " + usage_object.get_description())
         print(" long: " + usage_object.get_long())
         print(" short: " + usage_object.get_short())
-        return True 
-    
-Usage.add_usage("clear", [" clear ", " cls "], "this command clears the terminal.", " clear ", " cls ")
-Usage.add_usage("data", [" data [-collect | -parse] -template[<your_template>|std] -search-engine['<string_keyword>'] "], "this command can collect and parse information based on a template")
+        return True
 
+# Example usage
+usage = Usage()
 
+usage.add_usage("clear", [" clear ", " cls "], "this command clears the terminal.", " clear ", " cls ")
+usage.add_usage("data", [" data [-collect | -parse] -template[<your_template>|std] -search-engine['<string_keyword>'] "], "this command can collect and parse information based on a template", " data ", "  ")
 
-
-    
-        
+# Test displaying usage

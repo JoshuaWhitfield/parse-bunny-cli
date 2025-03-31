@@ -57,7 +57,6 @@ class Lexer:
                 while self.get_current() and not re.search('\"|\'', self.get_current()):
                     string += self.consume()
                 self.add_token(TT.String(string))
-                print("checkpoint: string")
                 self.consume()
                 return self.Tokenize()
 
@@ -66,7 +65,6 @@ class Lexer:
                 while self.get_current() and re.search(r'[a-zA-Z0-9._-]', self.get_current()):
                     command += self.consume()
                 self.add_token(TT.Command(command))
-                print("checkpoint: command: "+ command)
                 return self.Tokenize()
             
             if re.search(r'\-[a-zA-Z0-9_]|\[|\]', consumed + str(self.get_current())):
@@ -74,7 +72,6 @@ class Lexer:
                 while self.get_current() and re.search(r'[a-zA-Z0-9_]|\-', self.get_current()):
                     flag += self.consume()
                 self.add_token(TT.Flag(flag))
-                print("checkpoint: flag: "+ flag)
                 return self.Tokenize()
 
             if re.search(r'\-\-', consumed + str(self.get_current())):
@@ -82,7 +79,6 @@ class Lexer:
                 while self.get_current() and re.search(r'[a-zA-Z0-9_]|\-', self.get_current()):
                     global_flag += self.consume()
                 self.add_token(TT.GlobalFlag(global_flag))
-                print("checkpoint: global flag: "+ global_flag)
                 return self.Tokenize()
             
             if re.search(r'\d', consumed):
@@ -90,7 +86,6 @@ class Lexer:
                 while self.get_current() and re.search(r'\d|[.,]', self.get_current()):
                     number += self.consume()
                 self.add_token(TT.Number(number))
-                print("checkpoint: number")
                 return self.Tokenize()
             
             if re.search(r'\(|\)', consumed):

@@ -1,2 +1,3 @@
-I want this to be able to parse information and compile certiain information in formats as output to help with planning. say replay poker
-wanted to go back to charge people to add achievement notifications to their replays, they would use this cli to go through all the data, match up the date of the achievements with the data and time data of the replays and output the information side by side somehow. maybe even creating digital documents.
+I want this to be able to parse information and compile certiain information in formats as output to help with data collection and parsing for AI model training. 
+
+or say replaypoker.com wanted to charge people to add achievement notifications to their replays, they would use this cli to go through all the data, match up the date of the achievements with the data and time data of the replays and output the information side by side somehow. maybe even creating digital documents.

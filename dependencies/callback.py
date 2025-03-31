@@ -1,12 +1,13 @@
 import json 
+from dependencies.error import Error 
 
 class Callback:
 
     def __init__(self):
         self.toggle = False
 
-    def catch(self, message = "", status = 0):
-        return { "status": status, "data": message }
+    def catch(self, message = "", status = False):
+        return Error(message, status)
     
     def toggle_debug(self):
         self.toggle = not self.toggle
