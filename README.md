@@ -18,7 +18,7 @@ This is a data collection cli for AI model training and development
 
 <h4>description</h4>
 <p>visits a url and scrapes every element that contains a keyword. 
-when ommitting the `-search-engine` flag, all content is scraped.</p>
+when ommitting keywords from the `-search-engine` flag, all content is scraped.</p>
 <br />
 
 <h1>Inputs</h1>
