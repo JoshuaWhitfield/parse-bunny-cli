@@ -3,13 +3,14 @@ This is a data collection cli for AI model training and development
 
 <h1>Getting Started:</h1>
 <p>clone the repository and download the following dependencies:</p>
-`bash
+```bash
+   _
     python -m pip install requests
 
     python -m pip install beautifulsoup4
 
     python -m pip install validators
-`
+```
 
 <h1>Commands:</h1>
 <br />
@@ -20,7 +21,8 @@ This is a data collection cli for AI model training and development
 <h3>data</h3>
 <h4>usage:</h4>
 
-```bash
+```bash 
+  _
    $ data <url> -collect -template[std] -search-engine["<keyword1>", "<keyword2>"]
    $ data <url> -collect -template[std] -search-engine[]
 ```
