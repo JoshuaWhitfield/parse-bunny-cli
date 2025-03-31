@@ -13,6 +13,7 @@ This is a data collection cli for AI model training and development
 
 ```bash
    $ data <url> -collect -template[std] -search-engine["<keyword1>", "<keyword2>"]
+   $ data <url> -collect -template[std] -search-engine[]
 ```
 
 <h4>description</h4>
