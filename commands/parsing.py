@@ -87,3 +87,38 @@ def data(PARAMS):
 
     return _callback.catch(web_crawler.get_body(), True)
 command.add_func("data", data)
+
+def db(PARAMS):
+    config = {"show": False}
+    def init():
+        if not len(PARAMS):
+            usage.display(usage.get_usage("db"))
+            return _callback.catch("", False)
+        
+        flag_tokens = interface.extract(PARAMS, [TT.Flag()])
+        if not len(flag_tokens):
+            usage.display(usage.get_usage("db"))
+            return _callback.catch("[db][err]: flags must be in use...", False)
+
+        for flag_token in flag_tokens:
+            if util.indexOf(["[", "]"], flag_token.value.replace("-", "")) > -1:
+                continue 
+            
+            if util.indexOf(["show", "shw"], flag_token.value.replace("-", "")) > -1:
+                config["show"] = True 
+            
+        if not config["show"]:
+            usage.display(usage.get_usage("db"))
+            return _callback.catch("[db][err]: invalid flag...", False)
+        
+        return _callback.catch("", True)
+    
+    error_handling = init()
+    if not error_handling.status:
+        return error_handling
+    
+    
+    
+    return _callback.catch("", True)
+command.add_func("db", db) 
+    
