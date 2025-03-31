@@ -16,7 +16,7 @@ class Callback:
     def debug(self, data, location, line_number):
         debug_content = { "content": data, "location": location, "line": line_number }
         if self.toggle:
-            print(json.dump(debug_content))
+            print(json.dumps(debug_content, indent=4))
         return debug_content
 
     def local_debug(self, data, location, line_number):

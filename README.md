@@ -22,9 +22,8 @@ This is a data collection cli for AI model training and development
 <h4>usage:</h4>
 
 ```bash 
-  _
-   $ data <url> -collect -template[std] -search-engine["<keyword1>", "<keyword2>"]
-   $ data <url> -collect -template[std] -search-engine[]
+   $ data <url> -collect -search-engine["king", "lebron", "james"]
+   $ data <url> -collect -search-engine[]
 ```
 
 <h4>description</h4>

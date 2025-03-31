@@ -7,6 +7,15 @@ from syntax.TokenTypes import TokenTypes
 from dependencies.master import MasterDep
 from internal.web_crawler import WebCrawler
 
+import json
+
+def load_config():
+    with open('config.json', 'r') as file:
+        config = json.load(file)
+    return config
+
+env_config = load_config()
+
 _callback = Callback()
 interface = Interface()
 TT = TokenTypes()
@@ -20,7 +29,7 @@ command.add_func('cls', clear)
 
 def data(PARAMS):
     config = {"collect": False, "parse": False, "url": False}
-    collect = {"template": False, "search_engine": False}
+    collect = {"search_engine": False}
     search_engine_keywords = []  # List to store search engine keywords
 
     def init():
@@ -28,46 +37,35 @@ def data(PARAMS):
             usage.display(usage.get_usage("data"))
             return _callback.catch("", False)
         
-        # Extract URL tokens and validate if they are valid URLs
-        url_tokens = interface.extract(PARAMS, [TT.String()])
-        if not len(url_tokens):
-            usage.display(usage.get_usage("data"))
-            return _callback.catch("", False)
-
-        # Extract only valid URLs (starting with http:// or https://)
-        config["url"] = [token.value for token in url_tokens if token.value.startswith("http://") or token.value.startswith("https://")]
-
-        # If no valid URLs are found, return an error message
-        if not config["url"]:
-            print("No valid URLs provided. Please provide URLs starting with http:// or https://.")
-            return _callback.catch("", False)
-
         flag_tokens = interface.extract(PARAMS, [TT.Flag()])
         if not len(flag_tokens):
             usage.display(usage.get_usage("data"))
             return _callback.catch("", False)
 
         for flag_token in flag_tokens:
-            if util.indexOf(["collect", "c"], flag_token.value.replace("-", "")) > -1:
+            if util.indexOf(["[", "]"], flag_token.value) > -1:
+                continue
+            cleaned_token_value = flag_token.value.replace("-", "")
+            if util.indexOf(["collect", "c"], cleaned_token_value) > -1:
                 config["collect"] = True
 
-            if util.indexOf(["parse", "p"], flag_token.value.replace("-", "")) > -1:
+            if util.indexOf(["parse", "p"], cleaned_token_value) > -1:
                 config["parse"] = True
 
-            if util.indexOf(["searchengine", "s"], flag_token.value.replace("-", "")) > -1:
+            if util.indexOf(["searchengine", "s"], cleaned_token_value) > -1:
+                # _callback.local_debug(cleaned_token_value, "parsing:", 59)
                 collect["search_engine"] = True
                 flag_contents = interface.extract_flags(PARAMS[util.indexOf(PARAMS, flag_token):])
                 for token in flag_contents:
                     search_engine_keywords.append(token.get_value())
 
-            if util.indexOf(["template", "t"], flag_token.value.replace("-", "")) > -1:
-                collect["template"] = True
-
         if not config["collect"] and not config["parse"]:
+            print("collect and parse not found")
             usage.display(usage.get_usage("data"))
             return _callback.catch("", False)
         
-        if not collect["template"] or not collect["search_engine"]:
+        if not collect["search_engine"]:
+            print("search engine not found")
             usage.display(usage.get_usage("data"))
             return _callback.catch("", False)
         
@@ -78,13 +76,14 @@ def data(PARAMS):
         return error_handling
 
     # Now that we've filtered the URLs, process them
-    for url in config["url"]:
-        web_crawler = WebCrawler(keywords=search_engine_keywords)  # Pass the keywords to the crawler
-        web_crawler.crawl(url, 0, 20)
-        print()
-        print(f"Web crawl completed at {url} ...")
-        print(f"body content: \n{web_crawler.get_body()}")
-        print()
+    api_key = env_config['API_KEY']
+    cse_id = env_config['CSE_ID']
+
+    web_crawler = WebCrawler(api_key=api_key, cse_id=cse_id, keywords=search_engine_keywords)  # Pass the keywords to the crawler
+    web_crawler.start_crawl_from_keywords()
+    print()
+    print(_callback.local_debug(web_crawler.get_body(), "parsing:", 83))
+    print()
 
     return _callback.catch(web_crawler.get_body(), True)
 command.add_func("data", data)
