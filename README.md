@@ -14,7 +14,7 @@ This is a data collection cli for AI model training and development
     $ python -m pip install requests
 
     $ python -m pip install beautifulsoup4
-fx
+
     $ python -m pip install validators
 
     $ python -m pip install redis
