@@ -30,9 +30,9 @@ This is a data collection cli for AI model training and development
 <h4>usage:</h4>
 
 ```bash 
-   $ data <url> -collect["king", "lebron", "james"]
-   $ data <url> -collect["lebron"] -parse["/path/to/your/parser/module"]
-   $ data <url> -collect["lebron"] -parse[]
+   $ data -collect["king", "lebron", "james"]
+   $ data -collect["lebron"] -parse["/path/to/your/parser/module"]
+   $ data -collect["lebron"] -parse[]
 ```
 
 <h4>description:</h4>
