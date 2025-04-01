@@ -28,6 +28,6 @@ class Usage:
 usage = Usage()
 
 usage.add_usage("clear", [" clear ", " cls "], "this command clears the terminal.", " clear ", " cls ")
-usage.add_usage("data", [" data [-collect | -parse] -template[<your_template>|std] -search-engine['<string_keyword>'] "], "this command can collect and parse information based on a template.", " data ", "")
+usage.add_usage("data", [" data collect['<string_keyword>', ...] ", " data collect['<string_keyword>', ...] -parse['/full/path/to/parser']", "data -collect['<keywords>'] -parse[]"], "this command can collect and parse information based on a template. by ommitting the path from the -parse flag, you use the built in parser.", " data ", "")
 usage.add_usage("db", [" db -show <table_name> "], "this command displays the contents stored in the database powered by Memurai.", "db", "")
 # Test displaying usage

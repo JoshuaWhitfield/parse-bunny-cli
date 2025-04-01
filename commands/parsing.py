@@ -30,23 +30,23 @@ command.add_func('clear', clear)
 command.add_func('cls', clear)
 
 
-def run_external_parser(parser_name, parser_path, data):
+def run_external_parser(parser_path, data):
     # Attempt to load the module from the given file location
+    parser_name = parser_path.split("/|\\")[-1]
     spec = importlib.util.spec_from_file_location(parser_name, parser_path)
     parser_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(parser_module)
 
     # Check if the 'run_parser' function exists in the loaded module
     if hasattr(parser_module, 'run_parser'):
-        for input in data.values():
-            parser_function = getattr(parser_module, 'run_parser')
-            return parser_function(input)  # Execute the parser function and pass the web crawler's output
+        parser_function = getattr(parser_module, 'run_parser')
+        return parser_function(data)  # Execute the parser function and pass the web crawler's output
     else:
         raise ImportError(f"The module {parser_name} at {parser_path} does not have a 'run_parser' function.")
 
 
 def data(PARAMS):
-    config = {"collect": False, "parse": False, "url": False, "parser": None, "parser_path": None}
+    config = {"collect": False, "parse": False, "url": False, "parser_path": None}
     collect = {"search_engine": False}
     search_engine_keywords = []
     
@@ -60,25 +60,27 @@ def data(PARAMS):
             cleaned_token_value = flag_token.value.replace("-", "")
             if util.indexOf(["collect", "c"], cleaned_token_value) > -1:
                 config["collect"] = True
-            if util.indexOf(["parse", "p"], cleaned_token_value) > -1:
-                config["parse"] = True
-            if util.indexOf(["parser"], cleaned_token_value) > -1:
-                parser_info = next((p for p in PARAMS[PARAMS.index(flag_token) + 1:] if p.type != TT.Flag()), None)
-                if parser_info:
-                    config["parser"], config["parser_path"] = parser_info.value.split(':')
-            if util.indexOf(["searchengine", "s"], cleaned_token_value) > -1:
-                collect["search_engine"] = True
                 flag_contents = interface.extract_flags(PARAMS[util.indexOf(PARAMS, flag_token):])
                 for token in flag_contents:
                     search_engine_keywords.append(token.get_value())
 
-        if not config["collect"] and not config["parse"]:
-            print("collect and parse not found")
-            usage.display(usage.get_usage("data"))
-            return _callback.catch("", False)
+            if util.indexOf(["parse", "p"], cleaned_token_value) > -1:
+                config["parse"] = True
+                parser_info = next((p for p in PARAMS[PARAMS.index(flag_token) + 1:] if p.type != TT.Flag()), None)
+                if parser_info:
+                    flag_contents = interface.extract_flags(PARAMS[util.indexOf(PARAMS, flag_token):])
+                    if not len(flag_contents):
+                        config["parser_path"] = ".\\external\\parser_template_one.py"
+                    else:
+                        config["parser_path"] = flag_contents[0].get_value()
 
-        if not collect["search_engine"]:
-            print("search engine not found")
+                    
+                else:
+                    usage.display(usage.get_usage("data"))
+                    return _callback.catch("", False)
+
+        if not config["collect"]:
+            print("collect and parse not found")
             usage.display(usage.get_usage("data"))
             return _callback.catch("", False)
         
@@ -94,15 +96,13 @@ def data(PARAMS):
         web_crawler = WebCrawler(api_key=api_key, cse_id=cse_id, keywords=search_engine_keywords)
         web_crawler.start_crawl_from_keywords()
         crawler_output = web_crawler.get_body()  # Assuming get_body() returns the data you want to process
-        print()
-        _callback.local_debug(web_crawler.get_body(), "parsing:", 83)
-        print()
         # Check if a parser is specified and if so, process the crawler output with it
-        if config["parser"] and config["parser_path"]:
-            parser_output = run_external_parser(config["parser"], config["parser_path"], crawler_output)
-            print("Parser Output:", parser_output)
+        if config["parser_path"]:
+            for link in crawler_output.values():
+                parser_output = run_external_parser(config["parser_path"], link)
+                print("\n\nParser Output:", parser_output)
         else:
-            print("Crawler Output:", crawler_output)
+            print("\n\nCrawler Output:", crawler_output)
 
     # Continue with regular operations if all checks pass
 

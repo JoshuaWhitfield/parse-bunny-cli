@@ -39,19 +39,25 @@ class Parser:
     def consume(self):
         if not self.get_current():
             return None
+        result = self.get_input()[0]
+        self.set_input(self.get_input()[1:])
+        return result
 
     def parse(self):
         while self.get_current():
             consumed = self.consume()
-            if re.search(r"\>|\'", consumed) or re.search(r'\"', consumed):
+            if not consumed:
+                return consumed
+            if re.search(r"\>|\'", consumed) or re.search(r'\"', consumed) or re.search(r'\.', consumed):
                 output = ""
-                while self.get_current() and (not re.search(r"\'|\>", self.get_current()) or not re.search(r'\"', self.get_current())):
+                while self.get_current() and (not re.search(r"\'|\>", self.get_current()) or not re.search(r'\"', self.get_current() or not re.search(r'\.', consumed))):
                     output += self.consume()
                 self.add_output(output)
                 return self.parse()
 
 def run_parser(input):
     parser = Parser()
+    # exit(type(input))
     parser.set_input(input)
     parser.parse()
-    return parser.get_output
+    return parser.get_output()

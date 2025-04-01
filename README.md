@@ -14,7 +14,7 @@ This is a data collection cli for AI model training and development
     $ python -m pip install requests
 
     $ python -m pip install beautifulsoup4
-
+fx
     $ python -m pip install validators
 
     $ python -m pip install redis
@@ -30,13 +30,40 @@ This is a data collection cli for AI model training and development
 <h4>usage:</h4>
 
 ```bash 
-   $ data <url> -collect -search-engine["king", "lebron", "james"]
-   $ data <url> -collect -search-engine[]
+   $ data <url> -collect["king", "lebron", "james"]
+   $ data <url> -collect["lebron"] -parse[]
 ```
 
 <h4>description</h4>
 <p>visits a url and scrapes every element that contains a keyword. 
-when ommitting keywords from the `-search-engine` flag, all content is scraped.</p>
+when ommitting keywords from the `-collect` flag, all content is scraped. when ommitting the path from the `-parse` flag, the built in parser is used. any custom parsers must contain the following function: ```python 
+    # its best practice to create a class above the main parser function #
+    class Parser:
+        def __init__(self):
+            # your code here
+            self.input = ""
+            self.output = ""
+
+        def set_input(self, new_input):
+            self.input = new_input
+
+        def get_output(self):
+            return self.output
+        # ...
+        
+        def parse(self):
+            # your parsing function here
+
+    def run_parser(input):
+        # your custom parser code #
+        parser = Parser()
+        parser.set_input(input)
+        parser.parse()
+        return self.get_output()
+
+```
+the run_parser function should always take in one parameter which is a string and should always be named `run_parser`.
+</p>
 <br />
 
 <h1>Inputs</h1>
