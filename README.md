@@ -5,11 +5,19 @@ This is a data collection cli for AI model training and development
 <p>clone the repository and download the following dependencies:</p>
 
 ```bash
-    python -m pip install requests
+    # $ clone the repository
 
-    python -m pip install beautifulsoup4
+    $ python -m venv parse-bunny
 
-    python -m pip install validators
+    $ parse-bunny\Scripts\activate
+
+    $ python -m pip install requests
+
+    $ python -m pip install beautifulsoup4
+
+    $ python -m pip install validators
+
+    $ python -m pip install redis
 ```
 
 <h1>Commands:</h1>

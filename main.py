@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from syntax.lexer import Lexer 
 from syntax.parser import Parser 
 from syntax.interpreter import Interpreter

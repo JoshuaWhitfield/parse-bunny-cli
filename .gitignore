@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+.venv/
+parse-bunny/
+
+# VS Code
+.vscode/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Redis dumps (if used)
+dump.rdb
+
+# Configs and secrets
+config.json

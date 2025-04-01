@@ -14,9 +14,11 @@ class WebCrawler:
         self.visited_links = set()
         self.body = {}
 
-    def get_body(self):
-        serializable_body = {key: str(value) for key, value in self.body.items()}
-        return serializable_body
+    def get_body(self, is_serializable = True):
+        if is_serializable:
+            serializable_body = {key: str(value) for key, value in self.body.items()}
+            return serializable_body
+        return self.body()
 
 
     def store_in_redis(self, command, url, content):
@@ -69,6 +71,7 @@ class WebCrawler:
             content = self.extract_content_with_keywords(soup)
             if content:
                 # self.store_in_redis(command, link, content)
+                print(f"[+] Adding content from url {link}")
                 self.body[link] = content
 
             # Continue crawling if below depth limit and content was found
