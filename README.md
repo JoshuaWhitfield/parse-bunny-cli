@@ -5,7 +5,7 @@ This is a data collection cli for AI model training and development
 <p>clone the repository and download the following dependencies:</p>
 
 ```bash
-    # $ clone the repository
+    $ git clone https://github.com/JoshuaWhitfield/parse-bunny-cli.git
 
     $ python3 -m venv parse-bunny
 
