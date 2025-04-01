@@ -17,7 +17,7 @@ class Usage:
     def display(self, usage_object):
         # Fixing the join() issue for usage_array
         print("COMMAND: " + usage_object.get_name().upper())
-        print("  " + "\n ".join(usage_object.get_usage_array()))  # Correct usage of join
+        print(" " + "\n ".join(usage_object.get_usage_array()))  # Correct usage of join
         print(" desc: " + usage_object.get_description())
         print(" long: " + usage_object.get_long())
         if usage_object.get_short() != "":
@@ -28,6 +28,6 @@ class Usage:
 usage = Usage()
 
 usage.add_usage("clear", [" clear ", " cls "], "this command clears the terminal.", " clear ", " cls ")
-usage.add_usage("data", [" data collect['<string_keyword>', ...] ", " data collect['<string_keyword>', ...] -parse['/full/path/to/parser']", "data -collect['<keywords>'] -parse[]"], "this command can collect and parse information based on a template. by ommitting the path from the -parse flag, you use the built in parser.", " data ", "")
+usage.add_usage("data", [" data collect['<string_keyword>', ...] ", " data collect['<string_keyword>', ...] -parse['/full/path/to/parser'] ", " data -collect['<keywords>'] -parse[] "], "this command can collect and parse information for AI model training. by ommitting the path from the -parse flag, you use the built in parser.", " data ", "")
 usage.add_usage("db", [" db -show <table_name> "], "this command displays the contents stored in the database powered by Memurai.", "db", "")
 # Test displaying usage

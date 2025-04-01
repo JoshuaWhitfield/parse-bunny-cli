@@ -5,7 +5,8 @@ class Interface:
     
     def __init__(self):
         self.parser = Parser() 
-        self.lexer = Lexer() 
+        self.lexer = Lexer()
+        self.process = True 
     
     def get_parser(self):
         return self.parser
@@ -30,3 +31,11 @@ class Interface:
                 continue 
         return flag_contents
 
+    def process_is_running(self):
+        return self.process 
+    
+    def end_process(self):
+        self.process = False
+        return self.process
+
+interface = Interface()

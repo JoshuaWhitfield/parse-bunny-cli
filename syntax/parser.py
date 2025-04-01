@@ -1,7 +1,7 @@
 from dependencies.master import MasterDep as Util
 from dependencies.callback import Callback
-from syntax.ParserTypes import ParserTypes
-from syntax.TokenTypes import TokenTypes
+from syntax.types.ParserTypes import ParserTypes
+from syntax.types.TokenTypes import TokenTypes
 
 util = Util()
 _callback = Callback()

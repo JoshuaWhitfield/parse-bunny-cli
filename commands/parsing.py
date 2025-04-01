@@ -2,8 +2,8 @@ import os
 from commands.command import command
 from dependencies.callback import Callback 
 from internal.usage import usage
-from syntax.interface import Interface
-from syntax.TokenTypes import TokenTypes
+from syntax.interface import interface
+from syntax.types.TokenTypes import TokenTypes
 from dependencies.master import MasterDep
 from internal.web_crawler import WebCrawler
 import importlib
@@ -19,16 +19,8 @@ def load_config():
 env_config = load_config()
 
 _callback = Callback()
-interface = Interface()
 TT = TokenTypes()
 util = MasterDep()
-
-def clear(PARAMS):
-    os.system('cls' if os.name == 'nt' else 'clear')
-    return _callback.catch("", True)
-command.add_func('clear', clear)
-command.add_func('cls', clear)
-
 
 def run_external_parser(parser_path, data):
     # Attempt to load the module from the given file location

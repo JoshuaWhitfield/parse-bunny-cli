@@ -1,4 +1,4 @@
-from syntax.ParserTokens import ParserToken as PToken
+from syntax.tokens.ParserTokens import ParserToken as PToken
 
 class ParserTypes:
     

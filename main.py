@@ -4,13 +4,15 @@ from syntax.lexer import Lexer
 from syntax.parser import Parser 
 from syntax.interpreter import Interpreter
 from syntax.prompt import Prompt 
+from syntax.interface import interface
 
 lexer = Lexer()
 parser = Parser()
 interp = Interpreter()
 prompt = Prompt()
 
-while True:
+
+while interface.process_is_running():
     inputs = prompt.get_input().split(";")
 
     for input in inputs:

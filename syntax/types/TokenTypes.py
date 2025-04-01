@@ -1,4 +1,4 @@
-from syntax.token import Token 
+from syntax.tokens.LexerTokens import Token 
 
 class TokenTypes:
     
@@ -11,7 +11,7 @@ class TokenTypes:
     def Flag(self, value = None):
         return Token("FLAG", value)
     
-    def GlobalFlag(self, value = None):
+    def GlobalFlag(self, valuqe = None):
         return Token("GLOBALFLAG", value)
     
     def Macro(self, value = None):

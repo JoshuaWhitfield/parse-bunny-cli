@@ -1,13 +1,22 @@
 import os
 from environments.piping import Pipe
 from dependencies.callback import Callback
+from commands.interface import CommandInterface
 
 pipe = Pipe()
 _callback = Callback()
+CI = CommandInterface()
 
 class Command:
     def __init__(self):
         self.body = {}
+        self.interface = CommandInterface()
+
+    def get_body(self): 
+        return self.body 
+    
+    def set_body(self, new_body):
+        self.body = new_body
 
     def add_func(self, cmd_name, func_body):
         self.body[cmd_name] = func_body
@@ -35,9 +44,5 @@ class Command:
 
 command = Command()
 
-def grab(PARAMS):
-    def init():
-        if not len(PARAMS):
-            return 
 
 

@@ -1,5 +1,5 @@
 import re
-from syntax.TokenTypes import TokenTypes
+from syntax.types.TokenTypes import TokenTypes
 
 TT = TokenTypes()
 

@@ -6,7 +6,7 @@ class Pipe:
         return self.body 
     
     def set_body(self, new_body):
-        self.body = new_body 
+        self.body = new_body
         return self.body
     
     def add_data(self, new_data):

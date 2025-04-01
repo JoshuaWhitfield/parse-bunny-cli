@@ -76,5 +76,5 @@ the run_parser function should always take in one parameter which is a string an
 <h4>description</h4>
 <p>displays previous command, and is ready for execution.</p>
 
-<h3>press CTRL + C to exit<h3>
+<h4>press CTRL + C to or type 'exit' to end process<h4>
 

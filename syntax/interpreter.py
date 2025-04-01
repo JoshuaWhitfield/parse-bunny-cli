@@ -1,9 +1,13 @@
-from commands.parsing import command
+from commands.parsing import command as command_one
+from commands.base import command as command_two
+from commands.command import command
 from environments.piping import Pipe
-from syntax.TokenTypes import TokenTypes
-
+from syntax.types.TokenTypes import TokenTypes
 pipe = Pipe()
 TT = TokenTypes()
+
+merged_body = {**command_one.get_body(), **command_two.get_body()}
+command.set_body(merged_body)
 
 class Interpreter:
     def __init__(self):

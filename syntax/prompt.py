@@ -1,7 +1,7 @@
 class Prompt:
     def __init__(self):
-        self.message = "\n(parse)-•-(bunny)$> "  # The prompt message
-    
+        self.message = "\n(parse)-•-(bunny)$> "  # The prompt message 
+
     def get_message(self):
         """Returns the current message."""
         return self.message
