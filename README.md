@@ -31,10 +31,11 @@ This is a data collection cli for AI model training and development
 
 ```bash 
    $ data <url> -collect["king", "lebron", "james"]
+   $ data <url> -collect["lebron"] -parse["/path/to/your/parser/module"]
    $ data <url> -collect["lebron"] -parse[]
 ```
 
-<h4>description</h4>
+<h4>description:</h4>
 <p>visits a url and scrapes every element that contains a keyword. 
 when ommitting keywords from the `-collect` flag, all content is scraped. when ommitting the path from the `-parse` flag, the built in parser is used. any custom parsers must contain the following function: 
 </p>
