@@ -7,17 +7,21 @@ This is a data collection cli for AI model training and development
 ```bash
     # $ clone the repository
 
-    $ python -m venv parse-bunny
+    $ python3 -m venv parse-bunny
 
     $ parse-bunny\Scripts\activate
 
-    $ python -m pip install requests
+    $ python3 -m pip install requests
 
-    $ python -m pip install beautifulsoup4
+    $ python3 -m pip install beautifulsoup4
 
-    $ python -m pip install validators
+    $ python3 -m pip install validators
 
-    $ python -m pip install redis
+    $ python3 -m pip install redis
+
+    # in the ./parse-bunny-cli/ directory, run:
+    $ python3 main.py
+    # to run the cli
 ```
 
 <h1>Commands:</h1>
