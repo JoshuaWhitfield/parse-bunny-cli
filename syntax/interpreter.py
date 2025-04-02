@@ -3,6 +3,7 @@ from commands.base import command as command_two
 from commands.command import command
 from environments.piping import Pipe
 from syntax.types.TokenTypes import TokenTypes
+
 pipe = Pipe()
 TT = TokenTypes()
 

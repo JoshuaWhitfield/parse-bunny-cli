@@ -1,15 +1,15 @@
-import os
-from commands.command import command
-from dependencies.callback import Callback 
-from internal.usage import usage
-from syntax.interface import interface
-from syntax.types.TokenTypes import TokenTypes
-from dependencies.master import MasterDep
-from internal.web_crawler import WebCrawler
 import importlib
 import importlib.util
-
 import json
+import os
+from commands.command import command
+from internal.web_crawler import WebCrawler
+from internal.usage import usage
+from dependencies.callback import Callback 
+from dependencies.master import MasterDep
+from syntax.types.TokenTypes import TokenTypes
+from syntax.interface import interface
+
 
 def load_config():
     with open('config.json', 'r') as file:
@@ -38,7 +38,7 @@ def run_external_parser(parser_path, data):
 
 
 def data(PARAMS):
-    config = {"collect": False, "parse": False, "url": False, "parser_path": None}
+    config = {"collect": False, "parse": False}
     collect = {"search_engine": False}
     search_engine_keywords = []
     
@@ -57,14 +57,12 @@ def data(PARAMS):
                     search_engine_keywords.append(token.get_value())
 
             if util.indexOf(["parse", "p"], cleaned_token_value) > -1:
-                config["parse"] = True
+                config["parse"] = ".\\external\\parser_template_one.py"
                 parser_info = next((p for p in PARAMS[PARAMS.index(flag_token) + 1:] if p.type != TT.Flag()), None)
                 if parser_info:
                     flag_contents = interface.extract_flags(PARAMS[util.indexOf(PARAMS, flag_token):])
-                    if not len(flag_contents):
-                        config["parser_path"] = ".\\external\\parser_template_one.py"
-                    else:
-                        config["parser_path"] = flag_contents[0].get_value()
+                    if len(flag_contents):
+                        config["parse"] = flag_contents[0].get_value()
 
                     
                 else:
@@ -89,9 +87,10 @@ def data(PARAMS):
         web_crawler.start_crawl_from_keywords()
         crawler_output = web_crawler.get_body()  # Assuming get_body() returns the data you want to process
         # Check if a parser is specified and if so, process the crawler output with it
-        if config["parser_path"]:
-            for link in crawler_output.values():
-                parser_output = run_external_parser(config["parser_path"], link)
+        if config["parse"]:
+            for output in crawler_output.values():
+                print(f"[+] Running Parser on output of length ({len(output)})")
+                parser_output = run_external_parser(config["parse"], output)
                 print("\n\nParser Output:", parser_output)
         else:
             print("\n\nCrawler Output:", crawler_output)

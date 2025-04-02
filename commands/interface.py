@@ -1,4 +1,7 @@
 from environments.piping import Pipe
+from dependencies.master import MasterDep
+
+util = MasterDep()
 
 class CommandInterface:
     def __init__(self):
@@ -23,3 +26,5 @@ class CommandInterface:
         self.pipe.remove_index(index)
         return True
     
+    
+interface = CommandInterface()
