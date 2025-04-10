@@ -50,7 +50,7 @@ class Parser:
                 return consumed
             if re.search(r"\>|\'", consumed) or re.search(r'\"', consumed) or re.search(r'\.', consumed):
                 output = ""
-                while self.get_current() and (not re.search(r"\'|\>", self.get_current()) or not re.search(r'\"', self.get_current() or not re.search(r'\.', consumed))):
+                while self.get_current() and (not re.search(r"\'|\<", self.get_current()) or not re.search(r'\"', self.get_current() or not re.search(r'\.', consumed))):
                     output += self.consume()
                 self.add_output(output)
                 return self.parse()
