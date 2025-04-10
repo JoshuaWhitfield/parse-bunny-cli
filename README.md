@@ -33,7 +33,7 @@ This is a data collection cli for AI model training and development
 <h3>reset</h3>
 <h4>description:</h4>
 <p>this clears the content output of the 'data' command found in the output folder.</p>
-
+<br />
 <h3>data</h3>
 <h4>usage:</h4>
 
