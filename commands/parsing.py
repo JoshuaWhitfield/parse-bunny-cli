@@ -631,7 +631,42 @@ REDACT_PATTERNS = {
     "ip": r"\b(?:\d{1,3}\.){3}\d{1,3}\b"
 }
 
-def run_redact(PARAMS):
+def deepseek_redact(text, matches):
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        print("[redact][x]: missing OPENAI_API_KEY")
+        print("please visit platform.deepseek.com/api_keys and create an api key")
+        print("then copy it, and run in terminal:")
+        print("> $env:OPENAI_API_KEY = 'YOUR_API_KEY'")
+        return text
+
+    prompt = (
+        f"Redact all personal {", ".join(matches)}, and sensitive legal identifiers from this text."
+        " Return the redacted text with '[REDACTED]' in place of any sensitive info.\n\nText:\n" + text
+    )
+
+    response = requests.post(
+        "https://api.deepseek.com/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": "deepseek-chat",
+            "messages": [
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": 0.2
+        }
+    )
+
+    if response.status_code == 200:
+        return response.json()["choices"][0]["message"]["content"].strip()
+    else:
+        print(f"[redact][x]: API error {response.status_code}")
+        return text
+
+def redact(PARAMS):
     config = {
         "files": [],
         "tags": []
@@ -652,7 +687,7 @@ def run_redact(PARAMS):
                 val = token.get_value()
                 p = Path(val)
                 if p.is_dir():
-                    config["files"] += [str(f) for f in p.glob("*.txt") if f.is_file()]
+                    config["files"] += [str(f) for f in p.rglob("*.txt") if f.is_file()]
                 elif "*" in val:
                     config["files"] += [f for f in glob(val, recursive=True) if Path(f).is_file()]
                 elif p.is_file():
@@ -661,8 +696,8 @@ def run_redact(PARAMS):
         elif cleaned == "tags":
             config["tags"] += [token.get_value().lower() for token in flag_contents]
 
-    if not config["files"] or not config["tags"]:
-        print("[redact][x]: provide -files[...] and -tags[...]")
+    if not config["files"]:
+        print("[redact][x]: no files provided")
         return _callback.catch("", False)
 
     output_dir = Path("data/redacted")
@@ -671,14 +706,10 @@ def run_redact(PARAMS):
     for file_path in config["files"]:
         try:
             text = Path(file_path).read_text(encoding="utf-8")
-            original_text = text
-            for tag in config["tags"]:
-                pattern = REDACT_PATTERNS.get(tag)
-                if pattern:
-                    text = re.sub(pattern, "[REDACTED]", text, flags=re.IGNORECASE)
-            
+            redacted = deepseek_redact(text, config["tags"])
+
             out_path = output_dir / Path(file_path).name
-            out_path.write_text(text, encoding="utf-8")
+            out_path.write_text(redacted, encoding="utf-8")
 
             print(f"[redact][✓]: {Path(file_path).name} → {out_path.name}")
 
@@ -687,7 +718,7 @@ def run_redact(PARAMS):
 
     return _callback.catch("", True)
 
-command.add_func("redact", run_redact)
+command.add_func("redact", redact)
 
 def run_highlight(PARAMS):
     # Handles: parse highlight -entities["person", "org"]
