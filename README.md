@@ -1,3 +1,4 @@
+
 # parse-bunny-cli
 This is a data parsing and redaction CLI for AI model training, legal document analysis, and sensitive data workflows.
 
@@ -122,3 +123,17 @@ $ redact -files["/data/ingested/*.txt"]
 
 <h4>Exit the CLI:</h4>
 <p>Press <code>CTRL + C</code> or type <code>exit</code>.</p>
+
+<h1>Legal and Data Handling Clauses</h1>
+
+### 1. **User Responsibility for Data**  
+By using **Parse Bunny CLI**, the user acknowledges and agrees that they are solely responsible for handling and securing any data processed through the tool. **Parse Bunny CLI** does not store, access, or retain any user data unless explicitly required for specific operations, such as temporary processing or logging. The user must ensure that any data processed is handled in compliance with relevant data protection laws and regulations.
+
+### 2. **Data Processing Disclaimer**  
+**Parse Bunny CLI** processes user data **on behalf of the user**. The tool does not retain or store any user data after the processing is complete, unless explicitly required for operational reasons (e.g., temporary file storage, logging). Users must ensure that they manage, process, and delete any data according to their own legal and regulatory obligations.
+
+### 4. **User Privacy and Confidentiality**  
+While **Parse Bunny CLI** does not store or access user data, we take necessary steps to ensure that data processed within the tool is handled with the highest level of confidentiality. Any temporary files or data handled by the tool are secured during processing using encryption. The user agrees to manage any data confidentiality concerns within their own operational environments.
+
+### 7. **Limitation of Liability**  
+**Parse Bunny CLI** is provided as-is, and the user acknowledges that they are solely responsible for the legal and regulatory compliance of their data. The developers of **Parse Bunny CLI** are not liable for any failure to comply with data protection laws, mismanagement of data, or security breaches arising from the user's handling of data. By using this tool, the user agrees to indemnify the developers from any legal actions or claims related to the use of the software.
