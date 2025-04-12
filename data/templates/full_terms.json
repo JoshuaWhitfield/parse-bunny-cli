@@ -1,0 +1,252 @@
+[
+  {
+    "key": "confidentiality",
+    "pattern": "\\b(confidential(ity)?|non-disclosure|keep\\s+secret|shall\\s+not\\s+disclose)\\b",
+    "description": "Confidentiality clauses restricting disclosure of information."
+  },
+  {
+    "key": "non_disclosure",
+    "pattern": "\\b(non-disclosure|NDA|shall\\s+not\\s+disclose)\\b",
+    "description": "Explicit non-disclosure agreement terms."
+  },
+  {
+    "key": "scope_of_services",
+    "pattern": "\\b(scope\\s+of\\s+services|services\\s+to\\s+be\\s+provided|engagement\\s+includes)\\b",
+    "description": "Defines what services are included."
+  },
+  {
+    "key": "deliverables",
+    "pattern": "\\b(deliverables|work\\s+product|outputs\\s+to\\s+be\\s+delivered)\\b",
+    "description": "Specifies required outcomes or documents."
+  },
+  {
+    "key": "use_of_information",
+    "pattern": "\\b(use\\s+of\\s+information|permitted\\s+use|authorized\\s+use)\\b",
+    "description": "Permitted use of shared data or knowledge."
+  },
+  {
+    "key": "license_grant",
+    "pattern": "\\b(grant\\s+of\\s+license|license\\s+to\\s+use|licensed\\s+rights)\\b",
+    "description": "Specifies what license is granted."
+  },
+  {
+    "key": "intellectual_property",
+    "pattern": "\\b(intellectual\\s+property|IP\\s+rights|ownership|retain\\s+rights)\\b",
+    "description": "Ownership and usage of intellectual property."
+  },
+  {
+    "key": "work_product",
+    "pattern": "\\b(work\\s+product|developed\\s+materials|created\\s+deliverables)\\b",
+    "description": "Defines who owns the output."
+  },
+  {
+    "key": "data_protection",
+    "pattern": "\\b(data\\s+protection|secure\\s+storage|GDPR|privacy\\s+policy)\\b",
+    "description": "Obligations to protect data."
+  },
+  {
+    "key": "privacy_compliance",
+    "pattern": "\\b(privacy\\s+compliance|HIPAA|CCPA|data\\s+privacy\\s+law)\\b",
+    "description": "Mentions of compliance with privacy regulations."
+  },
+  {
+    "key": "payment_terms",
+    "pattern": "\\b(payment\\s+terms|due\\s+within|net\\s+\\d+|invoice|compensation)\\b",
+    "description": "Details on how and when payments are made."
+  },
+  {
+    "key": "compensation",
+    "pattern": "\\b(compensation|salary|fee\\s+structure|remuneration)\\b",
+    "description": "Compensation amounts and structure."
+  },
+  {
+    "key": "fees",
+    "pattern": "\\b(fees|charges|billing\\s+rates|service\\s+fees)\\b",
+    "description": "Fee schedule and amounts."
+  },
+  {
+    "key": "invoicing",
+    "pattern": "\\b(invoice|billing|payment\\s+requests|submit\\s+invoices)\\b",
+    "description": "Invoicing procedures."
+  },
+  {
+    "key": "taxes",
+    "pattern": "\\b(taxes|tax\\s+liability|withholding|VAT)\\b",
+    "description": "Tax responsibilities and terms."
+  },
+  {
+    "key": "late_fees",
+    "pattern": "\\b(late\\s+fee|penalty\\s+for\\s+late\\s+payment|interest\\s+on\\s+overdue)\\b",
+    "description": "Fees for missed payment deadlines."
+  },
+  {
+    "key": "cost_reimbursement",
+    "pattern": "\\b(cost\\s+reimbursement|expenses\\s+incurred|reimbursable\\s+costs)\\b",
+    "description": "Reimbursement of costs clause."
+  },
+  {
+    "key": "refund_policy",
+    "pattern": "\\b(refund\\s+policy|return\\s+of\\s+funds|refund\\s+upon\\s+termination)\\b",
+    "description": "Conditions under which funds are returned."
+  },
+  {
+    "key": "expenses",
+    "pattern": "\\b(expenses|out-of-pocket|travel\\s+costs|approved\\s+expenses)\\b",
+    "description": "Expense coverage responsibilities."
+  },
+  {
+    "key": "royalties",
+    "pattern": "\\b(royalties|royalty\\s+payments|licensing\\s+fees)\\b",
+    "description": "Payment terms tied to usage/licensing."
+  },
+  {
+    "key": "term",
+    "pattern": "\\b(term|duration|effective\\s+date|valid\\s+until|commencement\\s+date)\\b.*?(until|expires|termination|period)",
+    "description": "Start and end duration of the agreement."
+  },
+  {
+    "key": "termination",
+    "pattern": "\\b(termination|terminate|may\\s+be\\s+terminated|cancel\\s+the\\s+agreement)\\b",
+    "description": "Termination rights and timelines."
+  },
+  {
+    "key": "renewal",
+    "pattern": "\\b(renewal|renew\\s+automatically|extend\\s+agreement)\\b",
+    "description": "Renewal terms and notices."
+  },
+  {
+    "key": "auto_renewal",
+    "pattern": "\\b(auto\\s+renew(al)?|renews\\s+unless|automatically\\s+renews)\\b",
+    "description": "Automatically renewing terms."
+  },
+  {
+    "key": "notice_period",
+    "pattern": "\\b(notice\\s+period|prior\\s+notice|required|x\\s+days\\s+notice)\\b",
+    "description": "Required notice time before change/termination."
+  },
+  {
+    "key": "cancellation_clause",
+    "pattern": "\\b(cancellation\\s+clause|cancel\\s+contract|terminate\\s+without\\s+cause)\\b",
+    "description": "Right to cancel without fault."
+  },
+  {
+    "key": "governing_law",
+    "pattern": "\\b(governing\\s+law|under\\s+the\\s+laws\\s+of)\\s+(the\\s+State|jurisdiction)\\b",
+    "description": "Which law governs the contract."
+  },
+  {
+    "key": "jurisdiction",
+    "pattern": "\\b(jurisdiction|venue|exclusive\\s+jurisdiction|court\\s+location)\\b",
+    "description": "Where legal matters will be settled."
+  },
+  {
+    "key": "dispute_resolution",
+    "pattern": "\\b(dispute\\s+resolution|arbitration|mediate|resolve\\s+disputes)\\b",
+    "description": "Methods of resolving disagreements."
+  },
+  {
+    "key": "arbitration",
+    "pattern": "\\b(arbitration|arbitrator|binding\\s+decision|AAA)\\b",
+    "description": "Arbitration terms and methods."
+  },
+  {
+    "key": "injunctive_relief",
+    "pattern": "\\b(injunctive\\s+relief|equitable\\s+relief|irreparable\\s+harm)\\b",
+    "description": "Right to prevent harm via court order."
+  },
+  {
+    "key": "force_majeure",
+    "pattern": "\\b(force\\s+majeure|acts\\s+of\\s+god|unforeseen\\s+events)\\b",
+    "description": "Unexpected events that excuse obligation."
+  },
+  {
+    "key": "compliance_with_law",
+    "pattern": "\\b(comply\\s+with\\s+laws|legal\\s+compliance|applicable\\s+law)\\b",
+    "description": "Obligation to follow applicable laws."
+  },
+  {
+    "key": "anti_corruption",
+    "pattern": "\\b(anti[-\\s]?corruption|FCPA|bribery\\s+laws)\\b",
+    "description": "Adherence to anti-corruption laws."
+  },
+  {
+    "key": "regulatory_compliance",
+    "pattern": "\\b(regulatory\\s+compliance|subject\\s+to\\s+regulations)\\b",
+    "description": "Complying with specific regulations."
+  },
+  {
+    "key": "export_control",
+    "pattern": "\\b(export\\s+control|ITAR|restricted\\s+technology)\\b",
+    "description": "Clauses around global technology transfer."
+  },
+  {
+    "key": "indemnity",
+    "pattern": "\\b(indemnif(y|ication)|hold\\s+harmless|liability\\s+for\\s+damages)\\b",
+    "description": "Protection from damages caused by the other party."
+  },
+  {
+    "key": "limitation_of_liability",
+    "pattern": "\\b(limit(ed)?\\s+liability|cap\\s+on\\s+damages|max(imum)?\\s+liability)\\b",
+    "description": "Financial caps on responsibility."
+  },
+  {
+    "key": "warranty",
+    "pattern": "\\b(warranty|warranties|represent(ation)?|guarantee)\\b",
+    "description": "Product or service guarantees."
+  },
+  {
+    "key": "disclaimer_of_warranty",
+    "pattern": "\\b(as\\s+is|no\\s+warranty|disclaims\\s+all\\s+warranties)\\b",
+    "description": "Limitations on guarantees."
+  },
+  {
+    "key": "insurance",
+    "pattern": "\\b(insurance|coverage\\s+limits|insured\\s+party)\\b",
+    "description": "Required insurance for risk management."
+  },
+  {
+    "key": "risk_of_loss",
+    "pattern": "\\b(risk\\s+of\\s+loss|damage\\s+to\\s+goods|responsibility\\s+for\\s+loss)\\b",
+    "description": "Who bears risk of damage."
+  },
+  {
+    "key": "security",
+    "pattern": "\\b(security\\s+measures|cybersecurity|secure\\s+access|controls)\\b",
+    "description": "Security protocols and controls."
+  },
+  {
+    "key": "assignment",
+    "pattern": "\\b(assign(ment)?|transfer\\s+rights|delegate\\s+obligations)\\b",
+    "description": "Can the contract be transferred?"
+  },
+  {
+    "key": "subcontracting",
+    "pattern": "\\b(subcontracting|outsourcing|third\\s+party\\s+providers)\\b",
+    "description": "Work passed to another vendor."
+  },
+  {
+    "key": "non_solicitation",
+    "pattern": "\\b(non-solicit|solicit\\s+employees|recruit\\s+restriction)\\b",
+    "description": "Restricting party from poaching staff."
+  },
+  {
+    "key": "non_compete",
+    "pattern": "\\b(non-competition|non-compete|restrict\\s+employment|competitive\\s+activities)\\b",
+    "description": "Post-termination competition rules."
+  },
+  {
+    "key": "exclusivity",
+    "pattern": "\\b(exclusivity|sole\\s+provider|exclusive\\s+right)\\b",
+    "description": "One party gets exclusive rights."
+  },
+  {
+    "key": "independent_contractor",
+    "pattern": "\\b(independent\\s+contractor|not\\s+an\\s+employee|self-employed)\\b",
+    "description": "Defines relationship, avoids employment status."
+  },
+  {
+    "key": "entire_agreement",
+    "pattern": "\\b(entire\\s+agreement|whole\\s+agreement|supersedes\\s+prior)\\b",
+    "description": "No other promises outside the contract."
+  }
+]

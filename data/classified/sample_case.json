@@ -1,0 +1,14 @@
+[
+  {
+    "file": "sample_contract_e0fa0f67.txt",
+    "label": "contract",
+    "confidence": 0.95,
+    "model": "deepseek"
+  },
+  {
+    "file": "sample_case_5c735237.txt",
+    "label": "legal_notice",
+    "confidence": 0.95,
+    "model": "deepseek"
+  }
+]
