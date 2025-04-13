@@ -6,6 +6,7 @@ __pycache__/
 dist/
 build/
 .venv/
+venv/
 parse-bunny/
 
 # VS Code
@@ -16,7 +17,8 @@ parse-bunny/
 Thumbs.db
 
 # Redis dumps (if used)
-dump.rdb
+dump.rdb1   `QAZDXC`
 
-# Configs and secrets
-config.json
+api_key.txt
+create_template.py
+GOALS

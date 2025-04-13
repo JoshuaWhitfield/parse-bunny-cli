@@ -13,6 +13,7 @@ $ python3 -m venv parse-bunny
 $ parse-bunny\Scripts\activate  # (or `source parse-bunny/bin/activate` on Unix)
 
 $ python3 -m pip install -r requirements.txt
+$ python3 -m pip install PyPDF2 python-docx
 
 # Then run the CLI
 $ python3 main.py
