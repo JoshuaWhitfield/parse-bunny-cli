@@ -1,0 +1,61 @@
+Here is the redacted text with personal and sensitive information replaced with `[REDACTED]`:
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+Your application was sent to [REDACTED]  
+----------------------------------------------------------------  
+Software Engineer  
+[REDACTED]  
+[REDACTED]  
+Applied: [REDACTED]  
+View job: [REDACTED]  
+
+----------------------------------------------------------------  
+View similar jobs you may be interested in  
+----------------------------------------------------------------  
+Backend Developer (Entry Level)  
+[REDACTED]  
+[REDACTED]  
+View job: [REDACTED]  
+
+Junior React Developer  
+[REDACTED]  
+[REDACTED]  
+View job: [REDACTED]  
+
+Test Engineer (Entry Level)  
+[REDACTED]  
+[REDACTED]  
+View job: [REDACTED]  
+
+See more: [REDACTED]  
+
+.....................................  
+
+Change frequency: [REDACTED]  
+
+Unsubscribe: [REDACTED]  
+
+Help: [REDACTED]  
+
+You are receiving LinkedIn notification emails.  
+
+This email was intended for [REDACTED].  
+Learn why we included this: [REDACTED]  
+
+© [REDACTED] LinkedIn Corporation, [REDACTED]. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.  
+
+---
+
+### Redactions made:  
+- File paths, timestamps, and unique identifiers  
+- Personal names (e.g., "Joshua Whitfield")  
+- Email addresses and LinkedIn tracking links  
+- Geographic details tied to individuals  
+- Legal disclaimers containing addresses  
+- Job application links with tracking parameters  
+
+Let me know if you'd like further adjustments!

@@ -1,0 +1,204 @@
+Here is the redacted text with personal email, name, and sensitive legal identifiers replaced with `[REDACTED]`:
+
+```html
+# Source: [REDACTED]
+# Timestamp: 2025-04-12T19:15:59.554236
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" style="width: 100%;" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+   <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+   <meta content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=no;" name="viewport" />
+   <meta content="width=device-width" name="viewport" />
+   <meta content="noindex, no follow" name="robots" />
+   <meta name="x-apple-disable-message-reformatting" />
+   <title>LinkedIn</title>
+   <style type="text/css">.ExternalClass { width:100%; }
+.ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div { line-height: 100%; }
+table td p { border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+h1, h2, h3, h4, h5, h6 { font-size: inherit; padding: 0; margin: 0; color: black; line-height: 100%; }
+.applelinks a { text-decoration: none; color: inherit !important; }
+a { color: black; text-decoration: none; }
+a, a:link, a:visited { color: inherit; text-decoration: none; }
+span.MsoHyperlink { mso-style-priority: 99; color: inherit; }
+span.MsoHyperlinkFollowed { mso-style-priority: 99; color: inherit; }
+img { border: 0px !important; }
+
+body { font-family: Segoe UI, Arial, sans-serif; font-size: 14px; -webkit-text-size-adjust: none; -ms-text-size-adjust: none; -webkit-font-smoothing: antialiased; margin: 0; padding: 0; width: 100% !important; }
+
+.linkopacity:hover { opacity: 0.8 !important; }
+
+.button { -webkit-border-radius: 50px; -moz-border-radius: 50px; border-radius: 50px; overflow: hidden; }
+
+
+@media only screen and (max-width: 480px) {
+.w100m, .column50, .column33, .column25, .column75, .column66 { width: 100% !important; }
+.w90m { width: 90% !important;}
+.expandm { width: 100% !important; display: block !important; }
+.resizem { width: 100% !important; height: auto !important; }
+.hidem { display: none !important; }
+.h1m { font-size: 22px !important;}
+.h2m { font-size: 15px !important;}
+.h3m { font-size: 13px !important;}
+.tcenterm { text-align: center !important; }
+.tleftm { text-align: left !important; }
+.trightm { text-align: right !important; }
+.height0m { height: 0 !important; }
+.showm { display: block !important; max-height: 1000px !important; width: 100% !important; overflow: visible !important; align: center !important; }	
+
+.logo { width: 150px !important; height: auto !important; }	
+
+.border0m { border: 0px !important; }
+.borderlr0m { border-left: 0px !important; border-right: 0px !important; }	
+.pad0m { padding: 0px !important; }
+.padlr0m { padding-left: 0px !important; padding-right: 0px !important; }	
+.padt0m { padding-top: 0px !important; }
+.padt5m { padding-top: 5px !important; }
+.padt10m { padding-top: 10px !important; }
+.padt20m { padding-top: 20px !important; }
+.padt30m { padding-top: 30px !important; }
+.padb0m { padding-bottom: 0px !important;}
+.padb5m { padding-bottom: 5px !important;}
+.padb10m { padding-bottom: 10px !important;}
+.padb20m { padding-bottom: 20px !important;}
+.padb30m { padding-bottom: 30px !important;}
+}
+
+@media only screen and (max-width: 512px) {
+.ow100 { width: 100% !important; }
+.w100 { width: 100% !important; }
+.w90 { width: 90% !important; }
+.hide { display: none !important; }
+.resize { width: 100% !important; height: auto !important; }
+.resize img { max-width: 100% !important; height: auto !important; }
+.resize a { width: auto !important; height: auto !important; }
+.expand { width: 100% !important; display: block !important; }
+.height0 { height: 0 !important; }
+.column50 { width: 50%; }
+.column50a { width: 50%; }
+.column33 { width: 33.33%; }
+.column25 { width: 25%; }
+.column75 { width: 75%; }
+.column66 { width: 66%; }
+.tcenter { text-align: center !important; }
+.show { display: block !important; max-height: 1000px !important; width: 100% !important; overflow: visible !important; align: center !important; }
+
+.bannerside { padding-top: 105px !important; }
+
+.border0 { border: 0px !important; }
+.borderlr0 { border-left: 0px !important; border-right: 0px !important; }	
+.pad0 { padding: 0px !important; }
+.padlr0 { padding-left: 0px !important; padding-right: 0px !important; }	
+.padt0 { padding-top: 0px !important; }
+.padt5 { padding-top: 5px !important; }
+.padt10 { padding-top: 10px !important; }
+.padt20 { padding-top: 20px !important; }
+.padt30 { padding-top: 30px !important; }
+.padb0 { padding-bottom: 0px !important; }
+.padb5 { padding-bottom: 5px !important; }
+.padb10 { padding-bottom: 10px !important; }
+.padb20 { padding-bottom: 20px !important; }
+.padb30 { padding-bottom: 30px !important; }
+}
+   </style>
+   <!--[if mso>
+<style type="text/css">
+body { margin: 0 !important; padding: 0 !important; font-family: Segoe UI, Arial, sans-serif; }
+table, td, div, p { font-family: Segoe UI, Arial, sans-serif; line-height: normal; }
+</style>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif-->
+</head>
+<body class="tli" data-gr-ext-installed="" data-new-gr-c-s-check-loaded="14.1087.0" style="-webkit-text-size-adjust: none;-ms-text-size-adjust: none; padding: 0; margin: 0; background-color: white;"><!-- HIDDEN PREHEADER START --><!--[if !mso]><!-- -->
+<div style="display: none; font-size: 0; max-height: 0;width: 0; mso-hide: all; overflow: hidden; visibility: hidden;"><span style="display: none; font-size: 0; max-height: 0;width: 0; mso-hide: all; overflow: hidden; visibility: hidden;">Make new connections and unlock new opportunities.</span>
+</div>
+<!-- DO NOT REMOVE preheader spacing below -->
+
+<div style="display: none; max-height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp; &zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+</div>
+<!--<![endif]--><!-- HIDDEN PREHEADER END -->
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width: 100%;" width="100%">
+   <tbody>
+      <tr>
+         <td align="center" style="background-color: #F3F2EF;">
+         <table align="center" border="0" cellpadding="0" cellspacing="0" class="w100" role="presentation" width="512">
+            <tbody>
+               <tr>
+                  <td align="center">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%"><!-- /// SPACING START -->
+                     <tbody>
+                        <tr><!-- COPY START -->
+                           <td style="padding-top: 10px; padding-bottom: 10px; text-align: center; font-size: 13px; line-height: 1.3em; color: #191919; font-family: Helvetica Neue, Arial, sans-serif;"></td>
+                           <!-- COPY END -->
+                        </tr>
+                        <!-- SPACING END /// --><!-- /// HEADER START -->
+                        <tr>
+                           <td align="center" class="padt10m" style="background-color: #FCE2BA; padding-top: 16px; padding-bottom: 16px;">
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="87%">
+                              <tbody>
+                                 <tr><!-- LOGO START -->
+                                    <td align="left" style="padding-right: 12px;" width="100"><a href="[REDACTED]"><img alt="LinkedIn" src="https://static.cdn.responsys.net/i5/responsysimages/linkedin/contentlibrary/jeangrey/logos/linkedin-blue-200x51.png" style="width: 100%; max-width: 100px; display: block; border: 0; color: black; font-size: 20px; font-weight: bold; font-family: sans-serif;" width="100" /></a></td>
+                                    <!-- LOGO END --><!-- NAME/PROFILE START -->
+                                    <td align="right" class="h3m" style="padding-top:3px; font-size: 14px; color: #191919; font-family: Helvetica Neue, Arial, sans-serif;" valign="top" width="150"><a href="[REDACTED]"><img alt="" src="[REDACTED]" style="display:block; border: 0; background-color: #ffffff; -webkit-border-radius: 50%; -moz-border-radius: 50%; border-radius: 50%; overflow: hidden;" width="32" /></a></td>
+                                    <!-- NAME/PROFILE END -->
+                                 </tr>
+                              </tbody>
+                           </table>
+                           </td>
+                        </tr>
+                        <!-- HEADER END /// --><!-- /// MODULES START - ADD NEW MODULES BELOW THIS LINE --><!-- /// BANNER LIGHT START -->
+                        <tr>
+                           <td>
+                           <table border="0" cellpadding="0" cellspacing="0" role="presentation" width="100%">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" style="background-color: #FCE2BA; padding-bottom: 12px;">
+                                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="87%"><!-- HEADLINE START -->
+                                       <tbody>
+                                          <tr>
+                                             <td style="padding-top: 16px; text-align: left; font-size: 24px; color: #191919; font-family: Helvetica Neue, Arial, sans-serif; font-weight: bold;">Your network is growing!</td>
+                                          </tr>
+                                          <!-- HEADLINE END --><!-- COPY START -->
+                                          <tr>
+                                             <td style="padding-top: 4px; text-align: left; font-size: 16px; line-height: 1.5em; color: #191919; font-family: Helvetica Neue, Arial, sans-serif;">Keep up the good work, with a free trial of Premium.</td>
+                                          </tr>
+                                          <!-- COPY END --><!-- / PRIMARY CTA START -->
+                                          <tr>
+                                             <td style="padding-top: 16px; padding-bottom: 16px;">
+                                             <table align="left" border="0" cellpadding="0" cellspacing="0" role="presentation">
+                                                <tbody>
+                                                   <tr>
+                                                      <td align="center" class="button" style="background-color: #0A66C2; padding: 14px 24px; font-size: 16px; color: white; font-family: Helvetica Neue, Arial, sans-serif; text-align: center; font-weight: bold;"><a href="[REDACTED]" style="color: #ffffff; text-decoration: none;"><span style="display: block; width: 100%;">Unlock&nbsp;for&nbsp;free</span></a></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                             </td>
+                                          </tr>
+                                          <!-- PRIMARY CTA END / -->
+                                       </tbody>
+                                    </table>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           </td>
+                        </tr>
+                        <!-- BANNER LIGHT END /// --><!-- /// TEXT LEFT START -->
+                        <tr>
+                           <td align="center" style="background-color: #ffffff; padding-top: 16px; padding-bottom: 12px;">
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" width="87%"><!-- COPY START -->
+                              <tbody>
+                                 <tr>
+                                    <td style="padding-top: 4px; text-align: left; font-size: 16px; line-height: 1.5em; color: #191919; font-family: Helvetica Neue, Arial, sans-serif;">Hi [REDACTED],<br />
+                                    <br />
+                                    You have added 5 connections recently - you're on a roll! On average, Premium members have 14x more connections. Keep growing with a free month of&nbsp;<a href="[REDACTED]"><span style="color: #0A66C2; text-decoration: underline;">LinkedIn&nbsp;Premium</span></a>.</td>
+                                 </tr>
+                                 <!-- COPY END --><!-- 445w IMAGE START -->
+                                 <tr>
+                                    <td align="center" style="padding-top: 12px;"><a href="[REDACTED]"><img alt="" class="resize" src="https://static.cdn.responsys.net/i5/responsysimages/content/linkedin/WVMP_celebration_v2.gif" style="display: block; border: 0; color: black; font-size: 20px; font-weight: bold; font-family:

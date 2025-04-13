@@ -1,0 +1,61 @@
+Here is the redacted text with personal and sensitive information replaced with `[REDACTED]`:
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+Your application was sent to [REDACTED]  
+----------------------------------------------------------------  
+Computer Science Course Designer, [REDACTED] (Remote) - $[REDACTED]/year USD  
+[REDACTED]  
+[REDACTED], [REDACTED]  
+Applied: [REDACTED]  
+View job: [REDACTED]  
+
+----------------------------------------------------------------  
+View similar jobs you may be interested in  
+----------------------------------------------------------------  
+Junior Software Engineer  
+[REDACTED]  
+[REDACTED], [REDACTED]  
+View job: [REDACTED]  
+
+Junior Python Developer  
+[REDACTED]  
+[REDACTED], [REDACTED]  
+View job: [REDACTED]  
+
+Junior Software Engineer  
+[REDACTED]  
+[REDACTED], [REDACTED]  
+View job: [REDACTED]  
+
+See more: [REDACTED]  
+
+.....................................  
+
+Change frequency: [REDACTED]  
+
+Unsubscribe: [REDACTED]  
+
+Help: [REDACTED]  
+
+You are receiving LinkedIn notification emails.  
+
+This email was intended for [REDACTED] ([REDACTED]).  
+Learn why we included this: [REDACTED]  
+
+© [REDACTED] LinkedIn Corporation, [REDACTED]. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.  
+
+---
+
+### Redactions Applied:  
+- **File paths, timestamps, and identifiers** (e.g., `D:\Development\...`, `b06dc1d07d...`)  
+- **Personal names** (e.g., "Joshua Whitfield")  
+- **Email addresses and LinkedIn tracking tokens** (e.g., `i0cakc%7Eloknk35q%7Ekb`)  
+- **Job application links** (to prevent tracking)  
+- **Specific salary figures** (e.g., "$100,000/year USD")  
+- **Physical addresses** (e.g., "1000 West Maude Avenue")  
+
+Let me know if you'd like further adjustments!

@@ -1,0 +1,33 @@
+Here is the redacted text with personal and sensitive information replaced with '[REDACTED]':
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+Hi [REDACTED],  
+
+Hooray! Your resume made it for the Staff Software Engineer - Compute Platform role!  
+
+In the spirit of transparency, a Fastly value, this is an automatic email, sent by a robot, to let you know that your resume made it across the internet and we’re absolutely thrilled that you would be interested in working at Fastly.  
+
+What’s Next?  
+
+Over the next several weeks (as our volume of applications has increased), our recruiting team will spend time reviewing your application. Because we're human and not as fast as our robot, this part can take a while. If we see skills and experience that match to our role, we'll reach out by email. If we don't, all is not lost. Your application will remain in our database, accessible by all of our recruiters, for at least one year. Not hearing from us about a specific role doesn't mean you won't hear from us in the future about something else.  
+
+Thanks again for your interest in working at Fastly!!  
+
+The Fastly Talent Acquisition Team  
+
+fastly.com ( https://fastly.com/ ) | @fastly ( https://twitter.com/fastly ) | LinkedIn ( https://www.linkedin.com/company/fastly/ ) | Instagram ( https://www.instagram.com/fastlyinc/ )  
+
+Fastly collects and processes personal data submitted by job applicants in accordance with our Privacy Policy ( https://www.fastly.com/privacy ). Please see our privacy notice for job applicants ( https://www.fastly.com/privacy-job-applicants ).  
+
+---
+
+### Redactions made:  
+- Removed the file path (`D:\Development\PY\CLI\parse-master-cli\core\downloads\98ae1759aa4926dde7e744d113a52d37.eml`)  
+- Removed the timestamp (`2025-04-12T19:16:01.286036`)  
+- Replaced the name "Joshua" with `[REDACTED]`  
+
+Let me know if you'd like any additional adjustments!

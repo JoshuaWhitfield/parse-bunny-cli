@@ -1,0 +1,4 @@
+{
+    "expiry": "2025-04-11",
+    "features": ["label", "redact", "extract", "ingest", "backup", "restore", "get"]
+}

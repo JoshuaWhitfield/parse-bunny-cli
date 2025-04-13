@@ -1,0 +1,187 @@
+Delivered-To: joshuawhitfield022@gmail.com
+Received: by 2002:a59:c946:0:b0:3fc:79f5:b92e with SMTP id k6csp261215vqt;
+        Wed, 1 Nov 2023 02:23:40 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFiGaL1ev3hKM1d6hKWjK2rsoJ2vh+oU6UjnCOcpfgpmKm1sjLodvjK+sxucq7FlBc0KUKX
+X-Received: by 2002:a05:6512:96e:b0:507:9a66:3577 with SMTP id v14-20020a056512096e00b005079a663577mr9370985lft.5.1698830620011;
+        Wed, 01 Nov 2023 02:23:40 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1698830619; cv=none;
+        d=google.com; s=arc-20160816;
+        b=yejCegaNb2b1fp2Fdr5Gnpyh9UQiokqlfMpzNHYxX/yF1PATcISgYzj4/rMXto20G2
+         C1423CrkLbVOsmhwXZj5i/46YHOe2aYt1Er99JFWYF4zB7ypjS7x1xBqouO5AaKDDBT6
+         K7PhjbYgbnuvv+xl0McUS52uuxWfwFKPWI0UygfJAlJOwxxwuRKs0i9zEYOfs2jNoOmE
+         WecotPKI3jwA/YWUaPtALbd2aXMluV73EoNGuJ4BwahfprBIWuB9nVm7hj/iXPlluo4G
+         +qkvHi5RrH85r9rHn4imX/m/7HgfGQodDSJA2y+yexpHG5mnaNX0aJyWqzRqUixGqtHO
+         5AhQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=sender:mime-version:reply-to:from:date:message-id:subject:to
+         :dkim-signature;
+        bh=QyK7tNz7OzRb4kWAyt8j6xWMmqiaILaINfXnoxVX0Gg=;
+        fh=oBPHf6BtJefJFfuSqiG3CJsVDBRnJAfTN0D084Tluv8=;
+        b=CyfgSnLQbIvDCC0RbHhkJUrepPeqChoBnodxPRP5HZyBiSYafsiWKhGCfove4PgA2c
+         gTkogeQgpYC82qNP+Hj31xsJvSamf6WsJIz8Pa2rKm1hcDeYhiLac1yWWKQehLuPu3Fi
+         O+IjOwTOClKPVuTlOHKkkDaFHSnw/qVuoqIxML1WyQpsTGQPw7rheYy3cZXlUMO2xKUV
+         EOrtCzh+35jtq+AFFSU+41uMCTDBWpvJ+BAWV16NprAJuNuZKpUOOnFNg0h7JsRf7xFj
+         EOJ9ELPQm/rKC1JkjacgPc3J9qpBd4WLk3N5je7YAmGLmzuqJhChOssq0VKFko07a232
+         zXvg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@a2hosting.com header.s=a2mxout header.b=MOEUP1ZI;
+       spf=pass (google.com: domain of support@a2hosting.com designates 68.66.238.15 as permitted sender) smtp.mailfrom=support@a2hosting.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=a2hosting.com
+Return-Path: <support@a2hosting.com>
+Received: from az1-mxout-01.a2hosting.com (az1-mxout-01.a2hosting.com. [68.66.238.15])
+        by mx.google.com with ESMTPS id p4-20020a05651212c400b00502a654e5c0si367793lfg.419.2023.11.01.02.23.39
+        for <joshuawhitfield022@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 01 Nov 2023 02:23:39 -0700 (PDT)
+Received-SPF: pass (google.com: domain of support@a2hosting.com designates 68.66.238.15 as permitted sender) client-ip=68.66.238.15;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@a2hosting.com header.s=a2mxout header.b=MOEUP1ZI;
+       spf=pass (google.com: domain of support@a2hosting.com designates 68.66.238.15 as permitted sender) smtp.mailfrom=support@a2hosting.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=a2hosting.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
+	d=a2hosting.com; s=a2mxout; h=Sender:Content-Type:MIME-Version:Reply-To:From:
+	Date:Message-ID:Subject:To:Cc:Content-Transfer-Encoding:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:In-Reply-To:References:List-Id:List-Help:List-Unsubscribe:
+	List-Subscribe:List-Post:List-Owner:List-Archive;
+	bh=QyK7tNz7OzRb4kWAyt8j6xWMmqiaILaINfXnoxVX0Gg=; b=MOEUP1ZIGUCCp1UgF+tijpWXWs
+	Is5G2GUzcqIto/yIM3qf3rEqJA/n+HoUnA4z1XpLpv10Yydf3zlqgF7uclrqauh35fHWZn4+0bnk0
+	cwqqhlQx3AX0Ar3RLt9qMwbs1evD8bZU2RFkspa20QYOkvb86lXXVU6cKi/4zYoreg0g=;
+To: joshuawhitfield022@gmail.com
+Subject: [SUPPORT #OXE-157-37866]: Client Side Routing Not Working
+X-PHP-Originating-Script: 1001:SimpleMailInvoker.php
+Message-ID: <3e789f51157da740ea4d0cc5b65bf2bb@support.a2hosting.com>
+Date: Wed, 01 Nov 2023 05:23:36 -0400
+From: A2 Hosting Support <support@a2hosting.com>
+Reply-To: support@a2hosting.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_v4_1698830616_be4199d7ed450ed102161fb7afff06ec_=_"
+X-Priority: 3 (Normal)
+Sender: support@a2hosting.com
+
+
+--_=_swift_v4_1698830616_be4199d7ed450ed102161fb7afff06ec_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+Hello,<br />
+<br />
+Thank you for contacting us. I understand how important your website is to =
+your business and appreciate your patience while we take care of this for y=
+ou.<br />
+<br />
+As part of the troubleshooting process, I was unable to replicate the issue=
+. It would be really helpful if you could provide me with the steps you too=
+k to replicate the issue from client side. Additionally, if you could share=
+ your login details with me, I can further investigate the problem.<br />
+<br />
+Please let us know if you have further questions or concerns. We are happy =
+to help!<br />
+<br />
+Regards,<br />
+
+Saritha R.
+Support Generalist
+A2 Hosting - Our Speed, Your Success!
+https://www.a2hosting.com/support
+
+
+Ticket Details
+----------------=
+-----------------
+Ticket ID: OXE-157-37866
+Department: Guru
+
+--_=_swift_v4_1698830616_be4199d7ed450ed102161fb7afff06ec_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<div>=3D=3D=3D=3D=3D=3D Please reply above this line =3D=3D=3D=3D=3D=3D<br =
+/><br />
+<strong>After reading this reply, please let us know if it was h=
+elpful by using the one-click rating at the bottom.</strong><br /><br />
+=
+<font face=3D"Verdana, Arial, Helvetica" size=3D"2">Hello,<br /><br />
+<br /><br />
+Thank you for contacting us. I understand how important your website is to =
+your business and appreciate your patience while we take care of this for y=
+ou.<br /><br />
+<br /><br />
+As part of the troubleshooting process, I was unable to replicate the issue=
+. It would be really helpful if you could provide me with the steps you too=
+k to replicate the issue from client side. Additionally, if you could share=
+ your login details with me, I can further investigate the problem.<br /><b=
+r />
+<br /><br />
+Please let us know if you have further questions or concerns. We are happy =
+to help!<br /><br />
+<br /><br />
+Regards,<br /><br />
+<br />
+Saritha R.<br />
+Support Generalist<br />
+A2 Hosting - Our Speed, Your Success!<br />
+<a href=3D"https://www.a2hosting.com/support" target=3D"_blank">https://www=
+.a2hosting.com/support</a>
+<br /><br />
+
+
+Ticket Details<br />
+<h=
+r style=3D"margin-bottom: 6px; height: 1px; BORDER: none; color: #cfcfcf; b=
+ackground-color: #cfcfcf;" />
+<b>Ticket ID: </b><a href=3D"https://my.a2h=
+osting.com/viewticket.php?_m=3Dtickets&_a=3Dviewticket&ticketid=3D4129031">=
+OXE-157-37866</a><br />
+Department: Guru<br />
+<br />
+
+    <style> =
+.star {color: grey !important;unicode-bidi: bidi-override;}     .star:hover=
+ {color: gold !important;}   .star a {color: inherit;text-decoration: none;=
+} </style>
+
+    <strong>Please help us improve our service with one cli=
+ck</strong><br>
+    If this reply moved your ticket forward, please give =
+us 5 stars:
+
+
+
+
+
+
+
+    <span class=3D'star'><a href=3D'http=
+s://nr4.me/A2Hosting?name=3DJoshua Whitfield&email=3Djoshuawhitfield022@gma=
+il.com&custom1=3DOXE-157-37866&custom2=3Dticket&custom3=3D11685527&custom4=
+=3D&custom6=3D&custom7=3DGuru&custom8=3D&custom9=3D' font-size: 1.2em; styl=
+e=3D"text-decoration: none; color: inherit"> 1 &#9734;</a></span>
+    <sp=
+an class=3D'star'><a href=3D'https://nr4.me/A2Hosting?name=3DJoshua Whitfie=
+ld&email=3Djoshuawhitfield022@gmail.com&custom1=3DOXE-157-37866&custom2=3Dt=
+icket&custom3=3D11685527&custom4=3D&custom6=3D&custom7=3DGuru&custom8=3D&cu=
+stom9=3D' font-size: 1.2em; style=3D"text-decoration: none; color: inherit"=
+>&#9734;</a></span>
+    <span class=3D'star'><a href=3D'https://nr4.me/A2=
+Hosting?name=3DJoshua Whitfield&email=3Djoshuawhitfield022@gmail.com&custom=
+1=3DOXE-157-37866&custom2=3Dticket&custom3=3D11685527&custom4=3D&custom6=3D=
+&custom7=3DGuru&custom8=3D&custom9=3D' font-size: 1.2em; style=3D"text-deco=
+ration: none; color: inherit">&#9734;</a></span>
+    <span class=3D'star'=
+><a href=3D'https://nr4.me/A2Hosting?name=3DJoshua Whitfield&email=3Djoshua=
+whitfield022@gmail.com&custom1=3DOXE-157-37866&custom2=3Dticket&custom3=3D1=
+1685527&custom4=3D&custom6=3D&custom7=3DGuru&custom8=3D&custom9=3D' font-si=
+ze: 1.2em; style=3D"text-decoration: none; color: inherit">&#9734;</a></spa=
+n>
+    <span class=3D'star'><a href=3D'https://nr4.me/A2Hosting?name=3DJo=
+shua Whitfield&email=3Djoshuawhitfield022@gmail.com&custom1=3DOXE-157-37866=
+&custom2=3Dticket&custom3=3D11685527&custom4=3D&custom6=3D&custom7=3DGuru&c=
+ustom8=3D&custom9=3D' font-size: 1.2em; style=3D"text-decoration: none; col=
+or: inherit">&#9734; 5 </a></span>
+
+</font></div>
+
+--_=_swift_v4_1698830616_be4199d7ed450ed102161fb7afff06ec_=_--
+

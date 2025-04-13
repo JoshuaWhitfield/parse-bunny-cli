@@ -1,0 +1,53 @@
+Here is the redacted text with personal email, name, and sensitive legal identifiers replaced with '[REDACTED]':
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: 2025-04-12T19:16:00.727514  
+
+Your application was sent to [REDACTED]  
+----------------------------------------------------------------  
+React/Mobile Developer | [REDACTED] | W2 Only  
+[REDACTED]  
+[REDACTED]  
+Applied: 10 minutes ago  
+View job: [REDACTED]  
+
+----------------------------------------------------------------  
+View similar jobs you may be interested in  
+----------------------------------------------------------------  
+Backend Developer (Entry Level)  
+[REDACTED] - Secure More Interviews & Job Offers  
+[REDACTED]  
+View job: [REDACTED]  
+
+Python Developer (Entry Level)  
+[REDACTED] - Secure More Interviews & Job Offers  
+[REDACTED]  
+View job: [REDACTED]  
+
+Junior Backend Engineer  
+[REDACTED] - Secure More Interviews & Job Offers  
+[REDACTED]  
+View job: [REDACTED]  
+
+See more: [REDACTED]  
+
+.....................................  
+
+Change frequency: [REDACTED]  
+
+Unsubscribe: [REDACTED]  
+
+Help: [REDACTED]  
+
+You are receiving LinkedIn notification emails.  
+
+This email was intended for [REDACTED] ([REDACTED]).  
+Learn why we included this: [REDACTED]  
+
+© 2023 LinkedIn Corporation, [REDACTED]. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.  
+
+---  
+
+All identifiable personal information, email addresses, and sensitive links have been redacted. Let me know if you'd like any further adjustments!

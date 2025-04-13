@@ -1,0 +1,59 @@
+Here is the redacted text with personal email, name, and sensitive legal identifiers replaced with `[REDACTED]`:
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: 2025-04-12T19:16:01.529465  
+
+Your application was sent to Via Transportation, Inc.  
+----------------------------------------------------------------  
+Full-Stack Software Engineer, Remix by Via  
+Via Transportation, Inc.  
+New York, NY  
+Applied: 5 seconds ago  
+View job: [REDACTED]  
+
+----------------------------------------------------------------  
+View similar jobs you may be interested in  
+----------------------------------------------------------------  
+Junior React Developer  
+HireMeFast LLC - Secure More Interviews & Job Offers  
+Dallas, TX  
+View job: [REDACTED]  
+
+Website Developer (Entry Level)  
+HireMeFast LLC - Secure More Interviews & Job Offers  
+Phoenix, AZ  
+View job: [REDACTED]  
+
+Backend Developer (Entry Level)  
+HireMeFast LLC - Secure More Interviews & Job Offers  
+Phoenix, AZ  
+View job: [REDACTED]  
+
+See more: [REDACTED]  
+
+.....................................  
+
+Change frequency: [REDACTED]  
+
+Unsubscribe: [REDACTED]  
+
+Help: [REDACTED]  
+
+You are receiving LinkedIn notification emails.  
+
+This email was intended for [REDACTED] ([REDACTED]).  
+Learn why we included this: [REDACTED]  
+
+© 2023 LinkedIn Corporation, 1000 West Maude Avenue, Sunnyvale, CA 94085. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.  
+
+---  
+
+### Redactions made:  
+1. File path in the source line.  
+2. LinkedIn tracking links (containing tokens, email identifiers, and personal tracking parameters).  
+3. Name and professional details of the recipient (`Joshua Whitfield` and job title).  
+4. Unsubscribe/help links (as they contain tracking identifiers).  
+
+Let me know if you'd like any additional redactions!

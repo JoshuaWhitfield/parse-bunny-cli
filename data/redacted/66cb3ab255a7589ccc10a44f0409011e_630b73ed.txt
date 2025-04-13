@@ -1,0 +1,420 @@
+Here is the redacted text with personal email, name, and sensitive legal identifiers replaced with `[REDACTED]`:
+
+```html
+# Source: [REDACTED]
+# Timestamp: 2025-04-12T19:16:00.570361
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="date=no" />
+<meta name="format-detection" content="address=no" />
+<meta name="format-detection" content="telephone=no" />
+<meta name="x-apple-disable-message-reformatting" />
+    <!--[if !mso]><!-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i,800,800i" rel="stylesheet"/>
+    <!--<![endif]-->
+<title>Statement document notification</title>
+<!--[if gte mso 9]>
+<style type="text/css" media="all">
+    sup { font-size: 100% !important; }
+COMM_TAGB33  table, th, td, div, span, p, h1, h2, h3, h4, h5, h6 { font-family: Arial, sans-serif !important; }
+</style>
+<![endif]-->
+<style type="text/css">
+
+* {
+    line-height: normal !important;
+}
+.mcnPreviewText {
+    display: none !important;
+    width: 0px;
+}
+
+strong {
+    font-weight: bold !important;
+}
+em {
+    font-style: italic !important;
+}
+body {
+    background-color: #ffffff !important;
+    -webkit-text-size-adjust: none !important;
+}
+.ExternalClass * {
+    line-height: 112%
+}
+.ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {
+    line-height: 112%
+}
+td {
+    -webkit-text-size-adjust: none;
+}
+a[href^=tel] {
+    color: inherit;
+    text-decoration: none;
+}
+.applelinksgray a {
+    color: #414042 !important;
+    text-decoration: none;
+}
+.applelinksblack a {
+    color: #000001 !important;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+.fullWidth {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0px !important;
+    text-align: center !important;
+}
+.hero {
+    width: 100% !important;
+    height: 10px !important;
+}
+.topLogoS {
+    width: 140px !important;
+    height: auto !important;
+}
+.mobilePad {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.TA_C {
+    text-align: center !important;
+}
+.firstO {
+    width: 185px !important;
+}
+.secondO {
+    width: 120px !important;
+}
+.thirdO {
+    width: 225px !important;
+}
+.fourthO {
+    width: 110px !important;
+}
+.fifthO {
+    width: 202px !important;
+}
+.sixthO {
+    width: 200px !important;
+}
+.seventhO {
+    width: 220px !important;
+}
+.h2 { font-size: 26px !important; line-height: 36px !important; }
+}
+
+@media print and (max-width: 600px) {
+.fullWidth {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0px !important;
+    text-align: center !important;
+}
+.hero {
+    width: 100% !important;
+    height: 10px !important;
+}
+.topLogoS {
+    width: 120px !important;
+    height: auto !important;
+}
+.mobilePad {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+.TA_C {
+    text-align: center !important;
+}
+.firstO {
+    width: 185px !important;
+}
+.secondO {
+    width: 120px !important;
+}
+.thirdO {
+    width: 225px !important;
+}
+.fourthO {
+    width: 110px !important;
+}
+.fifthO {
+    width: 202px !important;
+}
+.sixthO {
+    width: 200px !important;
+}
+.seventhO {
+    width: 220px !important;
+}
+.h2 { font-size: 26px !important; line-height: 36px !important; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .logo_bar {
+        background-color:#D9D9D6;
+    }
+
+    .logo_bar.dark-theme {
+        background-color:#D9D9D6;
+    }
+    .logo_bar.dark-scheme {
+        background-color:#D9D9D6;
+    }
+}
+
+.logo_bar {
+    background-color:#D9D9D6;
+}
+
+.logo_bar.dark-theme {
+    background-color:#D9D9D6;
+}
+
+.logo_bar.dark-scheme {
+    background-color:#D9D9D6;
+}
+
+div[class=mobilecontent]{
+    display: block !important;
+    max-height: none !important;
+  }
+
+.bullet_yi {
+    list-style-color: aqua;
+}
+
+ul {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.5em;
+  margin: 5px 0 15px 25px;
+  padding: 0;
+  color:#414042;
+  text-align: left !important;
+}
+ul li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 20px;
+}
+ul.round li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background-color:gray;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+}
+
+ul.round.yi li::before {
+  background-color: #93dddd;
+}
+
+ul.round.uswm li::before {
+  background-color: #A9431E;
+}
+
+ul.round.jpm_brown_pb li::before {
+  background-color: rgb(57, 32, 0);
+}
+
+ul.round.jpm_blue li::before {
+  background-color: #005076;
+}
+
+ul.unified_disclosures {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+td.unified_disclosures {
+  font-size: 14px;
+  font-weight: normal;
+  font-family: Arial, Helvetica, sans-serif;
+  color:#414042; background-color: #F5F7F8;
+}
+
+ul.unified_disclosures li {
+  list-style-type: circle;
+  font-size: 14px;
+}
+
+a.uswm_navlink {
+    color:#A9431E;
+    text-decoration:underline;
+    font-weight: normal;
+}
+
+a.uswm_inlinelink {
+    color:#A9431E;
+    text-decoration:underline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.uswm_accenttext {
+    color:#A9431E;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+
+a.uswm_supportlink {
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sCode {
+    background-color:lemonchiffon;
+    font-size: 12px;
+    font-family: Consolas, 'Courier New', Courier, monospace;
+}
+
+td.tdBody {
+    font-size: 16px;
+    font-weight: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #414042;
+}
+
+
+.heroBar_uswm {
+    vertical-align: top;
+    background-color: #CDA788;
+    padding: 0px;
+    font-size: 1px;
+    height: 30px;
+}
+
+.heroBar_pb {
+    vertical-align: top;
+    padding: 0px;
+    font-size: 1px;
+    line-height: 1px;
+}
+
+
+</style>
+</head>
+<body style="padding: 0px;margin: 0px; background-color:#ffffff; white-space: normal;">
+<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#efefef; min-width: 600px;" class="fullWidth">
+    <tr>
+        <td height="1" style="line-height: 1px">
+            <span style="font-size: 1px; color: #efefef;">
+You can review it online now&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
+            </span>
+        </td>
+    </tr>
+    <tr>
+        <td align="center" style="vertical-align:top; padding:0px 0px 0px 0px; background-color:#efefef;">
+<!-- PLAQUE -->
+            <table align="center" width="600" cellpadding="0" cellspacing="0" border="0" style="background-color:#efefef;" class="fullWidth">
+                <tr>
+                    <td align="left" style="vertical-align:top; padding:1px 1px 0px 1px; background-color:#cdcdcd;">
+                        <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="background-color:#ffffff;" class="fullWidth">
+                            <tr>
+                                <td align="left" style="vertical-align:top; padding: 0px 0px 0px;" class="mobilePad">
+                                    <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="logo_bar" class="fullWidth">
+                                        <tr>
+                                            <td align="left" style="vertical-align:top; padding:0px 0px 1px;">
+                                                <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="logo_bar">
+                                                    <tr>
+                                                        <td align="left" style="vertical-align:top; padding:20px 0px 20px;">
+                                                            <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" class="logo_bar">
+                                                                <tr>
+                                                                    <td align="left" style="vertical-align:middle; padding:0px 0px 0px 25px;">
+                                                                        <img src="https://www.chase.com/content/dam/email/images/uswm_logo_uswm.png" width="180"  height="50" border="0"
+                                                                        style="display:block;" class="topLogoS" alt=""/></td>
+                                                                    <td align="right" style="vertical-align:middle; padding:10px 10px 0px 10px; font-size:14px; font-weight:normal; font-family:Arial, Helvetica, sans-serif; color:#414042;">
+Self-Directed (...[REDACTED])
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="vertical-align:top; padding:27px 30px 10px; font-size:30px; font-weight: bold; font-family:Arial, Helvetica, sans-serif; color:#414042;" class="mobilePad TA_C h2">
+                                    Your latest statement is ready<BR/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="vertical-align:top; padding:30px 30px 0px; line-height: 24px !important;" class="tdBody mobilePad TA_C">
+[REDACTED],<br/><br/>The new statement for your Self-Directed (...[REDACTED]) account is available online.<BR/>
+
+                                </td>
+                            </tr>
+                    <tr>
+                        <td style="padding:20px 30px 40px 30px; vertical-align:top; " class="mobilePad TA_C">
+                            <table  cellpadding="0" cellspacing="0" border="0" style="vertical-align:top; display: inline;"  class="TA_C">
+                                <tr>
+                                    <td align="center" style="background-color: #A9431E; color: #FFFFFF; font-size: 15px; font-family: Open Sans, Arial, Helvetica, sans-serif;
+                                    font-weight:bold; padding: 10px 20px; border: 0px solid #A9431E; vertical-align:top; border-radius:4px; -moz-border-radius: 4px; -webkit-border-radius:4px;">
+                                    <a href="https://secure.chase.com/web/auth/nav?navKey=requestStatementsAndDocuments&documentType=STATEMENTS&mode=documents" target="_blank" style="color: #FFFFFF; text-decoration:none;">Go to your statements</a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+<tr>
+        <td align="left" style="vertical-align:top; padding:0px 30px 20px; background-color:#f5f7f8;" class="mobilePad">
+            <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                    <td align="left" style="vertical-align:top; padding:0px; background-color:#f5f7f8; border: 1px solid #f5f7f8; border-radius:4px; -moz-border-radius: 4px; -webkit-border-radius:4px;">
+                        <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0">
+                            <tr>
+                                <td align="left" style="vertical-align:top; padding:20px 50px 0px 20px; font-size:16px; font-weight: bold;
+                                     font-family: Arial, Helvetica, sans-serif; color:#414042; line-height: 140% !important;" class="mobilePad TA_C">
+                                    You can view and download your statements anytime on  chase.com  and the  Chase  Mobile&reg; app:
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="left" style="vertical-align:top; padding:10px 0px; background-color:#f5f7f8;" class="mobilePad">
+                        <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td align="left" style="vertical-align:top; padding: 0px 0px 0px 20px" class="mobilePad">
+                                    <table width="40" align="left" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+                                        <tr>
+                                            <td align="center" style=" vertical-align:top; padding:0px 0px 10px 0px;"><img src="https://www.chase.com/content/dam/email/images/uswm_nav_desktop_uswm.png" width="40" height="40" border="0" style="display:block;" alt=""/></td>
+                                        </tr>
+                                    </table>
+                                    <!--[if mso]></td><td><![endif]-->
+                                    <table width="440" align="left" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+                                        <tr>
+                                            <td align="left" style=" vertical-align:top; padding:0px 0px 0px 15px; font-family: Open Sans, Arial, Helvetica, sans-serif; font-size:14px; color:#414042;" class="TA_C">
+                                                Sign in to chase.com  and go to &ldquo;Statements & documents&rdquo; from the Main Menu, then &ldquo;Statements.&rdquo;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <!-- NAV_MOBILE

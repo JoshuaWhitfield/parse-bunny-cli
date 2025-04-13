@@ -1,0 +1,221 @@
+# Source: D:\Development\PY\CLI\parse-master-cli\downloads\647249ff47d5ffb9ec1bb2b2d60cfb2a.eml
+# Timestamp: 2025-04-12T20:27:23.040122
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+			<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title></title>
+<style type="text/css">
+* {
+	line-height: normal !important;
+}
+strong {
+	font-weight: bold !important;
+}
+em {
+	font-style: italic !important;
+}
+body {
+	background-color: #ffffff !important;
+	-webkit-text-size-adjust: none !important;
+}
+.ExternalClass * {
+	line-height: 112%
+}
+.ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {
+	line-height: 112%
+}
+td {
+	-webkit-text-size-adjust: none;
+}
+a[href^=tel] {
+	color: inherit;
+	text-decoration: none;
+}
+.applelinksgray a {
+	color: #666666 !important;
+	text-decoration: none;
+}
+.applelinksblack a {
+	color: #000001 !important;
+	text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+.fullWidth {
+	width: 100% !important;
+	min-width: 100% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding: 0px !important;
+	text-align: center !important;
+}
+.hero {
+	width: 100% !important;
+	height: auto !important;
+}
+.twentyfive {
+	font-size: 25px !important;
+	padding-left: 12px !important;
+	padding-top: 40px !important;
+	padding-bottom: 55px !important;
+}
+.left {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+
+}
+.right{
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+	padding-bottom: 35px !important;
+}
+.button {
+	padding: 20px 0px  20px 0px!important;
+}
+.IMG {
+	padding: 0px !important;
+}
+}
+
+@media print and (max-width: 600px) {
+.fullWidth {
+	width: 100% !important;
+	min-width: 100% !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	padding: 0px !important;
+	text-align: center !important;
+}
+.hero {
+	width: 100% !important;
+	height: auto !important;
+}
+.twentyfive {
+	font-size: 25px !important;
+	padding-left: 12px !important;
+	padding-top: 40px !important;
+	padding-bottom: 55px !important;
+}
+.left {
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+
+}
+.right{
+	padding-left: 12px !important;
+	padding-right: 12px !important;
+	padding-bottom: 35px !important;
+}
+.button {
+	padding: 20px 0px  20px 0px!important;
+}
+.IMG {
+	padding: 0px !important;
+}
+}
+</style>
+</head>
+<body style="padding: 0px;margin: 0px; background-color:#ffffff;">
+<table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:600px; background-color:#ffffff;" class="fullWidth">
+    <tr>
+        <td align="center" style="vertical-align:top; padding:0px 0px 0px 0px; min-width:600px; background-color:#ffffff;" class="fullWidth">
+            <table align="center" width="600" cellpadding="0" cellspacing="0" border="0" class="fullWidth" style="background-color:#ffffff;border-left: 2px solid #337ada;border-right: 2px solid #337ada;">
+                <tr>
+                    <td align="left" style="vertical-align:top;"><img src="https://www.chase.com/content/dam/chaseonline/en/alerts/images/email_alert_logo_banner.jpg" width="600" height="100" border="0" style="display:block;" alt="Chase Logo" class="hero"/></td>
+                </tr>
+                <tr>
+                    <td align="left"  class="twentyfive" style="vertical-align:top; font-family: Arial, Helvetica, sans-serif; font-size: 16px; color: #005db9;padding: 30px 12px 30px 50px;font-style: italic;"><strong>You received a payment<span
+                                                                                                        class="reg fallback-super"
+                                                                                                        style="vertical-align:super; font-size:100%; "></span><span
+                                                                                                        class="reg fallback-super"
+                                                                                                        style="vertical-align:super; font-size:100%; "></span> </strong></td>
+                </tr>
+
+                <tr>
+                    <td align="left" style="vertical-align:top;">
+                        <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+                            <tr>
+                                <td align="left" style="vertical-align:top;padding-left: 50px;" class="left">
+                                    <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" class="fullWidth">
+                                        <tr>
+                                            <td align="left" style="vertical-align:top; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000; padding: 0px 0px 20px 0px;">LOLIYA MEMBERR LLC sent you money through Chase QuickPay<span class="reg" style="vertical-align:super; font-size:14px; ">&reg;</span> with Zelle<span class="reg"
+                                        style="vertical-align:super; font-size:14px; line-height:14px; ">&reg;</span>. Your sender is registered with a Zelle member bank that supports payments in real time. You'll usually get their payment in a few minutes.</td>
+                                        </tr>
+
+
+                                    </table>
+                                    <!--[if mso]></td><td><![endif]-->
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+<tr>
+                    <td align="left" style="vertical-align:top; font-family: Arial; font-size: 12px; padding: 0px 12px 10px 50px;">
+                    <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0">
+										<tr><td style="vertical-align:top; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;"><b>Payment details:</b></td></tr>
+										<tr><td style="vertical-align:top; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;"><b>Amount:</b> $420.00 (USD)</td></tr>
+										<tr><td style="vertical-align:top; font-family: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;"><b>Memo:</b> </td></tr>
+									</table>
+								</td>
+
+      </tr>
+
+<tr>
+                    <td align="left" style="vertical-align:top; font-family: Arial; font-size: 12px; padding: 10px 12px 10px 50px;">To learn more, sign in to <b>chase.com/QP</b>.</td>
+                </tr>
+				<tr>
+                    <td align="left" style="vertical-align:top; font-family: Arial; font-size: 12px; padding: 10px 12px 10px 50px;">Have questions? Please call Chase Customer Service at 1-877-242-7372.</td>
+                </tr>
+                <tr>
+                    <td align="left" style="vertical-align:top; font-family: Arial; font-size: 12px; padding: 10px 12px 30px 50px;">Sincerely, <br> Chase QuickPay<span class="reg" style="vertical-align:super; font-size:14px; ">&reg;</span> with Zelle<span class="reg"
+                                        style="vertical-align:super; font-size:14px; line-height:14px; ">&reg;</span> team	</td>
+                </tr>
+                <tr>
+                    <td align="left" style="vertical-align:top;"><img src="https://www.chase.com/content/dam/chaseonline/en/alerts/images/email_alert_bottom_banner.jpg" width="600" height="100" border="0" style="display:block;" alt="Chase Logo" class="hero"/></td>
+                </tr>
+            </table>
+        </td>
+
+
+    <tr>
+     <td align="center" style="vertical-align:top; padding:0px 0px 0px 0px; min-width:600px; background-color:#ffffff;" class="fullWidth">
+            <table align="center" width="600" cellpadding="0" cellspacing="0" border="0" class="fullWidth" style="background-color:#ffffff;">
+                <br>
+                <tr>
+                    <td align="left" style="vertical-align:top; font-family: Arial; font-size: 12px;">To protect your personal information, please don’t reply to this email. Instead, use the mobile app or sign in to chase.com to send a message from your Secure Message Center.</td>
+                </tr>
+                </table>
+                </td>
+     </tr>
+
+
+
+ <tr>
+     <td align="center" style="vertical-align:top; padding:0px 0px 0px 0px; min-width:600px; background-color:#ffffff;" class="fullWidth">
+            <table align="center" width="600" cellpadding="0" cellspacing="0" border="0" class="fullWidth" style="background-color:#ffffff;">
+                <br>
+                <tr>
+                    <td align="left" style="vertical-align:top; font-family: Arial; font-size: 12px;">If you are concerned about clicking links in this email, the Online services mentioned above can be accessed by typing www.chase.com directly into your browser.</td>
+                </tr>
+                </table>
+                </td>
+     </tr>
+    <tr>
+     <td align="center" style="vertical-align:top; padding:0px 0px 0px 0px; min-width:600px; background-color:#ffffff;" class="fullWidth">
+            <table align="center" width="600" cellpadding="0" cellspacing="0" border="0" class="fullWidth" style="background-color:#ffffff;">
+                <br>
+                <tr>
+                    <td align="left" style="vertical-align:top; font-family: Arial; font-size: 12px;">© 2023 JPMorgan Chase & Co.</td>
+                </tr>
+                </table>
+                </td>
+     </tr>
+</table>
+</body>
+</html>

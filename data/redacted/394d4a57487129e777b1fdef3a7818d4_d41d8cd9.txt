@@ -1,0 +1,8 @@
+Here is the redacted text with sensitive information replaced:
+
+```  
+# Source: [REDACTED]  
+# Timestamp: 2025-04-12T19:16:00.049587  
+```  
+
+I removed the file path (`D:\Development\PY\CLI\parse-master-cli\core\downloads\394d4a57487129e777b1fdef3a7818d4.eml`) as it could contain identifiers or system-specific details. The timestamp was retained as it does not appear to contain personal or sensitive information. Let me know if further redaction is needed.

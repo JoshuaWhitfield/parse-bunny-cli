@@ -1,0 +1,359 @@
+Delivered-To: joshuawhitfield022@gmail.com
+Received: by 2002:a59:ad22:0:b0:3fc:79f5:b92e with SMTP id z2csp1129730vqy;
+        Wed, 30 Aug 2023 14:15:51 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGNDzFr4bXHQpXphFghnQcT1mK/ANLLo1J4A7NeKvf3WsY+065LtIziemL1l8mJi1plOv8X
+X-Received: by 2002:a05:622a:486:b0:411:ff31:79b2 with SMTP id p6-20020a05622a048600b00411ff3179b2mr1011279qtx.61.1693430151236;
+        Wed, 30 Aug 2023 14:15:51 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1693430151; cv=none;
+        d=google.com; s=arc-20160816;
+        b=XmObXITpF+PEt2KHEtibn5mYRvNQrZDIjtcmB4y6w884mPXuu1W8dSLXLsVH443YZi
+         h9FYh7LJqEN/ZokxxggtGzWvXJdOTm7oxTWPca5nhzbY6zA98r9BDSqTLP8QRzUQF0nY
+         4ZW8RuoyGjWtZ6ILDWd4ts32zGRNEHviu2uGZe5PJtU9ckCW6e9i7fG/HtQuhi/U+z80
+         yqzn0ieKN66aaO0jrUTdhbulHvW/ZdHD2an+nPCP85BOT2UtrRHyyCMIO4QX9rwslDGJ
+         SRqaIcJ34FoqOEq8FeIi3Yw5a0l+Er15AeICgGX2vPAqGACcvxr6Giopft3P2b82Or9j
+         dzIA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=device-id:app-source:notification-id:content-transfer-encoding
+         :mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=1JdlDqY9h9mtcWK4KExCiqTw++/rs8mOnFRZzXiIYFU=;
+        fh=oBPHf6BtJefJFfuSqiG3CJsVDBRnJAfTN0D084Tluv8=;
+        b=ffzSl90DrAltsU8QnQaDnRQ+DP45HhDNfjjbMc4rgGHguKYLTfarsS8aNbjd9KbL3G
+         JhjRpHCTF+GYVk5GMRiRd1B6m9YqCBLBM35g1KDgQICdN2oWxd16ddxtwgqcbn99iABg
+         jL+uhjZnq5EoXvTUF59Rwiohdszk3L42lXhFWYWzXw4RxYvLYHXltVMUY2V1QkiSNjtv
+         Gy5cyLi2pN77vRSKZ63e7OYPaKO+by1QBTmYtCOv6vu7xs3Z1M76L8VrcCC/xDndWIYk
+         dmIDsCLh9ys2DGPmlJA4lbAZ+og6v+x9w5RR98kAwf9DLZy3QjEObs5ZiaVw90OSUPnz
+         rpqg==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@alertsp.chase.com header.s=d4815 header.b=cevP5QWx;
+       spf=pass (google.com: domain of no-reply@alertsp.chase.com designates 159.53.111.162 as permitted sender) smtp.mailfrom=no-reply@alertsp.chase.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alertsp.chase.com
+Return-Path: <no-reply@alertsp.chase.com>
+Received: from shvj22.jpmchase.com (shvj22.jpmchase.com. [159.53.111.162])
+        by mx.google.com with ESMTPS id j4-20020ac85f84000000b004120206dd06si8181556qta.50.2023.08.30.14.15.50
+        for <joshuawhitfield022@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Wed, 30 Aug 2023 14:15:51 -0700 (PDT)
+Received-SPF: pass (google.com: domain of no-reply@alertsp.chase.com designates 159.53.111.162 as permitted sender) client-ip=159.53.111.162;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@alertsp.chase.com header.s=d4815 header.b=cevP5QWx;
+       spf=pass (google.com: domain of no-reply@alertsp.chase.com designates 159.53.111.162 as permitted sender) smtp.mailfrom=no-reply@alertsp.chase.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=alertsp.chase.com
+Received: from pps.filterd (shvj22.dmz.us.jpmchase.net [127.0.0.1])
+	by shvj22.jpmchase.com (8.17.1.5/8.17.1.5) with ESMTP id 37UL8tZS032907
+	for <joshuawhitfield022@gmail.com>; Wed, 30 Aug 2023 21:15:50 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=alertsp.chase.com; h=date : from :
+ to : message-id : subject : mime-version : content-type :
+ content-transfer-encoding; s=d4815;
+ bh=1JdlDqY9h9mtcWK4KExCiqTw++/rs8mOnFRZzXiIYFU=;
+ b=cevP5QWxL7d3Txx1FomXdOnRCctejrc1aYZ2bEQXxh6SbT82C2TNh6c46QdefGM5s3u8
+ L7l2LbRJ5y4awrSsZQKYYtox6nidN5erN5xY8BzfMFWdSOOjy90fYZg6Xu0P1DgJiZPx
+ snyMLu5Tz0Oq91hOxHX8iy0n2FBiqKhEqqObyI0MqpOG0pLROPOjWZ/mEt06tXChZMGy
+ tD1W996qKSWjKwD9D1Nt5GJ6panzwEFQ2H0pUm9wP+newTyQ5+dHyESSd9LqNTuX96YC
+ uY5j/EN7p/rHAsePcrpaRLo9VgfZGfzF3ZJ7pHIrTMd3JwhRkhFZDiGFVOIDIj65p5jp Pg== 
+Received: from vsin25p9813.svr.us.jpmchase.net ([165.168.218.243])
+	by shvj22.dmz.us.jpmchase.net (PPS) with ESMTPS id 3sqts2r1eg-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <joshuawhitfield022@gmail.com>; Wed, 30 Aug 2023 21:15:50 +0000
+Received: from cdc1vpc7lpr24.svr.us.jpmchase.net (cdc1vpc7lpr24.svr.us.jpmchase.net [169.121.64.229])       by vsin25p9813.svr.us.jpmchase.net  with ESMTPS id 37ULFYb5009778       (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384(256 bits) verified NO)       for <joshuawhitfield022@gmail.com>; Wed, 30 Aug 2023 21:15:35 GMT
+Received: from cdc1vpc7lpr24 (loopback [127.0.0.1])
+	by cdc1vpc7lpr24.svr.us.jpmchase.net (AIX7.2/8.15.2/8.14.4) with ESMTP id 37ULFn4Q39780848
+	for <joshuawhitfield022@gmail.com>; Wed, 30 Aug 2023 17:15:49 -0400
+Date: Wed, 30 Aug 2023 17:15:49 -0400 (EDT)
+From: Chase QuickPay Team <no-reply@alertsp.chase.com>
+To: joshuawhitfield022@gmail.com
+Message-ID: <-196277213.2380175.1693430149785@cdc1vpc7lpr24>
+Subject: LOLIYA MEMBERR LLC sent you $420.00
+MIME-Version: 1.0
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+NOTIFICATION-ID: 1018671634233
+APP-SOURCE: QP
+DEVICE-ID: 0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+=09=09=09<html xmlns=3D"http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" />
+<meta name=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.=
+0"/>
+<title></title>
+<style type=3D"text/css">
+* {
+=09line-height: normal !important;
+}
+strong {
+=09font-weight: bold !important;
+}
+em {
+=09font-style: italic !important;
+}
+body {
+=09background-color: #ffffff !important;
+=09-webkit-text-size-adjust: none !important;
+}
+.ExternalClass * {
+=09line-height: 112%
+}
+.ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass =
+td {
+=09line-height: 112%
+}
+td {
+=09-webkit-text-size-adjust: none;
+}
+a[href^=3Dtel] {
+=09color: inherit;
+=09text-decoration: none;
+}
+.applelinksgray a {
+=09color: #666666 !important;
+=09text-decoration: none;
+}
+.applelinksblack a {
+=09color: #000001 !important;
+=09text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+.fullWidth {
+=09width: 100% !important;
+=09min-width: 100% !important;
+=09margin-left: auto !important;
+=09margin-right: auto !important;
+=09padding: 0px !important;
+=09text-align: center !important;
+}
+.hero {
+=09width: 100% !important;
+=09height: auto !important;
+}
+.twentyfive {
+=09font-size: 25px !important;
+=09padding-left: 12px !important;
+=09padding-top: 40px !important;
+=09padding-bottom: 55px !important;
+}
+.left {
+=09padding-left: 12px !important;
+=09padding-right: 12px !important;
+
+}
+.right{
+=09padding-left: 12px !important;
+=09padding-right: 12px !important;
+=09padding-bottom: 35px !important;
+}
+.button {
+=09padding: 20px 0px  20px 0px!important;
+}
+.IMG {
+=09padding: 0px !important;
+}
+}
+
+@media print and (max-width: 600px) {
+.fullWidth {
+=09width: 100% !important;
+=09min-width: 100% !important;
+=09margin-left: auto !important;
+=09margin-right: auto !important;
+=09padding: 0px !important;
+=09text-align: center !important;
+}
+.hero {
+=09width: 100% !important;
+=09height: auto !important;
+}
+.twentyfive {
+=09font-size: 25px !important;
+=09padding-left: 12px !important;
+=09padding-top: 40px !important;
+=09padding-bottom: 55px !important;
+}
+.left {
+=09padding-left: 12px !important;
+=09padding-right: 12px !important;
+
+}
+.right{
+=09padding-left: 12px !important;
+=09padding-right: 12px !important;
+=09padding-bottom: 35px !important;
+}
+.button {
+=09padding: 20px 0px  20px 0px!important;
+}
+.IMG {
+=09padding: 0px !important;
+}
+}
+</style>
+</head>
+<body style=3D"padding: 0px;margin: 0px; background-color:#ffffff;">
+<table align=3D"center" width=3D"100%" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" style=3D"min-width:600px; background-color:#ffffff;" class=3D"=
+fullWidth">
+    <tr>
+        <td align=3D"center" style=3D"vertical-align:top; padding:0px 0px 0=
+px 0px; min-width:600px; background-color:#ffffff;" class=3D"fullWidth">
+            <table align=3D"center" width=3D"600" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" class=3D"fullWidth" style=3D"background-color:#ffff=
+ff;border-left: 2px solid #337ada;border-right: 2px solid #337ada;">
+                <tr>
+                    <td align=3D"left" style=3D"vertical-align:top;"><img s=
+rc=3D"https://www.chase.com/content/dam/chaseonline/en/alerts/images/email_=
+alert_logo_banner.jpg" width=3D"600" height=3D"100" border=3D"0" style=3D"d=
+isplay:block;" alt=3D"Chase Logo" class=3D"hero"/></td>
+                </tr>
+                <tr>
+                    <td align=3D"left"  class=3D"twentyfive" style=3D"verti=
+cal-align:top; font-family: Arial, Helvetica, sans-serif; font-size: 16px; =
+color: #005db9;padding: 30px 12px 30px 50px;font-style: italic;"><strong>Yo=
+u received a payment<span
+                                                                           =
+                             class=3D"reg fallback-super"
+                                                                           =
+                             style=3D"vertical-align:super; font-size:100%;=
+ "></span><span
+                                                                           =
+                             class=3D"reg fallback-super"
+                                                                           =
+                             style=3D"vertical-align:super; font-size:100%;=
+ "></span> </strong></td>
+                </tr>
+
+                <tr>
+                    <td align=3D"left" style=3D"vertical-align:top;">
+                        <table width=3D"100%" align=3D"left" cellpadding=3D=
+"0" cellspacing=3D"0" border=3D"0">
+                            <tr>
+                                <td align=3D"left" style=3D"vertical-align:=
+top;padding-left: 50px;" class=3D"left">
+                                    <table width=3D"100%" align=3D"left" ce=
+llpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"fullWidth">
+                                        <tr>
+                                            <td align=3D"left" style=3D"ver=
+tical-align:top; font-family: Arial, Helvetica, sans-serif; font-size: 12px=
+; color: #000000; padding: 0px 0px 20px 0px;">LOLIYA MEMBERR LLC sent you m=
+oney through Chase QuickPay<span class=3D"reg" style=3D"vertical-align:supe=
+r; font-size:14px; ">&reg;</span> with Zelle<span class=3D"reg"
+                                        style=3D"vertical-align:super; font=
+-size:14px; line-height:14px; ">&reg;</span>. Your sender is registered wit=
+h a Zelle member bank that supports payments in real time. You'll usually g=
+et their payment in a few minutes.</td>
+                                        </tr>
+
+
+                                    </table>
+                                    <!--[if mso]></td><td><![endif]-->
+
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+<tr>
+                    <td align=3D"left" style=3D"vertical-align:top; font-fa=
+mily: Arial; font-size: 12px; padding: 0px 12px 10px 50px;">
+                    <table width=3D"100%" align=3D"left" cellpadding=3D"0" =
+cellspacing=3D"0" border=3D"0">
+=09=09=09=09=09=09=09=09=09=09<tr><td style=3D"vertical-align:top; font-fam=
+ily: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;"><b>Pay=
+ment details:</b></td></tr>
+=09=09=09=09=09=09=09=09=09=09<tr><td style=3D"vertical-align:top; font-fam=
+ily: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;"><b>Amo=
+unt:</b> $420.00 (USD)</td></tr>
+=09=09=09=09=09=09=09=09=09=09<tr><td style=3D"vertical-align:top; font-fam=
+ily: Arial, Helvetica, sans-serif; font-size: 12px; color: #000000;"><b>Mem=
+o:</b> </td></tr>
+=09=09=09=09=09=09=09=09=09</table>
+=09=09=09=09=09=09=09=09</td>
+
+      </tr>
+
+<tr>
+                    <td align=3D"left" style=3D"vertical-align:top; font-fa=
+mily: Arial; font-size: 12px; padding: 10px 12px 10px 50px;">To learn more,=
+ sign in to <b>chase.com/QP</b>.</td>
+                </tr>
+=09=09=09=09<tr>
+                    <td align=3D"left" style=3D"vertical-align:top; font-fa=
+mily: Arial; font-size: 12px; padding: 10px 12px 10px 50px;">Have questions=
+? Please call Chase Customer Service at 1-877-242-7372.</td>
+                </tr>
+                <tr>
+                    <td align=3D"left" style=3D"vertical-align:top; font-fa=
+mily: Arial; font-size: 12px; padding: 10px 12px 30px 50px;">Sincerely, <br=
+> Chase QuickPay<span class=3D"reg" style=3D"vertical-align:super; font-siz=
+e:14px; ">&reg;</span> with Zelle<span class=3D"reg"
+                                        style=3D"vertical-align:super; font=
+-size:14px; line-height:14px; ">&reg;</span> team=09</td>
+                </tr>
+                <tr>
+                    <td align=3D"left" style=3D"vertical-align:top;"><img s=
+rc=3D"https://www.chase.com/content/dam/chaseonline/en/alerts/images/email_=
+alert_bottom_banner.jpg" width=3D"600" height=3D"100" border=3D"0" style=3D=
+"display:block;" alt=3D"Chase Logo" class=3D"hero"/></td>
+                </tr>
+            </table>
+        </td>
+
+
+    <tr>
+     <td align=3D"center" style=3D"vertical-align:top; padding:0px 0px 0px =
+0px; min-width:600px; background-color:#ffffff;" class=3D"fullWidth">
+            <table align=3D"center" width=3D"600" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" class=3D"fullWidth" style=3D"background-color:#ffff=
+ff;">
+                <br>
+                <tr>
+                    <td align=3D"left" style=3D"vertical-align:top; font-fa=
+mily: Arial; font-size: 12px;">To protect your personal information, please=
+ don=E2=80=99t reply to this email. Instead, use the mobile app or sign in =
+to chase.com to send a message from your Secure Message Center.</td>
+                </tr>
+                </table>
+                </td>
+     </tr>
+
+
+
+ <tr>
+     <td align=3D"center" style=3D"vertical-align:top; padding:0px 0px 0px =
+0px; min-width:600px; background-color:#ffffff;" class=3D"fullWidth">
+            <table align=3D"center" width=3D"600" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" class=3D"fullWidth" style=3D"background-color:#ffff=
+ff;">
+                <br>
+                <tr>
+                    <td align=3D"left" style=3D"vertical-align:top; font-fa=
+mily: Arial; font-size: 12px;">If you are concerned about clicking links in=
+ this email, the Online services mentioned above can be accessed by typing =
+www.chase.com directly into your browser.</td>
+                </tr>
+                </table>
+                </td>
+     </tr>
+    <tr>
+     <td align=3D"center" style=3D"vertical-align:top; padding:0px 0px 0px =
+0px; min-width:600px; background-color:#ffffff;" class=3D"fullWidth">
+            <table align=3D"center" width=3D"600" cellpadding=3D"0" cellspa=
+cing=3D"0" border=3D"0" class=3D"fullWidth" style=3D"background-color:#ffff=
+ff;">
+                <br>
+                <tr>
+                    <td align=3D"left" style=3D"vertical-align:top; font-fa=
+mily: Arial; font-size: 12px;">=C2=A9 2023 JPMorgan Chase & Co.</td>
+                </tr>
+                </table>
+                </td>
+     </tr>
+</table>
+</body>
+</html>
+
+
+
+=09=09=09

@@ -1,0 +1,28 @@
+Here is the redacted text with personal and sensitive information replaced with `[REDACTED]`:
+
+---  
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+Hi [REDACTED],  
+
+Thanks so much for applying for the Software Engineer, Growth role at [REDACTED]! We're so excited that you're interested in joining the fastest-growing marketplace in US history. 🚀  
+
+Our Recruiting team will review your application and will be in touch should your qualifications match our needs for the role. If you are not selected for this position, please keep an eye on our careers page ([REDACTED]) as we continue to grow.  
+
+In the meantime, you can check us out online and download the app ([REDACTED]) to explore [REDACTED] firsthand.  
+
+Thanks again for taking the time to apply!  
+
+The [REDACTED] Team  
+
+---  
+
+### Redactions made:  
+- File path and email source (`D:\Development\PY\CLI\parse-master-cli\core\downloads\38f73ce6a623c44f02f8f53f67d625e4.eml`) → `[REDACTED]`  
+- Timestamp (`2025-04-12T19:15:59.993580`) → `[REDACTED]` (if considered sensitive)  
+- Name ("Joshua") → `[REDACTED]`  
+- Company name ("Whatnot") → `[REDACTED]` (assuming it requires anonymization)  
+- URLs (`whatnot.com/careers`, `whatnot.com`) → `[REDACTED]` (if domain sensitivity is required)  
+
+Let me know if you'd like to adjust the redaction rules (e.g., preserve company name or URLs).

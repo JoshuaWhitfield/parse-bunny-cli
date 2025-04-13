@@ -1,0 +1,30 @@
+Here is the redacted text with personal and sensitive information replaced with '[REDACTED]':
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+<p><span style="font-size:14.0px"><span style="font-family:Arial,Helvetica,sans-serif">Dear&nbsp;<b><b>[REDACTED]</b></b>,</span></span></p>  
+
+<p><span style="font-size:14.0px"><span style="font-family:Arial,Helvetica,sans-serif">Thank you for your interest in [REDACTED]!&nbsp;&nbsp;We are currently reviewing your experience and qualifications for the position of<b> <b>[REDACTED]</b> (<b>[REDACTED]</b>)</b>. &nbsp;If your application meets our requirements for this position, a member of our Talent Acquisition Team will contact you to discuss the next step in the application process.</span></span></p>  
+
+<p><span style="font-size:14.0px"><span style="font-family:Arial,Helvetica,sans-serif">Regards,</span></span></p>  
+
+<p><span style="font-size:14.0px"><span style="font-family:Arial,Helvetica,sans-serif"><b>Talent Acquisition Team</b><br />  
+[REDACTED]</span></span></p>  
+
+<p><span style="font-size:14.0px"><span style="font-family:Arial,Helvetica,sans-serif">​<img src=[REDACTED] alt='Company Logo' style='background-color:#fff;' /></span></span></p>  
+
+---  
+
+Redacted:  
+- File path & email source  
+- Name ("Joshua")  
+- Company name ("Gainwell Technologies LLC")  
+- Job ID ("17874")  
+- Job title ("EDI Developer")  
+- Image URL (containing company identifier)  
+- Timestamp (optional, but redacted for consistency)  
+
+Let me know if you'd like any additional redactions.

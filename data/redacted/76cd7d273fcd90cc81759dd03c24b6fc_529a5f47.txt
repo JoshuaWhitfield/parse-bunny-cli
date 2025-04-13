@@ -1,0 +1,15 @@
+Here is the redacted text with personal and sensitive information replaced with '[REDACTED]':
+
+```
+# Source: [REDACTED]
+# Timestamp: [REDACTED]
+
+Hi [REDACTED],
+
+Thanks for your interest in [REDACTED] and for taking the time to apply for the [REDACTED] position. We’re looking forward to reviewing your application materials and learning more about you! If there’s an appropriate match, we’ll contact you to discuss next steps.
+
+Once again, thank you for considering [REDACTED] in your job search.
+
+Best,
+The [REDACTED] Recruiting team
+```

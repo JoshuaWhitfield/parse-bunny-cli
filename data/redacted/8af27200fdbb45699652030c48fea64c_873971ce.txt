@@ -1,0 +1,72 @@
+Here is the redacted text with personal and sensitive information replaced with `[REDACTED]`:
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+Your job alert for junior software engineer in Canada  
+
+3 new jobs match your preferences.  
+
+Junior Software Engineer, Trilogy (Remote) - $60,000/year USD  
+Crossover  
+Vancouver, BC  
+Apply with resume & profile  
+View job:  
+      [REDACTED]  
+
+---------------------------------------------------------  
+
+Junior Software Engineer, Trilogy (Remote) - $60,000/year USD  
+Crossover  
+Toronto, ON  
+Apply with resume & profile  
+View job:  
+      [REDACTED]  
+
+---------------------------------------------------------  
+
+Junior Software Engineer, Skyvera (Remote) - $30,000/year USD  
+Crossover  
+Toronto, ON  
+Apply with resume & profile  
+View job:  
+      [REDACTED]  
+
+---------------------------------------------------------  
+
+See all jobs on LinkedIn:  
+      [REDACTED]  
+
+See jobs where you’re a top applicant  
+      [REDACTED]  
+
+----------------  
+
+This email was intended for [REDACTED] ([REDACTED])  
+Learn why we included this:  
+      [REDACTED]  
+
+You are receiving Job Alert emails.  
+
+Manage your job alerts:  
+      [REDACTED]  
+
+Unsubscribe:  
+      [REDACTED]  
+
+Help:  
+      [REDACTED]  
+
+© 2023 LinkedIn Corporation, [REDACTED]. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.  
+
+---
+
+### Redactions made:  
+1. File path and email source metadata.  
+2. LinkedIn tracking URLs (containing tokens, IDs, and session data).  
+3. Recipient's name and professional title.  
+4. LinkedIn corporate address (partial redaction).  
+
+Let me know if you'd like any additional redactions!

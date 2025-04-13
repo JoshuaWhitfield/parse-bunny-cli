@@ -1,0 +1,75 @@
+[
+  {
+    "file": "ed8b701f8011ee3029358d6a4b1fc7e7_45973d1d.txt",
+    "extracted": {
+      "confidentiality": {
+        "text": "To protect your personal information, please don't reply to this message. Chase won't ask for confidential information in an email. <br />",
+        "line": 216
+      },
+      "warranty": {
+        "text": "Chase cannot guarantee the delivery of alerts and notifications. Wireless or internet service provider outages or other circumstances could delay them. You can always check <span class=\"applelinksgray\"><a style=\"color:#717171;text-decoration: none;\">chase.com</a></span> or the Chase&nbsp;Mobile app for the status of your account.<br />",
+        "line": 214
+      }
+    }
+  },
+  {
+    "file": "4d73c162cf44a8c3059b2d7278b51467_09251272.txt",
+    "extracted": {}
+  },
+  {
+    "file": "647249ff47d5ffb9ec1bb2b2d60cfb2a_6a81441f.txt",
+    "extracted": {}
+  },
+  {
+    "file": "7b25c216718ebca0c8858f82d44fb90e_26920878.txt",
+    "extracted": {
+      "data_protection": {
+        "text": "Privacy Policy:",
+        "line": 20
+      }
+    }
+  },
+  {
+    "file": "ed8b701f8011ee3029358d6a4b1fc7e7_45973d1d.txt",
+    "extracted": {
+      "confidentiality": {
+        "text": "To protect your personal information, please don't reply to this message. Chase won't ask for confidential information in an email. <br />",
+        "line": 216
+      },
+      "warranty": {
+        "text": "Chase cannot guarantee the delivery of alerts and notifications. Wireless or internet service provider outages or other circumstances could delay them. You can always check <span class=\"applelinksgray\"><a style=\"color:#717171;text-decoration: none;\">chase.com</a></span> or the Chase&nbsp;Mobile app for the status of your account.<br />",
+        "line": 214
+      }
+    }
+  },
+  {
+    "file": "4d73c162cf44a8c3059b2d7278b51467_09251272.txt",
+    "extracted": {}
+  },
+  {
+    "file": "647249ff47d5ffb9ec1bb2b2d60cfb2a_6a81441f.txt",
+    "extracted": {}
+  },
+  {
+    "file": "7b25c216718ebca0c8858f82d44fb90e_26920878.txt",
+    "extracted": {
+      "data_protection": {
+        "text": "Privacy Policy:",
+        "line": 20
+      }
+    }
+  },
+  {
+    "file": "ed8b701f8011ee3029358d6a4b1fc7e7_45973d1d.txt",
+    "extracted": {
+      "confidentiality": {
+        "text": "To protect your personal information, please don't reply to this message. Chase won't ask for confidential information in an email. <br />",
+        "line": 216
+      },
+      "warranty": {
+        "text": "Chase cannot guarantee the delivery of alerts and notifications. Wireless or internet service provider outages or other circumstances could delay them. You can always check <span class=\"applelinksgray\"><a style=\"color:#717171;text-decoration: none;\">chase.com</a></span> or the Chase&nbsp;Mobile app for the status of your account.<br />",
+        "line": 214
+      }
+    }
+  }
+]

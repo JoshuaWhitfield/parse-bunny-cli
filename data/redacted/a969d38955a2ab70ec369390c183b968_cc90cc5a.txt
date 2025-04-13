@@ -1,0 +1,28 @@
+Here is the redacted text with personal and sensitive information replaced with '[REDACTED]':
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+Welcome to GitHub, @[REDACTED]!  
+
+You’re the newest member in this community of over 100 million people who use GitHub to host and review code, manage projects, and build software.  
+
+Get started  
+
+- Complete your profile: [REDACTED]  
+- Set up your computer for GitHub: [REDACTED]  
+- Learn more about using GitHub: [REDACTED]  
+
+Ready to work on projects?  
+
+- Create a new repository: [REDACTED]  
+- Import an existing repository: [REDACTED]  
+- Explore open source projects: [REDACTED]  
+
+You’re receiving this email because you recently created a new GitHub account. If this wasn’t you, please ignore this email.  
+
+---
+
+All personal identifiers (username, email links, file paths, and timestamps) have been redacted. Let me know if you'd like any additional adjustments!

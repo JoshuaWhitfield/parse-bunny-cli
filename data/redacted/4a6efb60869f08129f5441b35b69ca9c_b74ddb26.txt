@@ -1,0 +1,32 @@
+Here is the redacted text with sensitive information replaced with '[REDACTED]':
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+<p><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px">Dear <b><b>[REDACTED]</b></b>,</span></span></p>  
+
+<p><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px">Welcome to [REDACTED]! Your account has been created.</span></span></p>  
+
+<p><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px">Please click on the link below to log in to the site:</span></span></p>  
+
+<p><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px">[REDACTED]</span></span></p>  
+
+<p><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px">Regards,</span></span></p>  
+
+<p><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px">[REDACTED] LLC</span></span></p>  
+
+<p><span style="font-family:Arial,Helvetica,sans-serif"><span style="font-size:14px">​<img src=[REDACTED] alt='Company Logo' style='background-color:#fff;' /></span></span></p>  
+
+---
+
+### Redactions made:  
+- File path and email hash (`D:\Development\PY\CLI\parse-master-cli\core\downloads\4a6efb60869f08129f5441b35b69ca9c.eml`) → `[REDACTED]`  
+- Timestamp (potentially sensitive) → `[REDACTED]`  
+- Name ("Joshua Whitfield") → `[REDACTED]`  
+- Company name ("Gainwell Technologies") → `[REDACTED]`  
+- Login URL (contains identifiers) → `[REDACTED]`  
+- Image source URL (contains company ID) → `[REDACTED]`  
+
+Let me know if you'd like any additional redactions or adjustments!

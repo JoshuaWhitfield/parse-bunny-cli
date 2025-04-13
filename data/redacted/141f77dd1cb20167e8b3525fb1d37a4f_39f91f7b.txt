@@ -1,0 +1,54 @@
+Here is the redacted text with personal and sensitive information replaced with `[REDACTED]`:
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+LinkedIn |  
+
+Discover more opportunities with job alerts  
+
+Get notified of new jobs that match your search, and be one of the first to apply.  
+
+Improve your keyword searches  
+Find better matches with the right job title, e.g. "Senior Designer."  
+
+Choose a city or region that suits you best  
+When you select a city, you’ll receive jobs within 25 miles.  
+
+Filter your search for better job matches  
+Use filters like Company for more relevant jobs.  
+
+Search jobs: [REDACTED]  
+
+View and manage alerts in one place  
+Manage all of your alerts in one place, so you can keep them up to date and delete the ones you no longer need.  
+
+Manage job alerts: [REDACTED]  
+
+.....................................  
+
+Manage job alerts: [REDACTED]  
+
+Unsubscribe: [REDACTED]  
+
+Help: [REDACTED]  
+
+You are receiving LinkedIn notification emails.  
+
+This email was intended for [REDACTED] ([REDACTED]).  
+Learn why we included this: [REDACTED]  
+
+© 2023 LinkedIn Corporation, [REDACTED]. LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.  
+
+---
+
+### Redactions made:  
+1. Removed file path (`D:\Development\PY\CLI\parse-master-cli\core\downloads\141f77dd1cb20167e8b3525fb1d37a4f.eml`).  
+2. Removed timestamp (`2025-04-12T19:15:59.349231`).  
+3. Redacted all LinkedIn tracking URLs (containing `trkEmail`, `midToken`, `lipi`, etc.).  
+4. Removed personal name ("Joshua Whitfield") and skill details ("Proficient in Javascript, Python...").  
+5. Redacted LinkedIn's physical address ("1000 West Maude Avenue, Sunnyvale, CA 94085").  
+
+Let me know if you'd like any additional redactions!

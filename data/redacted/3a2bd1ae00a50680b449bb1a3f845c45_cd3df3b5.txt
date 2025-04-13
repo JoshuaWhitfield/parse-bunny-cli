@@ -1,0 +1,12 @@
+Here is the redacted text with sensitive information replaced with `[REDACTED]`:
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: [REDACTED]  
+
+<div>Hi [REDACTED],</div><div><br></div><div>Thank you for your interest in [REDACTED]! We have received your application and will review it as quickly as possible. Our hiring team will be in touch if there is a match for what we're looking for. Unfortunately, due to the high volume, we may not get back to everyone individually.&nbsp;</div><div>&nbsp;</div><div>To learn more about [REDACTED] and what it's like to work here:</div><div><a href="[REDACTED]">Blog</a></div><div><a href="[REDACTED]">Glassdoor</a></div><div><a href="[REDACTED]">LinkedIn</a></div><div><a href="[REDACTED]">Twitter</a></div><div><br></div><div>Thank you again for applying - we are grateful for your application! We hope to be in touch soon.</div><div><br></div><div>Cheers,</div><div>The [REDACTED] Team</div>  
+
+---  
+
+Let me know if you'd like any additional redactions or modifications!

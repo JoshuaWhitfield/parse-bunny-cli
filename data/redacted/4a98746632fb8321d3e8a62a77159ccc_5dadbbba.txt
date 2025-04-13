@@ -1,0 +1,28 @@
+Here is the redacted text with personal and sensitive information replaced with '[REDACTED]':
+
+```
+# Source: [REDACTED]
+# Timestamp: [REDACTED]
+
+Hello [REDACTED],
+
+Thank you for your interest in Peloton and for applying to the Software Engineer  opportunity with us! Our team will take a look at your application and will be in touch if we decide to move forward with next steps.
+
+In the meantime, check out the links below to learn more about us:
+
+* Try out the Peloton App ( https://www.onepeloton.com/app ), and gain a community of over 4 million members!
+* Take a look at our blog to find out more about our riders, employees, and instructors ( blog.onepeloton.com )
+* Follow our page on LinkedIn ( https://www.linkedin.com/company/2658876/ )
+* Check out this video highlighting our great employees ( https://www.linkedin.com/feed/update/urn:li:activity:6514907090694205440 )
+
+We appreciate you considering Peloton and hope to be in touch soon!
+
+Kind regards,
+
+The Peloton Talent Acquisition Team
+```
+
+Redacted:
+- Source file path (contains potential identifiers)
+- Timestamp (could be sensitive in some contexts)
+- Name ("Joshua")

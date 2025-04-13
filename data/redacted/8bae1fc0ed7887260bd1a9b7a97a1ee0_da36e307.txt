@@ -1,0 +1,34 @@
+Here is the redacted text with personal email, names, and sensitive legal identifiers replaced with `[REDACTED]`:
+
+---
+
+# Source: [REDACTED]  
+# Timestamp: 2025-04-12T19:16:01.152559  
+
+You have 1 new message  
+
+.....................................  
+
+[REDACTED] ([REDACTED])  
+([REDACTED])  
+
+View message: [REDACTED]  
+
+.....................................
+}  
+
+----------------------------------------  
+
+This email was intended for [REDACTED] ([REDACTED])  
+Learn why we included this: [REDACTED]  
+You are receiving Messages digest emails.  
+
+Unsubscribe: [REDACTED]  
+Help: [REDACTED]  
+
+© 2023 LinkedIn Corporation, [REDACTED].  
+LinkedIn and the LinkedIn logo are registered trademarks of LinkedIn.  
+
+---
+
+All identifiable personal information, including names, LinkedIn profile links, email tracking tokens, and physical addresses, has been redacted. Let me know if you'd like any further adjustments!

@@ -1,0 +1,304 @@
+Delivered-To: joshuawhitfield022@gmail.com
+Received: by 2002:a05:612c:80c:b0:3fc:79f5:b92e with SMTP id fz12csp2095573vqb;
+        Mon, 30 Oct 2023 06:02:04 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IG87GrBiPDzabgjMhSEb9941h8SI64N8i/HgzW941YS8TCBZukYgxhwN3o/P2JDc15IXU4C
+X-Received: by 2002:a05:622a:15cf:b0:418:af7:e00a with SMTP id d15-20020a05622a15cf00b004180af7e00amr13212428qty.21.1698670924032;
+        Mon, 30 Oct 2023 06:02:04 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1698670924; cv=none;
+        d=google.com; s=arc-20160816;
+        b=KtHvtDNMgv2sWtJz9GbWZ60fFBBXmlRIAIgf3ukd3Tu6nSMv+rEIzrBE3Y7cj5CS8C
+         KzyLjsdsttlymakRL1BhlDcTvEo4bSATekaQUOExSBwyLu9ATMEvoCozSF/qnzWiLCpV
+         +irhCGnhC/yOcKmF4jPqBGZYPmyozEekM9hEFPt2VrvtfeC/Fr56emVsfRSqqp17FbS2
+         Zc9z/Pg6ZiMPS1A/0QMdAGZ9/O4Ay6YMvMwm416WLSJmDMKVrQCu3wHAmmOX9NQvCg0r
+         7IScXGeJTjlzX9/zBxJOLKiCwaaFYg5mX/DVpVo9rG0+3kga+mzJABDcSJostM89w0rL
+         Ut/w==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=retry-count:notification-id:content-transfer-encoding:mime-version
+         :subject:message-id:to:from:date:dkim-signature;
+        bh=Y+KdNOAOVrLi2sSFMya+cY7rK8hqi6B/QpbDh0cMrIM=;
+        fh=oBPHf6BtJefJFfuSqiG3CJsVDBRnJAfTN0D084Tluv8=;
+        b=sVTpeJEdtPS/e5M7eRZAWcF59xTxQL7bdryutqF+iYWVuUBJ8YIUp4tXLyEvwlxd5X
+         zCrSgmZJw5/kDm2AM63EmVbroPI1D2PLo3l5mByTtq2n4/Wm1D5dq1BudKorLS3KJyZ+
+         sZ5U0E2uINMZ5Xcv3ZkJUyhLtUbU6o2X9KtfkA0+CxHoqCwKQdQZDpjcN87kcVwZXCuS
+         qu93DydAbT0r/bUUmwXNQjktI8JjjvDsRXnvUPpS1vvIeTjiR5U5fxIJLig3/n+mtAbD
+         ksQu7bCYnYYyXetb00NkVKkRu47kiVRXx12Os3Ld+2kmGXeZjd62Q2haubD3rL19rl6q
+         o4SA==
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@chase.com header.s=d4815 header.b=DRoZsULe;
+       spf=pass (google.com: domain of no.reply.alerts.02@chase.com designates 159.53.111.163 as permitted sender) smtp.mailfrom=no.reply.alerts.02@chase.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=chase.com
+Return-Path: <no.reply.alerts.02@chase.com>
+Received: from shvj23.jpmchase.com (shvj23.jpmchase.com. [159.53.111.163])
+        by mx.google.com with ESMTPS id t11-20020a05622a180b00b0041cb481b92esi5624373qtc.388.2023.10.30.06.02.03
+        for <joshuawhitfield022@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 30 Oct 2023 06:02:04 -0700 (PDT)
+Received-SPF: pass (google.com: domain of no.reply.alerts.02@chase.com designates 159.53.111.163 as permitted sender) client-ip=159.53.111.163;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@chase.com header.s=d4815 header.b=DRoZsULe;
+       spf=pass (google.com: domain of no.reply.alerts.02@chase.com designates 159.53.111.163 as permitted sender) smtp.mailfrom=no.reply.alerts.02@chase.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=chase.com
+Received: from pps.filterd (shvj23.dmz.us.jpmchase.net [127.0.0.1])
+	by shvj23.jpmchase.com (8.17.1.5/8.17.1.5) with ESMTP id 39UCs31a030617
+	for <joshuawhitfield022@gmail.com>; Mon, 30 Oct 2023 13:02:03 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chase.com; h=date : from : to :
+ message-id : subject : mime-version : content-type :
+ content-transfer-encoding; s=d4815;
+ bh=Y+KdNOAOVrLi2sSFMya+cY7rK8hqi6B/QpbDh0cMrIM=;
+ b=DRoZsULeMF5GPI/3ZA8ZNvfraJzVIhnMFhGUuTj/Rwcf/or1eexCSJu3Leepnm31ywIh
+ gC5jWRcUIGQTjxgYngGEhJEQrrFKiw4sko5cmv2dZMGoFYqCoTBXQ7BpPIMq07Vg4s5v
+ yvIfSozbeCMB6UtXjevJ+yxlwiM41EdnLp5Zd9837BZ6iHRjmCWIwxhU2OyJEmXxok3v
+ qUFfStIIkBY4MdOMmBYbGJKLWcWDXPgqMnwqpZaXjESP1o4Jz7dSfpNPMxnkJTPJVN1h
+ 6T9cmRQOK6Y81ZwYVjzJSNulWv3Fe7fjGAY3O5/kDwTWiCJFV0CoNmiZ0Z5Kv1/i4wb2 ww== 
+Received: from vsin27p3135.svr.us.jpmchase.net ([147.107.195.225])
+	by shvj23.dmz.us.jpmchase.net (PPS) with ESMTPS id 3u1bkh6ab0-1
+	(version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=NOT)
+	for <joshuawhitfield022@gmail.com>; Mon, 30 Oct 2023 13:02:03 +0000
+Received: from iaasn00075964.svr.us.jpmchase.net (iaasn00075964.svr.us.jpmchase.net [165.168.206.228])       by vsin27p3135.svr.us.jpmchase.net  with ESMTP id 39UD0mgH008286       for <joshuawhitfield022@gmail.com>; Mon, 30 Oct 2023 13:00:49 GMT
+Date: Mon, 30 Oct 2023 09:02:02 -0400 (EDT)
+From: Chase <no.reply.alerts@chase.com>
+To: joshuawhitfield022@gmail.com
+Message-ID: <1007821905.17204694.1698670922715.JavaMail.webuser@iaasn00075964.svr.us.jpmchase.net>
+Subject: Your balance is below $50.00 for account ending in (...1665)
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 7bit
+NOTIFICATION-ID: DDA_MON_ACCT-31735b62-34eb-481c-9f44-214a2d85151f-7-c07a8e61-b04c-3210-baa8-9aa01d96aed9
+RETRY-COUNT: 0
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title></title>
+<style type="text/css">
+* {
+    line-height: normal !important;
+}
+strong {
+    font-weight: bold !important;
+}
+em {
+    font-style: italic !important;
+}
+body {
+    background-color: #d7dbe0 !important;
+    -webkit-text-size-adjust: none !important;
+}
+.ExternalClass * {
+    line-height: 112%
+}
+.ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {
+    line-height: 112%
+}
+td {
+    -webkit-text-size-adjust: none;
+}
+a[href^=tel] {
+    color: inherit;
+    text-decoration: none;
+}
+.applelinksgray41 a {
+    color: #414042 !important;
+    text-decoration: none;
+}
+.applelinksgray a {
+    color: #717171 !important;
+    text-decoration: none;
+}
+.wordBreak {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+}
+
+@media screen and (max-width: 800px) {
+.fullWidth {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0px !important;
+    text-align: center !important;
+}
+.hero {
+    width: 100% !important;
+    height: auto !important;
+}
+.moPad {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+.zeroPad {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.font14 {
+    font-size: 14px !important;
+}
+.font24 {
+    font-size: 24px !important;
+}
+}
+
+@media print and (max-width: 800px) {
+.fullWidth {
+    width: 100% !important;
+    min-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0px !important;
+    text-align: center !important;
+}
+.hero {
+    width: 100% !important;
+    height: auto !important;
+}
+.moPad {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+}
+.zeroPad {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+.font14 {
+    font-size: 14px !important;
+}
+.font24 {
+    font-size: 24px !important;
+}
+}
+</style>
+</head>
+<body style="padding: 0px;margin: 0px; background-color:#d7dbe0;">
+<table role="presentation" align="center" width="100%" border="0" cellspacing="0" cellpadding="0" style="min-width:800px; background-color:#d7dbe0;" class="fullWidth">
+  <tr>
+    <td align="center" style="vertical-align:top; padding:0px 0px 20px 0px; min-width:800px; background-color:#d7dbe0;" class="fullWidth"><table role="presentation" align="center" width="800" cellpadding="0" cellspacing="0" border="0" class="fullWidth" style="background-color:#FFFFFF;">
+        <!-- Start of Content -->
+        <tr>
+          <td align="center" style="vertical-align:top; padding: 23px 0px 0px;background-color: #005EB8;"><table role="presentation" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td align="right" style="vertical-align:bottom; padding:0px 0px; width:12px;"><img src="https://www.chase.com/content/dam/email/images/blue-left.jpg" width="12" height="226" border="0" style="display:block;" alt=""/></td>
+                <td align="center" style="vertical-align:bottom; padding: 0px 0px 0px;width:616px; background-color: #FFFFFF;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td align="left" style="vertical-align:top; padding: 0px 0px; background-color: #ffffff;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <!-- preheader location -->
+                          <tr>
+                            <td align="left" style="vertical-align:top;padding-left: 30px; background-color: #ffffff;" class="moPad"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td align="left" style="vertical-align:bottom; padding:36px 0px 20px;"><img src="https://www.chase.com/content/dam/email/images/chase-logo-h-rgb.png" width="104" height="20" border="0" style="display:block;" alt="Chase Logo"/></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td align="left" style="vertical-align:top; padding: 20px 28px 0px;" class="moPad"><table role="presentation" align="left" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td align="left" style="vertical-align:top;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                      <tr>
+                                        <td align="left" style="vertical-align:top; padding:5px 10px; font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:#414042; background-color:#D7DBE0; border-radius:20px; -moz-border-radius: 20px; -webkit-border-radius:20px; white-space: nowrap;" class="font14">Account alert</td>
+                                      </tr>
+                                    </table></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td align="left" style="vertical-align:top; padding: 20px 30px 58px; background-color: #ffffff;" class="moPad"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td role="heading" align="left" style="vertical-align:top; padding:0px 150px 0px 0px; font-family:Arial, Helvetica, sans-serif; font-size:30px; font-weight: bold; color:#414042;" class="zeroPad">Your account balance is below $50.00</td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+                <td align="left" style="vertical-align:bottom; padding:0px 0px;width:12px; "><img src="https://www.chase.com/content/dam/email/images/blue-right.jpg " width="12" height="226" border="0" style="display:block;" alt=""/></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td align="center" style="vertical-align:top; padding: 0px 0px 0px; background-color: #FFFFFF;"><table role="presentation" cellpadding="0" cellspacing="0" border="0">
+              <tr>
+                <td align="right" style="vertical-align:top; padding:0px 0px; width:12px;"><img src="https://www.chase.com/content/dam/email/images/white-left.jpg" width="12" height="77" border="0" style="display:block;" alt=""/></td>
+                <td align="center" style="vertical-align:top; padding: 0px 0px 0px;width:616px;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                    <tr>
+                      <td align="left" style="vertical-align:top; padding: 0px 150px 0px 30px;" class="moPad"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td align="left" style="vertical-align:top; padding: 10px 0px;border-bottom: solid 1px #414042;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td align="left" style="vertical-align:top; padding:0px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#414042;" class="font14">Account ending in</td>
+                                  <td align="right" style="vertical-align:top; padding:0px 0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#414042;" class="font14">(...1665)</td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td align="left" style="vertical-align:top; padding: 10px 0px;border-bottom: solid 1px #414042;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td align="left" style="vertical-align:top; padding:0px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#414042;" class="font14">As of</td>
+                                  <td align="right" style="vertical-align:top; padding:0px 0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#414042;" class="font14"><span class="applelinksgray41"><a style="color:#414042;text-decoration: none;">Oct 29, 2023 at 5:28 AM ET</a></span></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td align="left" style="vertical-align:top; padding: 10px 0px;border-bottom: solid 1px #414042;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td align="left" style="vertical-align:top; padding:0px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#414042;" class="font14">Available balance</td>
+                                  <td align="right" style="vertical-align:top; padding:0px 0px 0px 5px; font-family:Arial, Helvetica, sans-serif; font-size:16px; font-weight:bold; color:#414042;" class="font14">$0.50</td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="vertical-align:top; padding:40px 30px; font-family:Arial, Helvetica, sans-serif; font-size:16px; color:#414042;" class="moPad">You are receiving this alert because your available balance is below the limit you
+                        set. Visit <a style="text-decoration: underline; color:#0060F0;" href="https://www.chase.com/personal/mobile-online-banking/login-alerts" rel="noopener noreferrer"  target="_blank">chase.com/alerts</a> to view or manage your settings.<br />
+                        <br />
+                        Since the time of this alert, additional activity may have occurred.</td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="padding:0px; vertical-align:top; padding: 0px 0px 60px 30px;" class="moPad"><table role="presentation" align="left" cellpadding="0" cellspacing="0" border="0" style="vertical-align:top;">
+                          <tr>
+                            <td role="button" align="center" style="background-color:#0060f0; color: #fffffe; font-size: 16px; font-family: Arial, Helvetica, sans-serif; padding: 10px 0px; border: 1px solid #0060f0; vertical-align:top; border-radius:4px; -moz-border-radius: 4px; -webkit-border-radius:4px;width: 168px;"><a href="https://secure.chase.com/web/auth/nav?navKey=requestDashboard" target="_blank" style="color: #fffffe; text-decoration:none;">Review account</a></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="vertical-align:top; padding:0px 30px 20px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#717171;" class="moPad font14">Securely access your accounts with the <a style="text-decoration: underline; color:#0060F0;" href="https://www.chase.com/digital/mobile-banking" rel="noopener noreferrer"  target="_blank">Chase&nbsp;Mobile<span style="font-size:70%; line-height:0; vertical-align:3px; text-decoration: none;">&reg;</span> app</a> or <a style="text-decoration: underline; color:#0060F0;" href="https://secure.chase.com/web/auth/nav?navKey=requestDashboard" rel="noopener noreferrer"  target="_blank">chase.com</a>. </td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="vertical-align:top; padding: 0px 0px; background-color: #F6F6F6;"><table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+                          <tr>
+                            <td align="left" style="vertical-align:top; padding:20px 30px 60px; font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#717171;" class="moPad font14"><span role="heading" style="text-transform: uppercase; font-weight: bold;">About this message</span><br />
+                              <br />
+                              Chase&nbsp;Mobile<span style="font-size:70%; line-height:0; vertical-align:3px;">&reg;</span> app is available  for select mobile devices. Message and data rates may apply.<br />
+                              <br />
+                              This service email was sent based on your alert settings. Use the Chase&nbsp;Mobile app or visit <a href="https://www.chase.com/personal/mobile-online-banking/login-alerts" target="_blank" style="text-decoration: underline; color:#0060F0;" rel="noopener noreferrer">chase.com/alerts</a> to view or manage your settings.<br />
+                              <br />
+                              Chase cannot guarantee the delivery of alerts and notifications. Wireless or internet service provider outages or other circumstances could delay them. You can always check <span class="applelinksgray"><a style="color:#717171;text-decoration: none;">chase.com</a></span> or the Chase&nbsp;Mobile app for the status of your account.<br />
+                              <br />
+                              To protect your personal information, please don't reply to this message. Chase won't ask for confidential information in an email. <br />
+                              <br />
+                              If you have concerns about the authenticity of this message or have questions about your account visit <a style="text-decoration: underline; color:#0060F0;" href="https://www.chase.com/digital/customer-service" target="_blank" rel="noopener noreferrer">chase.com/CustomerService</a> for ways to contact us.<br />
+                              <br />
+                              Your privacy is important to us. See our online <a style="text-decoration: underline; color:#0060F0;" href="https://www.chase.com/digital/resources/privacy-security" target="_blank" rel="noopener noreferrer">Security Center</a> to learn how to protect your information.<br />
+                              <br />
+                              JPMorgan Chase Bank, N.A. Member FDIC<br />
+                              <br />
+                              &copy; 2023 JPMorgan Chase &amp; Co. </td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+                <td align="left" style="vertical-align:top; padding:0px 0px; width:12px;"><img src="https://www.chase.com/content/dam/email/images/white-right.jpg" width="12" height="77" border="0" style="display:block;" alt=""/></td>
+              </tr>
+            </table></td>
+        </tr>
+        <!--End of Content -->
+
+      </table></td>
+  </tr>
+</table>
+</body>
+</html>
