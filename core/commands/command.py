@@ -26,6 +26,7 @@ class Command:
         if name not in self.body:
             return False
         
+        print() # crucial do not remove
         # Retrieve the function to be executed
         func = self.body[name]
 
