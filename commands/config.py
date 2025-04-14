@@ -1,15 +1,15 @@
 from cryptography.fernet import Fernet
-import json
-from pathlib import Path
 from datetime import datetime
+from pathlib import Path
+import json
+import pkgutil
 
 CONFIG_PATH = Path("setup.enc")
-KEY = b"b8p33_zr4zGf8DKV4c4bNFpe_xmNlc0dNfLmy7JKY8c="  # Paste your latest key
+KEY = b" dEC9MdSpRwrPN7R9u2BNZc8DMK3SkRASll53irOezHM="  # Paste your latest key
 
 def load_config():
-    fernet = Fernet(KEY)
-    decrypted = fernet.decrypt(CONFIG_PATH.read_bytes())
-    return json.loads(decrypted.decode("utf-8"))
+    raw = pkgutil.get_data("commands", "config.json")
+    return json.loads(raw.decode("utf-8"))
 
 def check_expiry(config):
     expiry_str = config.get("expiry")

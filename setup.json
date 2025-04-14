@@ -1,4 +1,5 @@
 {
-    "expiry": "2025-04-11",
-    "features": ["label", "redact", "extract", "ingest", "backup", "restore", "get"]
-}
+    "expiry": "2025-05-01",
+    "features": ["label", "extract", "redact"]
+  }
+  

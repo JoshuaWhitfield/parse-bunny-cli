@@ -42,10 +42,11 @@ def normalize_path(path_str):
     # Normalize and convert to absolute path
     return Path(expanded).resolve()
 
+import pkgutil
+
 def load_config():
-    with open('config.json', 'r') as file:
-        config = json.load(file)
-    return config
+    data = pkgutil.get_data("commands", "config.json")
+    return json.loads(data.decode("utf-8"))
 
 env_config = load_config()
 

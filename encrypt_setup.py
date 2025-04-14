@@ -2,15 +2,15 @@
 from cryptography.fernet import Fernet
 import json
 
-# 🔐 Generate and print the key
-key = Fernet.generate_key()
-print("Encryption complete. Store this key:", key.decode())
-
+key = b"qaKU1pv5J1uvJu_yqDmMqr5cEOWclvkX7JBxREBCVT8="
 fernet = Fernet(key)
 
-with open("setup.json", "r", encoding="utf-8") as f:
-    raw = json.load(f)
+with open("setup.json", "r") as f:
+    config = json.load(f)
 
-encrypted = fernet.encrypt(json.dumps(raw).encode())
+encrypted = fernet.encrypt(json.dumps(config).encode())
+
 with open("setup.enc", "wb") as f:
     f.write(encrypted)
+
+print("Encrypted config with expiry:", config["expiry"])
