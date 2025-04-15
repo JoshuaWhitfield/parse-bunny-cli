@@ -1,0 +1,21 @@
+# Source: C:\Users\ikoda\Downloads\nda_document.docx
+# Timestamp: 2025-04-14T22:57:19.262252
+
+Non-Disclosure Agreement
+NON-DISCLOSURE AGREEMENT (NDA)
+
+This Non-Disclosure Agreement (the “Agreement”) is entered into as of the date of acceptance by and between the Disclosing Party and the Receiving Party.
+
+1. CONFIDENTIAL INFORMATION
+The parties agree that all information disclosed, written or oral, shall be considered confidential and proprietary to the disclosing party.
+
+2. OBLIGATIONS OF RECEIVING PARTY
+The Receiving Party shall not disclose, publish, or otherwise reveal any of the Confidential Information received from the Disclosing Party to any third party.
+
+3. TERM
+This Agreement shall remain in effect for a period of three (3) years.
+
+4. GOVERNING LAW
+This Agreement shall be governed in accordance with the laws of the applicable jurisdiction.
+
+IN WITNESS WHEREOF, the parties have executed this Agreement as of the Effective Date.

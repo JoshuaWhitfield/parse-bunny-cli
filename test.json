@@ -1,0 +1,18 @@
+{
+    "confidentiality": [
+        {
+            "text": "Chase won't ask for confidential information...",
+            "line": 216,
+            "source": "C:\\path\\to\\file"
+        },
+        {
+            "text": "Chase won't ask for confidential information...",
+            "line": 216,
+            "source": "C:\\path\\to\\file"
+        },
+        ...
+    ]
+}
+
+search -files["data/ingested/*.txt"] -extract["classification"] -name["search_ingest"]
+extract -files["C:\parse-bunny\dashboard\data\ingested"] -name["extracted_emails"]

@@ -1,0 +1,42 @@
+# Source: C:\Users\ikoda\Downloads\parse_bunny_vendor_intake_form_vendor_ready.pdf
+# Timestamp: 2025-04-14T22:56:35.524445
+
+IS Department Vendor Intake Form
+1. Contact Information
+Full Name: Joshua Whitfield
+Company Name: Parse Bunny CLI
+Title: Founder & Lead Architect
+Phone Number: 602-632-5714
+Email Address: joshuawhitfield022@gmail.com
+Website: https://www.parsebunnycli.com
+LinkedIn: https://www.linkedin.com/in/joshuawhitfield
+2. Company Overview
+Parse Bunny CLI is an AI-driven command-line tool designed to help law firms automate document parsing,
+classification, redaction, and legal data discovery.
+- AI-powered document classification and clause extraction
+- OCR support for scanned documents
+- Entity and privilege redaction tools
+- Labeling system for contract analysis and compliance
+- Clause pattern templates (e.g., NDA, termination, GDPR)
+- Semantic and keyword search functionality
+- Audit logs for discovery and billing
+- Secure backup and restore with encryption
+- Versioning and retention policy metadata
+Most Pertinent to Law Firms:
+- Redaction of sensitive information (PII/PHI)
+IS Department Vendor Intake Form
+- Document labeling and classification for e-discovery
+- Audit logs and backup for compliance
+- Semantic search for enterprise-level queries
+2(b). Meeting Request (Optional)
+Requested Attendee: IS Senior Management Team
+Meeting Agenda:
+- Introduction to Parse Bunny CLI as a software vendor candidate
+- Demonstration of key legal tech features: redaction, clause detection, semantic search
+- Walkthrough of how Parse Bunny improves document management, e-discovery, and compliance
+- Discussion on integration with existing systems and data retention policies
+- Exploration of billing and audit logging capabilities for legal review workflows
+- Q&A on pilot implementation and vendor approval process
+3. Current Law Firm Clients
+- Confidential (under NDA) - references available upon request.
+- Pilot trial initiated with two US-based litigation firms as of Q2 2025.

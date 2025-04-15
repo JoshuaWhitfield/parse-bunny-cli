@@ -1,0 +1,37 @@
+# Source: C:\Users\ikoda\Downloads\parse_bunny_vendor_intake_form.pdf
+# Timestamp: 2025-04-14T22:56:35.478455
+
+IS Department Vendor Intake Form
+1. Contact Information
+Full Name: Joshua Whitfield
+Company Name: Parse Bunny CLI
+Title: Founder & Lead Architect
+Phone Number: (555) 123-4567
+Email Address: joshua@parsebunny.ai
+Website: https://parsebunny.ai
+2. Company Overview
+Parse Bunny CLI is an AI-driven command-line tool designed to help law firms automate document parsing,
+classification, redaction, and legal data discovery.
+- AI-powered document classification and clause extraction
+- OCR support for scanned documents
+- Entity and privilege redaction tools
+- Labeling system for contract analysis and compliance
+- Clause pattern templates (e.g., NDA, termination, GDPR)
+- Semantic and keyword search functionality
+- Audit logs for discovery and billing
+- Secure backup and restore with encryption
+- Versioning and retention policy metadata
+- Local-only processing or hybrid encrypted mode
+Most Pertinent to Law Firms:
+- Redaction of sensitive information (PII/PHI)
+IS Department Vendor Intake Form
+- Document labeling and classification for e-discovery
+- Audit logs and backup for compliance
+- Semantic search for enterprise-level queries
+- Billing insight through per-command and per-file usage logs
+2(b). Meeting Request (Optional)
+Requested Attendee: [Leave blank]
+Meeting Agenda: [Leave blank]
+3. Current Law Firm Clients
+- Confidential (under NDA) - references available upon request.
+- Pilot trial initiated with two US-based litigation firms as of Q2 2025.

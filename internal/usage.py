@@ -29,12 +29,11 @@ usage = Usage()
 
 usage.add_usage("clear", [" clear ", " cls "], "this command clears the terminal.", " clear ", " cls ")
 usage.add_usage("data", [" data -collect['<string_keyword>', ...] ", " data -collect['<string_keyword>', ...] -parse['/full/path/to/parser'] ", " data -collect['<keywords>'] -parse[] "], "this command can collect and parse information for AI model training. by ommitting the path from the -parse flag, you use the built in parser.", " data ", "")
-usage.add_usage("ingest", [" ingest -pdf['</path/to>', ...] -output['</path/to>']", " ingest -email['</path/to>', ...] -doc['</path/to>']"], "This command ingests PDF, DOCX, and EML files from the specified paths, extracts raw text, and stores it into the output directory for downstream classification, extraction, and search.", "db", "")
-usage.add_usage("db", [" db -show <table_name> "], "this command displays the contents stored in the database powered by Memurai.", "db", "")
+usage.add_usage("ingest", [" ingest -pdf['</path/to/dir>', ...] -output['</path/to/dir>']", " ingest -email['</path/to/dir>', ...] -docc['</path/to/dir>']"], "This command ingests PDF, DOCX, and EML files from the specified paths, extracts raw text, and stores it into the output directory for downstream classification, extraction, and search.", " ingest ", "")
 usage.add_usage(
     "label",
     [
-        " label -files['</path/to/file.txt>', ...] -name['<output_name>']"
+        " label -files['</path/to/file.txt>', '</path/to/dir>' ...] -name['<output_name>']"
     ],
     "Automatically labels text documents using the DeepSeek API. The results are saved as data/classified/<name>.json, "
     "where each entry contains file name, predicted label, confidence score, and model source.",
@@ -44,7 +43,7 @@ usage.add_usage(
 usage.add_usage(
     "extract",
     [
-        " extract -files['</path/to/*.txt>'] -template['<template_name>'] -name['<output_name>']"
+        " extract -files['</path/to/dir/*.txt>', </path/to/dir>, ...] -name['<output_name>']"
     ],
     "Extracts legal clauses from text files using a named clause template. "
     "Results are saved to data/extracted/<name>.json. If -name is not provided, the template name is used by default.",
@@ -55,27 +54,27 @@ usage.add_usage(
     "search",
     [
         " search -files['</path/to/dir/or/file>'] -label['nda']",
-        " search -files['</path/to/*.json>'] -extract['jurisdiction=california']",
+        " search -files['</path/to/*.json>'] -extract['<term>']",
         " search -files['</path/to/*.txt>'] -text['confidentiality'] -name['confidential_hits']"
     ],
-    "Searches classified, extracted, or raw text data using flags. Results are saved to data/search/<name>.json. If -name[...] is not provided, defaults to 'results.json'. Supports matching on -label, -extract, and -text.",
+    "Searches classified, extracted, or raw text data using flags. Uses terms from '/templates/full_terms.json' (see documentation for terms). Results are saved to data/search/<name>.json. If -name[...] is not provided, defaults to 'results.json'. Supports matching on -label, -extract, and -text.",
     "search",
     ""
 )
 usage.add_usage(
     "redact",
     [
-        " redact -files['</path/*.txt>'] -tags['email', 'ssn', 'date', 'ip'] "
+        " redact -files['</path/*.txt>', </path/to/dir>, ...] -tags['email', 'ssn', 'date', 'ip', '<arbitrary>'] "
     ],
-    "Redacts sensitive patterns like emails, SSNs, IPs, and dates from .txt files. Outputs redacted files to data/redacted/.",
-    "ai",
+    "Redacts sensitive patterns like emails, SSNs, IPs, and dates from .txt files. Outputs redacted files to data/redacted/. tags go directly into the ai prompt, so be specific.",
+    "redact",
     ""
 )
 usage.add_usage(
     "get",
     [
-        " get -email['email@example.com'] -label['INBOX'] -query['is:unread'] -output['./downloads'] -limit[10]",
-        " get -email['email@example.com'] -label['Sent'] -limit[5]"
+        " get -output['</path/to/dir>'] -limit[10]",
+        " get -limit[5]"
     ],
     "Download emails from a specified email address and label (folder) with optional query and limit. Saves the emails as .eml files in the specified output directory.",
     "get",

@@ -1,0 +1,14 @@
+{
+  "confidentiality": [
+    {
+      "text": "To protect your personal information, please don't reply to this message. Chase won't ask for confidential information in an email. <br />",
+      "line": 216,
+      "source": "D:\\Development\\PY\\CLI\\parse-master-cli\\data\\extracted\\extracted_emails.json"
+    },
+    {
+      "text": "To protect your personal information, please don't reply to this message. Chase won't ask for confidential information in an email.",
+      "line": 216,
+      "source": "D:\\Development\\PY\\CLI\\parse-master-cli\\data\\extracted\\extracted_emails.json"
+    }
+  ]
+}

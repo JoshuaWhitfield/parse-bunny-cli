@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from commands.path_config import PATH
 
 # Repeat term data due to kernel reset
 terms = [
@@ -56,7 +57,7 @@ terms = [
 ]
 
 # Save to JSON
-output_path = Path("data/templates/full_terms.json")
+output_path = PATH["templates"] / "full_terms.json"
 output_path.parent.mkdir(parents=True, exist_ok=True)
 output_path.write_text(json.dumps([
     {"key": key, "pattern": regex, "description": desc}
