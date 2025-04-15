@@ -28,6 +28,7 @@ from email import policy
 
 from backend.utils.db import insert_log
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from fpdf import FPDF
 
 def threaded(fn):
     def wrapper(file_paths, *args, **kwargs):
@@ -596,7 +597,6 @@ import glob
 def search(PARAMS):
     config = {
         "files": [],
-        "label": [],
         "extract": [],
         "text": [],
         "name": None
@@ -624,9 +624,6 @@ def search(PARAMS):
                     config["files"].append(str(path))
                 elif path.is_dir():
                     config["files"] += [str(p) for p in path.rglob("*") if p.is_file()]
-
-        elif cleaned == "label":
-            config["label"] += [token.get_value().lower() for token in flag_contents]
 
         elif cleaned == "extract":
             config["extract"] += [token.get_value() for token in flag_contents]
@@ -1099,10 +1096,159 @@ def restore(PARAMS):
 command.add_func("backup", backup)
 command.add_func("restore", restore)
 
-def run_highlight(PARAMS):
-    # Handles: parse highlight -entities["person", "org"]
-    pass
+from reportlab.lib.pagesizes import LETTER
+from reportlab.pdfgen import canvas
+from reportlab.lib import colors
 
+import os
+import requests
+
+def deepseek_highlight(text, tags):
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        print("[highlight][x]: missing OPENAI_API_KEY")
+        print("please visit platform.deepseek.com/api_keys and create an api key")
+        print("then copy it, and update C:\parse-bunny\dashboard\.env with:")
+        print("$OPENAI_API_KEY=YOUR_API_KEY")
+        return []
+
+    prompt = f"Highlight the following categories in this text: {', '.join(tags)}.\n" + """You are an AI extraction engine. 
+
+    Your job is to identify sensitive or important legal or regulatory phrases, based on provided keywords. 
+    For each matching phrase, output a JSON object with:
+
+    - The `keyword` (the term that matched),
+    - The `text` (the full line or paragraph),
+    - The `line` number in the source text.
+
+    Only output valid JSON. Your entire response must be a JSON array like this:
+
+    [
+    {
+        "keyword": "data rights",
+        "text": "This agreement grants data rights to all parties involved.",
+        "line": 14
+    },
+    {
+        "keyword": "confidential",
+        "text": "This information is confidential and may not be shared.",
+        "line": 29
+    }
+    ]
+
+    If no matches are found, return an empty JSON array: `[]`.
+    Do not explain anything. Only return JSON. No commentary or markdown."""
+
+
+    response = requests.post(
+        "https://api.deepseek.com/v1/chat/completions",
+        headers={
+            "Authorization": f"Bearer {api_key}",
+            "Content-Type": "application/json"
+        },
+        json={
+            "model": "deepseek-chat",
+            "messages": [
+                {"role": "user", "content": prompt}
+            ],
+            "temperature": 0.2
+        }
+    )
+
+    if response.status_code == 200:
+        try:
+            return response.json()["choices"][0]["message"]["content"].strip()
+        except Exception as e:
+            print(f"[highlight][x]: failed to parse AI response → {e}")
+            return []
+    else:
+        print(f"[highlight][x]: API error {response.status_code}")
+        return []
+
+
+def highlight(PARAMS):
+    config = {
+        "files": [],
+        "tags": [],  # Tags to highlight
+    }
+
+    if not PARAMS:
+        usage.display(usage.get_usage("highlight"))
+        return _callback.catch("", False)
+
+    # Parse flags
+    flag_tokens = interface.extract(PARAMS, [TT.Flag()])
+    for flag_token in flag_tokens:
+        cleaned = flag_token.value.replace("-", "")
+        index = util.indexOf(PARAMS, flag_token)
+        flag_contents = interface.extract_flags(PARAMS[index:])
+
+        if cleaned == "files":
+            for token in flag_contents:
+                val = token.get_value()
+                p = Path(val)
+                if "*" in val:
+                    config["files"] += [f for f in glob(val, recursive=True) if Path(f).is_file()]
+                elif p.is_dir():
+                    config["files"] += [str(f) for f in p.rglob("*.txt")]
+                elif p.is_file():
+                    config["files"].append(str(p))
+
+        elif cleaned == "regex":
+            config["tags"] += [token.get_value().lower() for token in flag_contents]
+
+    if not config["files"]:
+        print("[highlight][x]: no input files provided.")
+        return _callback.catch("", False)
+
+    output_dir = Path("C:/parse-bunny/dashboard/data/highlighted")
+    output_dir.mkdir(parents=True, exist_ok=True)
+
+    def highlight_text_file(file_path):
+        try:
+            text = Path(file_path).read_text(encoding="utf-8")
+            lines = text.splitlines()
+            tags = config["tags"] or list(REDACT_PATTERNS.keys())
+            highlights = []
+
+            for i, line in enumerate(lines):
+                for tag in tags:
+                    pattern = REDACT_PATTERNS.get(tag)
+                    if pattern and re.search(pattern, line, flags=re.IGNORECASE):
+                        highlights.append((i + 1, line.strip()))
+                        break  # Avoid duplicates on same line
+
+            if not highlights:
+                print(f"[highlight][~]: no matches in {Path(file_path).name}")
+                return
+
+            pdf = FPDF()
+            pdf.add_page()
+            pdf.set_auto_page_break(auto=True, margin=15)
+            pdf.set_font("Arial", size=12)
+
+            for i, line in enumerate(lines):
+                match = next((hl for hl in highlights if hl[0] == i + 1), None)
+                if match:
+                    pdf.set_text_color(255, 0, 0)
+                    pdf.multi_cell(0, 10, match[1])
+                    pdf.set_text_color(0, 0, 0)
+                else:
+                    pdf.multi_cell(0, 10, line)
+
+            out_file = output_dir / (Path(file_path).stem + ".pdf")
+            pdf.output(str(out_file))
+            print(f"[highlight][✓]: {Path(file_path).name} → {out_file.name}")
+
+        except Exception as e:
+            print(f"[highlight][x]: {file_path} → {e}")
+
+    with ThreadPoolExecutor(max_workers=23) as executor:
+        executor.map(highlight_text_file, config["files"])
+
+    return _callback.catch("[highlight][✓]: highlight PDFs generated", True)
+
+command.add_func("highlight", highlight)
 
 
 def run_templates(PARAMS):

@@ -29,7 +29,7 @@ usage = Usage()
 
 usage.add_usage("clear", [" clear ", " cls "], "this command clears the terminal.", " clear ", " cls ")
 usage.add_usage("data", [" data -collect['<string_keyword>', ...] ", " data -collect['<string_keyword>', ...] -parse['/full/path/to/parser'] ", " data -collect['<keywords>'] -parse[] "], "this command can collect and parse information for AI model training. by ommitting the path from the -parse flag, you use the built in parser.", " data ", "")
-usage.add_usage("ingest", [" ingest -pdf['</path/to/dir>', ...] -output['</path/to/dir>']", " ingest -email['</path/to/dir>', ...] -docc['</path/to/dir>']"], "This command ingests PDF, DOCX, and EML files from the specified paths, extracts raw text, and stores it into the output directory for downstream classification, extraction, and search.", " ingest ", "")
+usage.add_usage("ingest", [" ingest -pdf['</path/to/dir>', ...] -output['</path/to/dir>']", " ingest -email['</path/to/dir>', ...] -docx['</path/to/dir>']"], "This command ingests PDF, DOCX, and EML files from the specified paths, extracts raw text, and stores it into the output directory for downstream classification, extraction, and search.", " ingest ", "")
 usage.add_usage(
     "label",
     [
@@ -53,9 +53,7 @@ usage.add_usage(
 usage.add_usage(
     "search",
     [
-        " search -files['</path/to/dir/or/file>'] -label['nda']",
         " search -files['</path/to/*.json>'] -extract['<term>']",
-        " search -files['</path/to/*.txt>'] -text['confidentiality'] -name['confidential_hits']"
     ],
     "Searches classified, extracted, or raw text data using flags. Uses terms from '/templates/full_terms.json' (see documentation for terms). Results are saved to data/search/<name>.json. If -name[...] is not provided, defaults to 'results.json'. Supports matching on -label, -extract, and -text.",
     "search",
@@ -80,6 +78,18 @@ usage.add_usage(
     "get",
     ""
 )
+
+usage.add_usage(
+    "highlight",
+    [
+        " highlight -files['</path/to/*.txt>'] -regex['<term1>', '<term2>'] -ai['<clause1>', '<clause2>']",
+    ],
+    "Generates highlighted PDFs based on detected matches. Highlights both predefined regex terms and AI-identified legal clauses. Outputs to 'C:/parse-bunny/dashboard/data/highlighted/'. Use -regex[...] for keyword matching and -ai[...] to include AI clause detection.",
+    "highlight",
+    ""
+)
+
+
 
 usage.add_usage("backup", [
     " backup -name['<optional_filename>'] "

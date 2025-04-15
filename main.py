@@ -11,6 +11,7 @@ from syntax.parser import Parser
 from syntax.interpreter import Interpreter
 from syntax.prompt import Prompt
 from syntax.interface import interface
+from dotenv import load_dotenv
 
 lexer = Lexer()
 parser = Parser()
@@ -71,9 +72,7 @@ if "-logo" in sys.argv:
 def ensure_env_file():
     env_path = Path("C:/parse-bunny/dashboard/.env")
     if not env_path.exists():
-        print()
         print("[pbc][notif]: creating .env file. please populate it with the appropriate values.")
-        print()
         env_content = """# Parse Bunny CLI Environment Variables
 
 # Gmail credentials (for `get` command)
@@ -91,6 +90,14 @@ OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
         env_path.parent.mkdir(parents=True, exist_ok=True)
         env_path.write_text(env_content, encoding="utf-8")
         print(f"[config][✓]: .env file created at {env_path}")
+
+# ===========================
+# Load environment variables from .env file
+# ===========================
+dotenv_path = Path("C:/parse-bunny/dashboard/.env")
+if dotenv_path.exists():
+    load_dotenv(dotenv_path)
+
 # ===========================
 # CLI Runtime Loop
 # ===========================
