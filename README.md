@@ -37,10 +37,11 @@ reset       → Reset data/downloads/output (supports flags)
 an environment variables file will be created in `C:\parse-bunny\dashboard\.env`
 The following contents are required for AI or automated features:
 
+```bash
 $GGL_USER=your_email@gmail.com
 $GGL_PASS=your_google_app_password # format (16 chars): xxxx xxxx xxxx xxxx 
 $OPENAI_API_KEY=your_deepseek_api_key
-
+```
 ---
 
 ## Folder Structure
