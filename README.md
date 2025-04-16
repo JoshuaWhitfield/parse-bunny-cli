@@ -99,7 +99,7 @@ Trials: Free trial requests accepted
 
 ## License
 
-© 2025 ParseBunny Inc. All rights reserved.
+© 2025 Parse-Bunny Corp. All rights reserved.
 
 <h1>Inputs</h1>
 
