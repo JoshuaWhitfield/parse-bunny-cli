@@ -89,6 +89,24 @@ usage.add_usage(
     ""
 )
 
+usage.add_usage(
+    "reset",
+    [
+        " reset -all",
+        " reset -data",
+        " reset -downloads",
+        " reset -ingest",
+        " reset -search",
+        " reset -extract",
+        " reset -label",
+        " reset -highlight",
+        " reset -redact"
+    ],
+    "Resets selected directories by clearing their contents. Use flags to control which folders are cleared. Use -all to wipe everything inside the 'data' and 'downloads' directories. No files are deleted permanently—only emptied from Parse Bunny directories.",
+    "reset",
+    ""
+)
+
 
 
 usage.add_usage("backup", [

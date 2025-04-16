@@ -30,6 +30,11 @@ from backend.utils.db import insert_log
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from fpdf import FPDF
 
+# from google.oauth2 import service_account
+# from googleapiclient.discovery import build
+# from googleapiclient.http import MediaIoBaseDownload
+# import io
+
 def threaded(fn):
     def wrapper(file_paths, *args, **kwargs):
         results = []
@@ -99,29 +104,70 @@ def save_to_file(url, content):
         print(f"No content to save for URL: {url}")
 
 
-def reset_output_dir():
-    """Remove all contents in the 'output' directory."""
-    root_dir = 'output'
-    try:
-        # Check if the directory exists and remove all contents
-        if os.path.exists(root_dir):
-            shutil.rmtree(root_dir)
-            print(f"All contents removed from {root_dir}.")
-            # Optionally, recreate the directory after clearing it
-            os.makedirs(root_dir, exist_ok=True)
-            print(f"Reset {root_dir} directory.")
-        else:
-            print(f"No '{root_dir}' directory found, creating one.")
-            os.makedirs(root_dir, exist_ok=True)
-    except Exception as e:
-        print(f"Failed to reset {root_dir}: {e}")
+def reset(PARAMS):
+    flags = {
+        "all": False,
+        "downloads": False,
+        "ingest": False,
+        "search": False,
+        "extract": False,
+        "label": False,
+        "highlight": False,
+        "redact": False,
+        "data": False,
+        "output": False
+    }
 
-def reset_output(PARAMS):
-    """CLI command function to handle resetting the output directory."""
-    reset_output_dir()
+    if not PARAMS:
+        usage.display(usage.get_usage("reset"))
+        return _callback.catch("", False)
 
-# Register the reset command in your CLI framework
-command.add_func("reset", reset_output)
+    # Parse flags
+    flag_tokens = interface.extract(PARAMS, [TT.Flag()])
+    for flag_token in flag_tokens:
+        cleaned = flag_token.value.replace("-", "")
+        if cleaned in flags:
+            flags[cleaned] = True
+
+    # If -all or -data is selected, set related directories
+    if flags["all"] or flags["data"]:
+        flags.update({
+            "downloads": True,
+            "ingest": True,
+            "search": True,
+            "extract": True,
+            "label": True,
+            "highlight": True,
+            "redact": True,
+            "outout": True
+        })
+
+    reset_map = {
+        "downloads": PATH["downloads"],
+        "ingest": PATH["ingested"],
+        "search": PATH["search"],
+        "extract": PATH["extracted"],
+        "label": PATH["classified"],
+        "highlight": PATH["highlighted"],
+        "redact": PATH["redacted"],
+        "output": PATH["output"]
+    }
+
+    for key, path in reset_map.items():
+        if flags[key]:
+            try:
+                for file in Path(path).glob("*"):
+                    if file.is_file():
+                        file.unlink()
+                    elif file.is_dir():
+                        shutil.rmtree(file)
+                print(f"[reset][✓]: {key} folder cleared")
+            except Exception as e:
+                print(f"[reset][x]: error clearing {key} → {e}")
+
+    return _callback.catch("[reset][✓]: reset complete", True)
+
+command.add_func("reset", reset)
 
 def save_ingested_content(text, out_folder, source_path):
     os.makedirs(out_folder, exist_ok=True)
@@ -849,6 +895,55 @@ def redact(PARAMS):
 
 command.add_func("redact", redact)
 
+def download_docx_from_drive(output_dir):
+    try:
+        creds_path = Path("C:/parse-bunny/dashboard/creds/service_account.json")
+        if not creds_path.exists():
+            print("[drive][x]: service account file not found at:", creds_path)
+            return
+
+        SCOPES = ['https://www.googleapis.com/auth/drive.readonly']
+        creds = service_account.Credentials.from_service_account_file(
+            str(creds_path),
+            scopes=SCOPES
+        )
+
+        service = build('drive', 'v3', credentials=creds)
+
+        # Find .docx files in Drive
+        query = "mimeType='application/vnd.openxmlformats-officedocument.wordprocessingml.document'"
+        results = service.files().list(q=query, fields="files(id, name)").execute()
+        files = results.get('files', [])
+
+        if not files:
+            print("[drive][✓]: no DOCX files found in Drive")
+            return
+
+        output_dir.mkdir(parents=True, exist_ok=True)
+
+        for file in files:
+            file_id = file['id']
+            file_name = file['name']
+            if not file_name.lower().endswith('.docx'):
+                file_name += '.docx'
+
+            request = service.files().get_media(fileId=file_id)
+            fh = io.BytesIO()
+            downloader = MediaIoBaseDownload(fh, request)
+
+            done = False
+            while not done:
+                status, done = downloader.next_chunk()
+
+            fh.seek(0)
+            file_path = output_dir / file_name
+            with open(file_path, 'wb') as f:
+                f.write(fh.read())
+            print(f"[drive][✓]: Downloaded → {file_name}")
+
+    except Exception as e:
+        print(f"[drive][x]: error → {e}")
+
 def download_emails(label, query, output_dir, limit):
     try:
         # 🔐 Load environment variables
@@ -962,7 +1057,6 @@ def get(PARAMS):
     if not result.status:
         return result
 
-    # Run download
     download_emails(
         label=config["label"],
         query=config["query"],
@@ -1251,6 +1345,7 @@ def highlight(PARAMS):
 command.add_func("highlight", highlight)
 
 
+
 def run_templates(PARAMS):
     # Handles: parse templates -list, -create["name"], etc.
     pass
@@ -1263,4 +1358,5 @@ def help_command(PARAMS):
 
 command.add_func("help", help_command)
 command.add_func("h", help_command)
+
 

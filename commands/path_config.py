@@ -16,4 +16,5 @@ PATH = {
     "search": get_data_path() / "search",
     "output": get_data_path() / "output",
     "downloads": get_data_path() / "downloads",
+    "highlighted": get_data_path() / "highlighted"
 }
