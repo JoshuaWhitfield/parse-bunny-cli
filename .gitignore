@@ -19,6 +19,7 @@ Thumbs.db
 # Redis dumps (if used)
 dump.rdb1   `QAZDXC`
 
-api_key.txt
+api_key.json
 create_template.py
-GOALS
+key.bin
+
