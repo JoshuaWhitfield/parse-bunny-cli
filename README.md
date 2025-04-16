@@ -1,120 +1,105 @@
+# ParseBunny CLI
 
-# parse-bunny-cli
-This is a data parsing and redaction CLI for AI model training, legal document analysis, and sensitive data workflows.
+ParseBunnyCLI is a local, AI-powered command-line interface for legal professionals and data analysts. It automates redaction, clause extraction, labeling, classification, and document search—built for privacy, speed, and accuracy.
 
-<h1>Getting Started:</h1>
-<p>Clone the repository and install the following dependencies:</p>
+---
 
-```bash
-$ git clone https://github.com/JoshuaWhitfield/parse-bunny-cli.git
-$ cd parse-bunny-cli
+## Getting Started
 
-$ python3 -m venv parse-bunny
-$ parse-bunny\Scripts\activate  # (or `source parse-bunny/bin/activate` on Unix)
+Installation:
+1. Download the binary (parse-bunny.exe)
+2. Place it somewhere like C:\parse-bunny\
+3. Run it from terminal:
+   ./parse-bunny.exe
 
-$ python3 -m pip install -r requirements.txt
-$ python3 -m pip install PyPDF2 python-docx
+All data stays local. Internet connection is require for the following features:
 
-# Then run the CLI
-$ python3 main.py
-```
+label 
+redact 
 
-<h1>Commands:</h1>
+---
 
-<h3>clear</h3>
-<h4>description:</h4>
-<p>Clears the terminal screen.</p>
+## Commands
 
-<h3>reset</h3>
-<h4>description:</h4>
-<p>Clears the contents of the 'data' output directory.</p>
+label       → Auto-label legal documents using AI or keyword sets  
+extract     → Extract clauses from contracts (e.g., termination, payment)  
+highlight   → Highlight sensitive data and legal clauses in PDF  
+redact      → Redact PII, PHI, and privilege from files  
+search      → Search documents using regex or AI  
+backup      → Save a memory snapshot of file structure  
+restore     → Restore from a backup  
+reset       → Reset data/downloads/output (supports flags)
 
-<h3>data</h3>
-<h4>usage:</h4>
+---
 
-```bash
-$ data -collect["<keyword>"]
-$ data -collect["<keyword>"] -parse["/path/to/parser.py"]
-$ data -collect["<keyword>"] -parse[]  # use default parser
-```
+## Environment Variables
 
-<h4>description:</h4>
-<p>Collects web content by keyword and optionally parses it with a custom or built-in parser.</p>
+an environment variables file will be created in `C:\parse-bunny\dashboard\.env`
+The following contents are required for AI or automated features:
 
-```python
-class Parser:
-    def __init__(self):
-        self.input = ""
-        self.output = ""
+$env:GGL_USER="your_email@gmail.com"  
+$env:GGL_PASS="your_google_app_password" # format (16 chars): xxxx xxxx xxxx xxxx 
+$env:OPENAI_API_KEY="your_deepseek_api_key"
 
-    def set_input(self, new_input):
-        self.input = new_input
+---
 
-    def get_output(self):
-        return self.output
+## Folder Structure
 
-    def parse(self):
-        # your parsing logic
+data/ingested/      → Raw ingested files  
+data/classified/    → Labeled output  
+data/highlighted/   → Highlighted PDFs  
+data/search/        → AI search results  
+downloads/          → Email/download automation  
+output/             → Generated content and file trees
 
-# Required entry point for custom parser:
-def run_parser(input):
-    parser = Parser()
-    parser.set_input(input)
-    parser.parse()
-    return parser.get_output()
-```
+---
 
-<h3>ingest</h3>
-<h4>usage:</h4>
+## Usage Examples
 
-```bash
-$ ingest -pdf["/path/to/folder"] -output["/path/to/output"]
-$ ingest -doc["/path/to/docs"]
-$ ingest -email["/path/to/emls"]
-```
+Label documents:
+label -name["nda_corp_set"] -files["./contracts/*.txt"]
 
-<h4>description:</h4>
-<p>Extracts text from PDF, DOCX, and EML files and outputs plaintext `.txt` files to the ingested directory.</p>
+Extract NDA terms:
+extract -template["nda_terms"] -files["./contracts/*.txt"] # template should be a .json file in the `./template` dir
 
-<h3>label</h3>
-<h4>usage:</h4>
+Highlight PII and legal clauses:
+highlight -files["./contracts/*.pdf"] -regex["ssn", "email"] -ai["termination clause"]
 
-```bash
-$ label -files["/data/ingested/*.txt"] -name["classified_batch"]
-```
+Redact sensitive content:
+redact -files["./contracts/*.pdf"] -regex["ssn", "dob", "email"]
 
-<h4>description:</h4>
-<p>Automatically classifies ingested text files using DeepSeek. Outputs JSON files to `data/classified/`.</p>
+Search through extractions:
+search -files["./contracts/] -extract["nda_terms"]
 
-<h3>extract</h3>
-<h4>usage:</h4>
+Ingest emails and docx files:
+ingest -email["./downloads"]
+ingest -docx["./downloads"]
+ingest -email | -docx OPT: -output["./output/dest"]
 
-```bash
-$ extract -files["/data/ingested/*.txt"] -template["full_terms"] -name["contract_terms"]
-```
+---
 
-<h4>description:</h4>
-<p>Extracts predefined legal clauses like `payment_terms`, `jurisdiction`, `confidentiality`, etc., using regex templates. Outputs JSON to `data/extracted/`.</p>
+## AI Details
 
-<h3>search</h3>
-<h4>usage:</h4>
+Model: DeepSeek  
+Use Cases:  
+- Labeling  
+- Clause Extraction  
+- Redaction  
+- Semantic Search
 
-```bash
-$ search -files["/data/extracted"] -extract["jurisdiction=california"] -name["ca_jurisdiction"]
-```
+---
 
-<h4>description:</h4>
-<p>Searches extracted or classified data for label, text, or field matches. Outputs results to `data/search/<name>.json`.</p>
+## Contact
 
-<h3>redact</h3>
-<h4>usage:</h4>
+Email: joshuawhitfield022@gmail.com  
+Website: https://parsebunnycli.com  
+Trials: Free trial requests accepted
 
-```bash
-$ redact -files["/data/ingested/*.txt"]
-```
+---
 
-<h4>description:</h4>
-<p>Uses DeepSeek LLM to automatically redact names, timestamps, and sensitive fields. Saves output to `data/redacted/`.</p>
+## License
+
+© 2025 ParseBunny Inc. All rights reserved.
 
 <h1>Inputs</h1>
 
