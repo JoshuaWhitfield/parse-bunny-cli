@@ -29,7 +29,7 @@ usage = Usage()
 
 usage.add_usage("clear", [" clear ", " cls "], "this command clears the terminal.", " clear ", " cls ")
 usage.add_usage("data", [" data -collect['<string_keyword>', ...] ", " data -collect['<string_keyword>', ...] -parse['/full/path/to/parser'] ", " data -collect['<keywords>'] -parse[] "], "this command can collect and parse information for AI model training. by ommitting the path from the -parse flag, you use the built in parser.", " data ", "")
-usage.add_usage("ingest", [" ingest -pdf['</path/to/dir>', ...] -output['</path/to/dir>']", " ingest -email['</path/to/dir>', ...] -docx['</path/to/dir>']"], "This command ingests PDF, DOCX, and EML files from the specified paths, extracts raw text, and stores it into the output directory for downstream classification, extraction, and search.", " ingest ", "")
+usage.add_usage("ingest", [" ingest -pdf['</path/to/dir>', ...] OPTION: -output['</path/to/dir>']", " ingest -email['</path/to/dir>', ...] ", " ingest -docx['</path/to/dir>'] "], "This command ingests PDF, DOCX, and EML files from the specified paths, extracts raw text, and stores it into the output directory for downstream classification, extraction, and search.", " ingest ", "")
 usage.add_usage(
     "label",
     [
@@ -71,10 +71,10 @@ usage.add_usage(
 usage.add_usage(
     "get",
     [
-        " get -output['</path/to/dir>'] -limit[10]",
+        " get -limit[10] OPTION: -output['</path/to/dir>'] ",
         " get -limit[5]"
     ],
-    "Download emails from a specified email address and label (folder) with optional query and limit. Saves the emails as .eml files in the specified output directory.",
+    "Download emails from a specified email address and label (folder) with optional query and limit. Saves the emails as .eml files in the specified output directory. the -limit is the maximum amount of files to download.",
     "get",
     ""
 )
@@ -106,8 +106,6 @@ usage.add_usage(
     "reset",
     ""
 )
-
-
 
 usage.add_usage("backup", [
     " backup -name['<optional_filename>'] "
