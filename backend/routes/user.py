@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from models.user import User  # adjust import if needed
+from models.user import User, UserRegister, UserLookup  # adjust import if needed
 from typing import List
 from pymongo import MongoClient
 
@@ -27,3 +27,23 @@ def verify_license(user_key: str):
     if not user.get("paid", False):
         raise HTTPException(status_code=402, detail="Payment required")
     return {"status": "verified"}
+
+@router.post("/api/register")
+async def register_user(data: UserRegister):
+    existing = users_collection.find_one({"md5": data.md5})
+    if existing:
+        raise HTTPException(status_code=400, detail="User already registered.")
+
+    users_collection.insert_one(data.dict())
+    return {"status": "ok", "message": "User registered."}
+
+@router.post("/api/lookup")
+async def lookup_by_username(data: dict):
+    user = users_collection.find_one({"username": data["username"]})
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found.")
+    return {
+        "md5": user["md5"],
+        "short_key": user.get("short_key", None)
+    }
+

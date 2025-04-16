@@ -1,5 +1,10 @@
 {
-    "expiry": "2025-05-01",
-    "features": ["label", "extract", "redact"]
+  "expiry": "2025-05-01",
+  "features": ["label", "extract", "redact", "highlight", "search", "reset", "get"],
+  "profile_hash": {
+    "username": "Ikodane",
+    "password": "ikodane"
   }
+}
+
   

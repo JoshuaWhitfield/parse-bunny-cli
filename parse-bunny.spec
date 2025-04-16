@@ -13,7 +13,6 @@ a = Analysis(
     pathex=[str(base_path)],
     binaries=[],
     datas=[
-        ('setup.enc', '.'),
         ('key.bin', '.'),
         ('commands/config.json', 'commands'),
         ('secure_setup.py', '.'),

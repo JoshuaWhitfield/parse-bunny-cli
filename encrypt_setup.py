@@ -1,29 +1,28 @@
 # encrypt_setup.py
-from cryptography.fernet import Fernet
 import json
-from pathlib import Path
+from cryptography.fernet import Fernet
 
-# Paths
-config_path = Path("commands/config.json")
-enc_path = Path("setup.enc")
-key_path = Path("key.bin")
+def encrypt_setup_json():
+    with open("setup.json", "r") as f:
+        data = f.read()
 
-# Load original config
-with open(config_path, "r", encoding="utf-8") as f:
-    config_data = json.load(f)
+    # Generate Fernet key (long key = full 44 bytes)
+    key = Fernet.generate_key()
+    fernet = Fernet(key)
 
-# Encrypt
-key = Fernet.generate_key()
-fernet = Fernet(key)
-encrypted_data = fernet.encrypt(json.dumps(config_data).encode("utf-8"))
+    encrypted = fernet.encrypt(data.encode())
 
-# Save encrypted config
-with open(enc_path, "wb") as enc_file:
-    enc_file.write(encrypted_data)
+    # Write encrypted output
+    with open("setup.enc", "wb") as ef:
+        ef.write(encrypted)
 
-# Save key
-with open(key_path, "wb") as key_file:
-    key_file.write(key)
+    print("[✓] Encrypted setup.json → setup.enc")
+    print("[✓] Fernet key (long):", key.decode())
 
-print("[encrypt][✓] Encrypted setup written to setup.enc")
-print("[encrypt][✓] Key written to key.bin")
+    # Optionally delete plaintext
+    # os.remove("setup.json")
+
+    return key.decode()
+
+if __name__ == "__main__":
+    encrypt_setup_json()

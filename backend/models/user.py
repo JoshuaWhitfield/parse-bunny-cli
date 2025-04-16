@@ -11,3 +11,11 @@ class User(BaseModel):
     name: str = Field(..., description="User's full name")
     email: EmailStr = Field(..., description="User's email address")
     user_key: str = Field(default_factory=generate_user_key, description="User key")
+
+class UserRegister(BaseModel):
+    md5: str
+    username: str
+    short_key: str
+
+class UserLookup(BaseModel):
+    md5: str
