@@ -13,6 +13,7 @@ from syntax.interface import interface
 from commands.secure_setup import load_encrypted_config, create_secure_setup
 from commands.config import check_expiry
 
+
 # Core interpreters
 lexer = Lexer()
 parser = Parser()

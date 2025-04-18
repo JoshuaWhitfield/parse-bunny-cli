@@ -30,6 +30,12 @@ from backend.utils.db import insert_log
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from fpdf import FPDF
 
+from commands import secure_backup
+from commands.secure_backup import (
+ pull_backup
+)
+
+
 # from google.oauth2 import service_account
 # from googleapiclient.discovery import build
 # from googleapiclient.http import MediaIoBaseDownload
@@ -1344,6 +1350,83 @@ def highlight(PARAMS):
 
 command.add_func("highlight", highlight)
 
+
+def push(PARAMS):
+    config = {
+        "files": None,
+        "name": None
+    }
+
+    if not PARAMS:
+        usage.display(usage.get_usage("push"))
+        return _callback.catch("", False)
+
+    flag_tokens = interface.extract(PARAMS, [TT.Flag()])
+    for flag_token in flag_tokens:
+        cleaned = flag_token.value.replace("-", "")
+        index = util.indexOf(PARAMS, flag_token)
+        flag_contents = interface.extract_flags(PARAMS[index:])
+
+        if cleaned == "files" and flag_contents:
+            config["files"] = flag_contents[0].get_value()
+
+        if cleaned == "name" and flag_contents:
+            config["name"] = flag_contents[0].get_value()
+
+    if not config["files"] or not config["name"]:
+        print("[push][x]: Missing required -files[...] or -name[...] flag")
+        usage.display(usage.get_usage("push"))
+        return _callback.catch("", False)
+
+    path = Path(config["files"]).resolve()
+    name = config["name"]
+
+    if not path.exists():
+        print(f"[push][x]: Path not found → {path}")
+        return _callback.catch("", False)
+
+    secure_backup.encrypt_and_push(path, name)
+    return _callback.catch(f"[push][✓]: Pushed backup '{name}' to server", True)
+
+command.add_func("push", push)
+
+def pull(PARAMS):
+    from commands.secure_setup import load_encrypted_config
+
+    if not PARAMS:
+        usage.display(usage.get_usage("pull"))
+        return _callback.catch("", False)
+
+    name = None
+    flag_tokens = interface.extract(PARAMS, [TT.Flag()])
+    for token in flag_tokens:
+        if token.value.replace("-", "") == "name":
+            index = util.indexOf(PARAMS, token)
+            name = interface.extract_flags([PARAMS[index]])
+            if not len(name):
+                usage.display(usage.get_usage("pull"))
+                return _callback.catch("", False)
+                
+            name = name[0].get_value()
+
+    if not name:
+        print("[pull][x]: please use -name[...] to specify backup name")
+        return _callback.catch("", False)
+
+    try:
+        config = load_encrypted_config()
+        cli_key = config["profile_hash"]["user_key"]
+        organization = config["organization"]
+        long_key = config["profile_hash"]["fernet_long_key"]
+
+        pull_backup(cli_key, organization, name, long_key)
+        return _callback.catch(f"[pull][✓]: backup '{name}' pulled and restored", True)
+
+    except Exception as e:
+        print(f"[pull][x]: {e}")
+        return _callback.catch("", False)
+
+command.add_func("pull", pull)
 
 
 def run_templates(PARAMS):

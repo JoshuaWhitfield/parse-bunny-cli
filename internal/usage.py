@@ -41,6 +41,24 @@ usage.add_usage(
     ""
 )
 usage.add_usage(
+    "push",
+    [
+        " push -name['backup_filename']",
+    ],
+    "Encrypts and pushes the current backup to the server.",
+    "push",
+    ""
+)
+usage.add_usage(
+    "pull",
+    [
+        " pull -name['backup_filename']",
+    ],
+    "Downloads and restores an encrypted backup from the server.",
+    "pull",
+    ""
+)
+usage.add_usage(
     "extract",
     [
         " extract -files['</path/to/dir/*.txt>', </path/to/dir>, ...] -name['<output_name>']"

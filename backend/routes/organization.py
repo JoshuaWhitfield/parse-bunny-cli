@@ -19,7 +19,7 @@ async def signup_org(payload: OrganizationSignup):
                 "username": payload.username,
                 "password": password_md5,
                 "user_key": user_key,
-                "backups": []
+                "backups": {}
             }
         ]
     }
