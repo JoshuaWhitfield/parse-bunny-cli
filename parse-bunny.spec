@@ -15,7 +15,7 @@ a = Analysis(
     datas=[
         ('key.bin', '.'),
         ('commands/config.json', 'commands'),
-        ('secure_setup.py', '.'),
+        ('commands/secure_setup.py', 'commands'),
         ('commands', 'commands'),
         ('syntax', 'syntax'),
         ('environments', 'environments'),

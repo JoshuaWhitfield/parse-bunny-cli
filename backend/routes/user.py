@@ -8,6 +8,7 @@ users_db: List[User] = []  # in-memory database for demo
 router = APIRouter()
 client = MongoClient("mongodb://localhost:27017")
 db = client["parsebunny"]
+organizations_collection = db["organizations"]
 users_collection = db["users"]
 
 @router.post("/users")
@@ -28,15 +29,33 @@ def verify_license(user_key: str):
         raise HTTPException(status_code=402, detail="Payment required")
     return {"status": "verified"}
 
-@router.post("/api/register")
-async def register_user(data: UserRegister):
-    existing = users_collection.find_one({"md5": data.md5})
-    if existing:
-        raise HTTPException(status_code=400, detail="User already registered.")
+@router.post("/api/org/signup")
+async def signup_organization(data: dict):
+    org_name = data.get("organization_name")
+    username = data.get("username")
+    password = data.get("password")
 
-    users_collection.insert_one(data.dict())
-    return {"status": "ok", "message": "User registered."}
+    if not org_name or not username or not password:
+        raise HTTPException(status_code=400, detail="Missing fields")
 
+    # Check if org exists already
+    exists = organizations_collection.find_one({"organization_name": org_name})
+    if exists:
+        return {"status": "ok", "message": "Organization already exists"}
+
+    # Insert new org
+    organizations_collection.insert_one({
+        "organization_name": org_name,
+        "created_by": username,
+        "users": [
+            {
+                "username": username,
+                "password": password
+            }
+        ]
+    })
+
+    return {"status": "ok", "message": "Organization created"}
 @router.post("/api/lookup")
 async def lookup_by_username(data: dict):
     user = users_collection.find_one({"username": data["username"]})

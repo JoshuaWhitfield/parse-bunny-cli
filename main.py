@@ -2,33 +2,36 @@
 import sys
 import time
 import os
-import json
-import hashlib
 import requests
 from pathlib import Path
-from datetime import datetime, timedelta
+from dotenv import load_dotenv
 from syntax.lexer import Lexer
 from syntax.parser import Parser
 from syntax.interpreter import Interpreter
 from syntax.prompt import Prompt
 from syntax.interface import interface
-from dotenv import load_dotenv
+from commands.secure_setup import load_encrypted_config, create_secure_setup
+from commands.config import check_expiry
 
+# Core interpreters
 lexer = Lexer()
 parser = Parser()
 interp = Interpreter()
 prompt = Prompt()
 
+# Paths
 SETUP_JSON_PATH = Path("C:/parse-bunny/dashboard/setup.json")
-SETUP_HASH_PATH = Path("C:/parse-bunny/dashboard/setup.enc")
+SETUP_ENC_PATH = Path("C:/parse-bunny/dashboard/setup.enc")
 SERVER_URL = "http://localhost:8000/api"
+dotenv_path = Path("C:/parse-bunny/dashboard/.env")
 
 # ===========================
-# Show Logo
+# Logo Animation
 # ===========================
 def show_logo():
     frames = [
-        " " * 20 + "      (\\_/)" + " " * 20 + "      ( •_•)" + " " * 20 + "     / >🥕   ",        " " * 18 + "      (\\_/)" + " " * 18 + "      ( •_•)" + " " * 18 + "     / > 🥕  ",        " " * 16 + "      (\\_/)" + " " * 16 + "      ( •_•)" + " " * 16 + "     / > >🥕 ",        " " * 14 + "      (\\_/)" + " " * 14 + "      ( •_•)" + " " * 14 + "     / > > 🥕",        " " * 12 + "      (\\_/)" + " " * 12 + "      ( •_•)" + " " * 12 + "     / > > \\🥕",        " " * 10 + "      (\\_/)" + " " * 10 + "      ( •_•)" + " " * 10 + "     / > > \\ 🥕",        " " * 8 + "      (\\_/)" + " " * 8 + "      ( •_•)" + " " * 8 + "     / > > \\  🥕",        " " * 6 + "      (\\_/)" + " " * 6 + "      ( •_•)" + " " * 6 + "     / > > \\   🥕",        " " * 4 + "      (\\_/)" + " " * 4 + "      ( •_•)" + " " * 4 + "     / > > \\    🥕",
+        " " * 20 + "      (\\_/)" + " " * 20 + "      ( •_•)" + " " * 20 + "     / >🥕   ",
+        " " * 4 + "      (\\_/)" + " " * 4 + "      ( •_•)" + " " * 4 + "     / > > \\    🥕"
     ]
     for _ in range(3):
         for frame in frames:
@@ -38,27 +41,26 @@ def show_logo():
     print()
 
 # ===========================
-# .env setup
+# .env File Setup
 # ===========================
 def ensure_env_file():
     env_path = Path("C:/parse-bunny/dashboard/.env")
     if not env_path.exists():
         print("[pbc][notif]: creating .env file. please populate it with the appropriate values.")
         env_content = """# Parse Bunny CLI Environment Variables
-            GGL_USER=example_user@gmail.com
-            GGL_PASS=xxxx xxxx xxxx xxxx
-            OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-            """
+GGL_USER=example_user@gmail.com
+GGL_PASS=xxxx xxxx xxxx xxxx
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+"""
         env_path.parent.mkdir(parents=True, exist_ok=True)
         env_path.write_text(env_content, encoding="utf-8")
-        print(f"[config][✓]: .env file created at {env_path}")
+        print(f"[config][✓] .env file created at {env_path}")
 
-dotenv_path = Path("C:/parse-bunny/dashboard/.env")
 if dotenv_path.exists():
     load_dotenv(dotenv_path)
 
 # ===========================
-# Main loop
+# Main Loop
 # ===========================
 def main_loop():
     while interface.process_is_running():
@@ -66,7 +68,6 @@ def main_loop():
             inputs = prompt.get_input().split(";")
         except Exception:
             break
-
         for input in inputs:
             lexer.set_input(lexer.reset_output() + list(input))
             lexer.Tokenize()
@@ -76,44 +77,45 @@ def main_loop():
             interp.Execute()
 
 # ===========================
-# Setup handling (MD5 hash instead of Fernet encryption)
+# First-Time Setup Check
 # ===========================
-def generate_md5_from_json(setup):
-    serialized = json.dumps(setup, sort_keys=True)
-    return hashlib.md5(serialized.encode()).hexdigest()
-
-def prompt_for_user():
-    username = input("Username: ").strip()
-    password = input("Password: ").strip()  # Stored in profile for lookup only
-    return {"username": username, "password": password}
-
-def create_setup():
-    profile = prompt_for_user()
-    setup = {
-        "expiry": (datetime.utcnow() + timedelta(days=30)).strftime("%Y-%m-%d"),
-        "features": ["label", "extract", "redact", "highlight", "search", "reset", "get"],
-        "profile_hash": profile
-    }
-    with open(SETUP_JSON_PATH, "w") as f:
-        json.dump(setup, f, indent=2)
-    md5_hash = generate_md5_from_json(setup)
-    with open(SETUP_HASH_PATH, "w") as f:
-        f.write(md5_hash)
-
-    try:
-        requests.post(f"{SERVER_URL}/register", json={"username": profile['username'], "md5": md5_hash})
-        print("[setup][✓] Registered setup with server.")
-    except Exception as e:
-        print(f"[setup][x] Failed to send to server: {e}")
-
-    print("[setup][✓] setup.json created and hashed to setup.enc")
-
 def validate_and_run():
-    if not SETUP_HASH_PATH.exists() or not SETUP_JSON_PATH.exists():
-        print("[setup] No config found — running first-time setup.")
-        create_setup()
+    if not SETUP_JSON_PATH.exists() or not SETUP_ENC_PATH.exists():
+        print("[setup][~] No config found — running secure setup...")
+        create_secure_setup()
     else:
         print("[setup][✓] setup.json and setup.enc found. Continuing...")
+
+# ===========================
+# Set Password If Missing
+# ===========================
+def set_password_if_none():
+    try:
+        setup = load_encrypted_config()
+        username = setup["profile_hash"]["username"]
+        password = setup["profile_hash"]["password"]
+    except Exception as e:
+        print(f"[auth][x] Could not load config: {e}")
+        return
+
+    organization_name = input("Enter your organization name: ").strip()
+
+    payload = {
+        "username": username,
+        "organization_name": organization_name,
+        "new_password": password
+    }
+
+    try:
+        res = requests.patch(f"{SERVER_URL}/org/update-password", json=payload)
+        if res.status_code == 200:
+            print("[auth][✓] Password successfully set on server.")
+        elif res.status_code == 404:
+            print("[auth] Proceeding smart login...") # password was already set or user not found. user is hardcoded so is always found unless deleted from server.
+        else:
+            print(f"[auth][x] Server responded with error: {res.text}")
+    except Exception as e:
+        print(f"[auth][x] Failed to update password: {e}")
 
 # ===========================
 # Boot
@@ -123,5 +125,7 @@ if __name__ == "__main__":
         show_logo()
         sys.argv.remove("-logo")
 
+    ensure_env_file()
     validate_and_run()
+    set_password_if_none()
     main_loop()
